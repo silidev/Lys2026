@@ -4,6 +4,7 @@ import { speak } from '../../../sound/index.ts';
 import { TtsRemindersConfig } from '../config.ts';
 import { usePrevious } from '../../../common/hooks/effects/usePrevious.ts';
 import type { TestResult } from '../../../common/testing/types/testing.ts';
+import { TestRunnerConfig } from '../../../00configs/common/testing.ts';
 
 interface UseTestRunnerSoundProps {
     testStatus: 'idle' | 'running' | 'completed';
@@ -44,6 +45,12 @@ export const useTestRunnerSound = ({ testStatus, testResults, setShowTestOverlay
     useEffect(() => {
         if (prevTestStatus === 'running' && testStatus === 'completed') {
             clearTimeouts(); // Clear any previous timers, just in case
+
+            const isSuccess = failedTests.length === 0;
+            if (isSuccess && TestRunnerConfig.disableRunningUiTestsOnDesktopLoad) {
+                // Do not show the success overlay when logic test suites succeed and UI tests on desktop load are disabled
+                return;
+            }
 
             setShowTestOverlay(true);
             
