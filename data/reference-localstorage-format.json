@@ -1,0 +1,14 @@
+{
+  "lys-last-manual-backup-timestamp": "1704067200000",
+  "shopping-list-advanced-mode": "true",
+  "shopping-list-autobackup-interval-h": "24",
+  "shopping-list-data": "{\"items\":[{\"id\":\"d-1\",\"name\":\"Milk (Look at home if you need this)\",\"completed\":false},{\"id\":\"d-2\",\"name\":\"Turkey for thanksgiving\",\"completed\":true,\"defaultCompleted\":true}],\"shopCategories\":[{\"id\":\"shop-uncategorized\",\"name\":\"Uncategorized\",\"itemIds\":[]},{\"id\":\"shop-fridge\",\"name\":\"Fridge\",\"itemIds\":[\"d-1\",\"d-2\"]},{\"id\":\"shop-freezer\",\"name\":\"Freezer\",\"itemIds\":[]},{\"id\":\"shop-fruit\",\"name\":\"Fruit\",\"itemIds\":[]},{\"id\":\"shop-vegetables\",\"name\":\"Vegetables\",\"itemIds\":[]},{\"id\":\"shop-hidden\",\"name\":\"Remove from this view\",\"itemIds\":[]}],\"homeCategories\":[{\"id\":\"home-uncategorized\",\"name\":\"Uncategorized\",\"itemIds\":[]},{\"id\":\"home-fridge\",\"name\":\"Fridge\",\"itemIds\":[\"d-1\"]},{\"id\":\"home-hidden\",\"name\":\"Remove from this view\",\"itemIds\":[\"d-2\"]}]}",
+  "shopping-list-data-history-state": "{\"history\":[{\"items\":[{\"id\":\"d-1\",\"name\":\"Milk (Look at home if you need this)\",\"completed\":false},{\"id\":\"d-2\",\"name\":\"Turkey for thanksgiving\",\"completed\":true,\"defaultCompleted\":true}],\"shopCategories\":[{\"id\":\"shop-uncategorized\",\"name\":\"Uncategorized\",\"itemIds\":[]},{\"id\":\"shop-fridge\",\"name\":\"Fridge\",\"itemIds\":[\"d-1\",\"d-2\"]},{\"id\":\"shop-freezer\",\"name\":\"Freezer\",\"itemIds\":[]},{\"id\":\"shop-fruit\",\"name\":\"Fruit\",\"itemIds\":[]},{\"id\":\"shop-vegetables\",\"name\":\"Vegetables\",\"itemIds\":[]},{\"id\":\"shop-hidden\",\"name\":\"Remove from this view\",\"itemIds\":[]}],\"homeCategories\":[{\"id\":\"home-uncategorized\",\"name\":\"Uncategorized\",\"itemIds\":[]},{\"id\":\"home-fridge\",\"name\":\"Fridge\",\"itemIds\":[\"d-1\"]},{\"id\":\"home-hidden\",\"name\":\"Remove from this view\",\"itemIds\":[\"d-2\"]}]}],\"currentIndex\":0}",
+  "shopping-list-enable-split-item-names": "true",
+  "shopping-list-hide-completed": "true",
+  "shopping-list-last-interacted-in-home-view": "null",
+  "shopping-list-new-item-default-completed": "true",
+  "shopping-list-show-only-default-completed": "false",
+  "shopping-list-show-only-rush": "false",
+  "theme": "\"dark\""
+}

@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "id": "ref-item-1",
+      "name": "Reference Item",
+      "nameShop": "Ref Shop Item",
+      "completed": false,
+      "amount": "1",
+      "defaultCompleted": false,
+      "isRush": false,
+      "isRushOnce": false
+    },
+    {
+      "id": "ref-item-2",
+      "name": "Another Reference Item",
+      "nameShop": "",
+      "completed": true,
+      "amount": "2kg",
+      "defaultCompleted": true,
+      "isRush": true,
+      "isRushOnce": false
+    }
+  ],
+  "shopCategories": [
+    {
+      "id": "ref-shop-cat-1",
+      "name": "Reference Shop Category",
+      "itemIds": ["ref-item-1", "ref-item-2"]
+    }
+  ],
+  "homeCategories": [
+    {
+      "id": "ref-home-cat-1",
+      "name": "Reference Home Category",
+      "itemIds": ["ref-item-1"]
+    },
+    {
+      "id": "ref-home-cat-2",
+      "name": "Second Home Category",
+      "itemIds": ["ref-item-2"]
+    }
+  ]
+}
