@@ -15,7 +15,7 @@ export const TestRunnerConfig = {
    * Logic tests always run on startup on desktop.
    * UI Tests are NEVER run automatically on mobile.
    */
-  disableRunningUiTestsOnDesktopLoad: false,
+  disableRunningUiTestsOnDesktopLoad: true,
 
   /**
    * The maximum number of failed test logs to write to the browser's console.
