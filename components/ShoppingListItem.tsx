@@ -1,3 +1,5 @@
+const FILE_PATH = 'components/ShoppingListItem.tsx';
+
 import React, { useState } from 'react';
 import { ShoppingListItem as ShoppingListItemType, ViewMode } from '../types';
 import { IconChevronUp, IconChevronDown, IconPencil } from '../common/components/icons/index.ts';
@@ -90,61 +92,47 @@ const ShoppingListItemComponent: React.FC<ShoppingListItemProps> = ({
   
   const borderClass = item.defaultCompleted ? 'border-2 border-yellow-400 dark:border-yellow-500' : 'border border-gray-200 dark:border-gray-700';
   const isCompleted = item.amount === '0';
+  const isShopWithCheckbox =
+    mode === 'shop' && AppConfig.enableShopItemCompletionCheckbox;
 
+  const handleItemClick = () => {
+    if (mode === 'home' && onSelectItem) {
+      onSelectItem(item.id);
+    } else if (mode === 'shop') {
+      if (AppConfig.enableShopItemCompletionCheckbox) {
+        onOpenEditModal(item.id, currentCategoryId);
+      } else {
+        onToggleItemCompleted(item.id);
+      }
+    }
+  };
 
-  return (
-    <li
-      aria-labelledby={`item-name-${item.id}`}
-      data-id={item.id}
-      draggable="true"
-      onDragStart={(e) => onDragStart(e, currentCategoryId, index)}
-      onDragOver={handleDragOver}
-      onDragLeave={handleDragLeave}
-      onDrop={(e) => {
-        e.stopPropagation();
-        setIsDragOver(false);
-        onDrop(e, currentCategoryId, index)
-      }}
-      onDragEnd={onDragEnd}
-      onTouchMove={(e) => {
-        if (isDragging) {
-          e.preventDefault();
-        }
-       }}
-      className={`
-        flex items-center justify-between py-${AppConfig.listItemInternalPaddingVerticalUnit} pr-${AppConfig.listItemRightPaddingUnit}
-        rounded-lg bg-white
-        shadow-sm transition-all duration-300
-        hover:shadow-md
-        dark:bg-gray-900/50 ${opacityClass} ${dropIndicatorClass} ${borderClass}
-      `}
-    >
-      <div className={`flex flex-grow items-center gap-0 mr-1 px-${AppConfig.listItemInternalPaddingHorizontalUnit}`}>
+  const renderCardContent = () => (
+    <>
+      <div
+        className={`flex flex-grow items-center gap-0 mr-1 px-${AppConfig.listItemInternalPaddingHorizontalUnit}`}
+      >
         {mode === 'shop' && !isCompleted ? (
-            <div className={`flex-shrink-0 text-right pr-2 text-gray-600 dark:text-gray-400 ${AppConfig.amountContainerMinWidthClass}`}>
-                {(item.amount || '1') !== '1' ? `${item.amount || '1'} x` : ''}
-            </div>
+          <div
+            onClick={handleItemClick}
+            className={`flex-shrink-0 text-right pr-2 text-gray-600 dark:text-gray-400 cursor-pointer ${AppConfig.amountContainerMinWidthClass}`}
+          >
+            {(item.amount || '1') !== '1' ? `${item.amount || '1'} x` : ''}
+          </div>
         ) : null}
         <div
-            id={`item-name-${item.id}`}
-            onClick={() => {
-                if (mode === 'home' && onSelectItem) {
-                    onSelectItem(item.id);
-                } else if (mode === 'shop') {
-                    onToggleItemCompleted(item.id);
-                }
-            }}
-            onDoubleClick={() => onOpenEditModal(item.id, currentCategoryId)}
-            className={`
-              flex-grow break-words text-gray-800
-              transition-colors dark:text-gray-200
-              ${isCompleted
-                ? 'line-through text-gray-500 dark:text-gray-400'
-                : ''
-              }
-            `}
+          id={`item-name-${item.id}`}
+          onClick={handleItemClick}
+          onDoubleClick={() => onOpenEditModal(item.id, currentCategoryId)}
+          className={`
+            flex-grow break-words text-gray-800
+            transition-colors dark:text-gray-200 cursor-pointer
+            ${isCompleted
+              ? 'line-through text-gray-500 dark:text-gray-400'
+              : ''}
+          `}
         >
-            <ClickableText text={displayName} />
+          <ClickableText text={displayName} />
         </div>
       </div>
       <div className="ml-1 flex flex-shrink-0 items-center gap-0.5">
@@ -159,7 +147,7 @@ const ShoppingListItemComponent: React.FC<ShoppingListItemProps> = ({
               title={t('shoppingListItem.tooltips.moveUp')}
               {...longPressHandlers}
             >
-                <IconChevronUp className="h-4 w-4" />
+              <IconChevronUp className="h-4 w-4" />
             </button>
             <button
               id={`move-down-item-${item.id}-button`}
@@ -170,7 +158,7 @@ const ShoppingListItemComponent: React.FC<ShoppingListItemProps> = ({
               title={t('shoppingListItem.tooltips.moveDown')}
               {...longPressHandlers}
             >
-                <IconChevronDown className="h-4 w-4" />
+              <IconChevronDown className="h-4 w-4" />
             </button>
           </>
         )}
@@ -182,19 +170,121 @@ const ShoppingListItemComponent: React.FC<ShoppingListItemProps> = ({
           title={t('shoppingListItem.tooltips.editItem')}
           {...longPressHandlers}
         >
-            <IconPencil className="h-4 w-4" />
+          <IconPencil className="h-4 w-4" />
         </button>
-        
+
         {mode === 'home' && (
-            <AmountControl
-                id={`amount-control-${item.id}`}
-                amountToDisplay={displayAmount}
-                onIncrease={() => onUpdateAmount(item.id, 1)}
-                onDecrease={() => onUpdateAmount(item.id, -1)}
-                displayName={displayName}
-            />
+          <AmountControl
+            id={`amount-control-${item.id}`}
+            amountToDisplay={displayAmount}
+            onIncrease={() => onUpdateAmount(item.id, 1)}
+            onDecrease={() => onUpdateAmount(item.id, -1)}
+            displayName={displayName}
+          />
         )}
       </div>
+    </>
+  );
+
+  if (isShopWithCheckbox) {
+    return (
+      <li
+        aria-labelledby={`item-name-${item.id}`}
+        data-id={item.id}
+        draggable="true"
+        onDragStart={(e) => onDragStart(e, currentCategoryId, index)}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={(e) => {
+          e.stopPropagation();
+          setIsDragOver(false);
+          onDrop(e, currentCategoryId, index);
+        }}
+        onDragEnd={onDragEnd}
+        onTouchMove={(e) => {
+          if (isDragging) {
+            e.preventDefault();
+          }
+        }}
+        className={`
+          flex items-center gap-1.5 w-full
+          transition-all duration-300
+          ${opacityClass} ${dropIndicatorClass}
+        `}
+      >
+        <button
+          type="button"
+          id={`complete-item-${item.id}-checkbox`}
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleItemCompleted(item.id);
+          }}
+          className={`
+            w-[38px] h-[38px] min-w-[38px] min-h-[38px]
+            flex-shrink-0 self-center aspect-square
+            rounded-lg bg-white
+            shadow-sm transition-all duration-200
+            hover:shadow-md hover:border-orange-500
+            dark:bg-gray-900/50 ${borderClass}
+            flex items-center justify-center cursor-pointer
+            focus:outline-none focus:ring-2
+            focus:ring-orange-500
+          `}
+          aria-label={t(
+            'shoppingListItem.aria.markCompleted',
+            displayName
+          )}
+          title={t('shoppingListItem.tooltips.checkbox')}
+          {...longPressHandlers}
+        />
+        <div
+          className={`
+            flex flex-grow items-center justify-between
+            min-h-[38px]
+            py-${AppConfig.listItemInternalPaddingVerticalUnit}
+            pr-${AppConfig.listItemRightPaddingUnit}
+            rounded-lg bg-white
+            shadow-sm transition-all duration-300
+            hover:shadow-md
+            dark:bg-gray-900/50 ${borderClass}
+          `}
+        >
+          {renderCardContent()}
+        </div>
+      </li>
+    );
+  }
+
+  return (
+    <li
+      aria-labelledby={`item-name-${item.id}`}
+      data-id={item.id}
+      draggable="true"
+      onDragStart={(e) => onDragStart(e, currentCategoryId, index)}
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={(e) => {
+        e.stopPropagation();
+        setIsDragOver(false);
+        onDrop(e, currentCategoryId, index);
+      }}
+      onDragEnd={onDragEnd}
+      onTouchMove={(e) => {
+        if (isDragging) {
+          e.preventDefault();
+        }
+      }}
+      className={`
+        flex items-center justify-between
+        py-${AppConfig.listItemInternalPaddingVerticalUnit}
+        pr-${AppConfig.listItemRightPaddingUnit}
+        rounded-lg bg-white
+        shadow-sm transition-all duration-300
+        hover:shadow-md
+        dark:bg-gray-900/50 ${opacityClass} ${dropIndicatorClass} ${borderClass}
+      `}
+    >
+      {renderCardContent()}
     </li>
   );
 };

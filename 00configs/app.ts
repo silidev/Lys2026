@@ -96,4 +96,23 @@ export const AppConfig = {
    * If false, it's only shown for items in the 'Uncategorized' category.
    */
   showMoveToCategoryIconForAllItems: true,
+
+  /**
+   * Switch: enableShopItemCompletionCheckbox
+   *
+   * If true, changes the Shop View item interaction behavior:
+   * 1. Displays a dedicated empty square/checkbox button to the left
+   *    (outside) of the item card. Clicking this square completes the item
+   *    (removes it from the Shop View).
+   * 2. Clicking the item itself in Shop View opens the Edit View instead
+   *    of marking it as completed.
+   *
+   * Rationale: Changed because tapping on an item would otherwise
+   * occasionally mark it as bought/completed by accident.
+   *
+   * Set this switch to false to revert back to the legacy behavior where
+   * clicking anywhere on the item directly marks it as completed and no
+   * extra checkbox is shown.
+   */
+  enableShopItemCompletionCheckbox: true,
 };

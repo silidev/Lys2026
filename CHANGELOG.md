@@ -44,3 +44,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
     categories containing items.
   - Protected categories (e.g., Uncategorized) remain
     protected from deletion.
+- **Shop View Item Interaction & Completion Checkbox**:
+  - Added `enableShopItemCompletionCheckbox` configuration switch
+    in `00configs/app.ts` (defaults to `true`).
+  - When enabled, a dedicated square checkbox is rendered directly
+    to the left of the item card. Clicking this square completes
+    the item (removes it from Shop View).
+  - Clicking the item body/name in Shop View now opens the Edit
+    View modal instead of completing the item, preventing
+    accidental completion while handling the device.
+  - Added unit and component tests in
+    `ShoppingListItem.test.suite.ts` testing both the checkbox
+    flow and the legacy click-to-complete fallback.
+  - Fixed checkbox dimensions to explicit 38px square (`w-[38px] h-[38px]`)
+    matching the item card height to prevent flexbox auto-sizing from
+    collapsing the empty box into a vertical line.

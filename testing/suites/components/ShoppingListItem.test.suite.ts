@@ -13,6 +13,8 @@ import { assertEquals } from '../../../common/testing/services/tests/helpers.ts'
 import { LongPressProvider } from '../../../common/longPressTooltip/LongPressProvider.tsx';
 import { LocalizationProvider } from '../../../localization/i18n.ts';
 
+import { AppConfig } from '../../../00configs/app.ts';
+
 const FILE_PATH = 'testing/suites/components/ShoppingListItem.test.suite.ts';
 
 const item: ShoppingListItem = { id: '1', name: 'Milk' };
@@ -100,6 +102,58 @@ const testCallsOnSelectItemOnClick = async (user: User) => {
     assertEquals(onSelectItem.called, false, "onSelectItem should not be called on click in shop mode");
 };
 
+const testShopModeWithCompletionCheckbox = async (user: User) => {
+    const originalSetting = AppConfig.enableShopItemCompletionCheckbox;
+    try {
+        AppConfig.enableShopItemCompletionCheckbox = true;
+        const onToggleItemCompleted = sinon.spy();
+        const onOpenEditModal = sinon.spy();
+        const { container } = renderWithProvider(React.createElement(ShoppingListItemComponent, getProps({
+            mode: 'shop',
+            onToggleItemCompleted,
+            onOpenEditModal,
+        })));
+
+        const checkbox = container.querySelector<HTMLButtonElement>('#complete-item-1-checkbox');
+        assertEquals(!!checkbox, true, "Completion checkbox should exist in shop mode when enabled");
+
+        await user.click(checkbox!);
+        assertEquals(onToggleItemCompleted.calledOnceWith('1'), true, "onToggleItemCompleted should be called when checkbox is clicked");
+        assertEquals(onOpenEditModal.called, false, "onOpenEditModal should not be called when checkbox is clicked");
+
+        // Clicking item text opens edit modal instead of toggling completion
+        const itemText = within(container).getByText('Milk');
+        await user.click(itemText);
+        assertEquals(onOpenEditModal.calledOnceWith('1', 'sec1'), true, "onOpenEditModal should be called on item click in shop mode");
+    } finally {
+        AppConfig.enableShopItemCompletionCheckbox = originalSetting;
+    }
+};
+
+const testShopModeLegacyWithoutCompletionCheckbox = async (user: User) => {
+    const originalSetting = AppConfig.enableShopItemCompletionCheckbox;
+    try {
+        AppConfig.enableShopItemCompletionCheckbox = false;
+        const onToggleItemCompleted = sinon.spy();
+        const onOpenEditModal = sinon.spy();
+        const { container } = renderWithProvider(React.createElement(ShoppingListItemComponent, getProps({
+            mode: 'shop',
+            onToggleItemCompleted,
+            onOpenEditModal,
+        })));
+
+        const checkbox = container.querySelector<HTMLButtonElement>('#complete-item-1-checkbox');
+        assertEquals(checkbox, null, "Completion checkbox should not exist when switch is disabled");
+
+        const itemText = within(container).getByText('Milk');
+        await user.click(itemText);
+        assertEquals(onToggleItemCompleted.calledOnceWith('1'), true, "onToggleItemCompleted should be called on item click in legacy shop mode");
+        assertEquals(onOpenEditModal.called, false, "onOpenEditModal should not be called on single click in legacy shop mode");
+    } finally {
+        AppConfig.enableShopItemCompletionCheckbox = originalSetting;
+    }
+};
+
 export function shoppingListItemTestSuite() {
     const SUITE_NAME = shoppingListItemTestSuite.name;
     return [
@@ -107,5 +161,7 @@ export function shoppingListItemTestSuite() {
         runComponentTest('ShoppingListItem: calls onUpdateAmount when +/- buttons are clicked', testCallsOnUpdateAmount, SUITE_NAME, FILE_PATH),
         runComponentTest('ShoppingListItem: calls onOpenEditModal on double click', testCallsOnOpenEditModalOnDoubleClick, SUITE_NAME, FILE_PATH),
         runComponentTest('ShoppingListItem: calls onSelectItem on click in home mode', testCallsOnSelectItemOnClick, SUITE_NAME, FILE_PATH),
+        runComponentTest('ShoppingListItem: shop mode checkbox completes item and item click opens edit modal', testShopModeWithCompletionCheckbox, SUITE_NAME, FILE_PATH),
+        runComponentTest('ShoppingListItem: shop mode legacy behavior without checkbox toggles completed on click', testShopModeLegacyWithoutCompletionCheckbox, SUITE_NAME, FILE_PATH),
     ];
 }
