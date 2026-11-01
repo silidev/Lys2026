@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="lysGradMaskable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+  </defs>
+  <!-- Full bleed background for maskable icon -->
+  <rect width="512" height="512" fill="url(#lysGradMaskable)" />
+  <!-- Icon content centered within safe zone (80% diameter = 409px) -->
+  <path d="M206 205 C206 150, 306 150, 306 205" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" />
+  <rect x="166" y="195" width="180" height="195" rx="26" fill="#ffffff" />
+  <path d="M214 290 L244 320 L298 264" fill="none" stroke="#ea580c" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

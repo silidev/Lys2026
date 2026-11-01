@@ -38,6 +38,7 @@ import { usePreviousTestSuite } from './suites/common/hooks/usePrevious.test.sui
 import { appBackupTestSuite } from './suites/app/App.backup.test.suite.ts';
 import { appLocalStorageTestSuite } from './suites/app/App.localStorage.test.suite.ts';
 import { appClipboardTestSuite } from './suites/app/App.clipboard.test.suite.ts';
+import { pwaServiceTestSuite } from './suites/services/pwaService.test.suite.ts';
 
 // It's important that these functions have names, as the test runner uses fn.name.
 const intentionalFailureTestSuiteFile = 'common/testing/services/tests/intentionalFailure.test.ts';
@@ -66,6 +67,7 @@ export const logicTestSuites: TestSuite[] = [
   useAutobackupTestSuite,
   listServiceTestSuite,
   usePreviousTestSuite,
+  pwaServiceTestSuite,
 ];
 
 // --- UI/Component/App Test Suites ---

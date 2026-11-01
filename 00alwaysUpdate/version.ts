@@ -7,5 +7,5 @@ export const versionDate: VersionDate = {
     month: 11, // November
     day: 1,
     hours: 4,
-    minutes: 12,
+    minutes: 28,
 };

@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased] - 2026-11-01
 
 ### Added
+- **PWA (Progressive Web App) Installability Support**:
+  - Configured `vite-plugin-pwa` with automatic manifest injection and Workbox precaching.
+  - Added Web App Manifest (`manifest.webmanifest`) and fallback offline Service Worker (`public/sw.js`).
+  - Added compliant icons: `icon.svg`, `pwa-192x192.png`, `pwa-512x512.png`, `pwa-maskable-512x512.png`, and `apple-touch-icon.png`.
+  - Updated `index.html` with mobile viewport, theme color, and PWA capability meta tags.
+  - Added PWA registration and utility service (`common/services/pwaService.ts`) with automated unit test suite (`testing/suites/services/pwaService.test.suite.ts`).
 - **Delete Non-Empty Category Flow**:
   - Modal dialog (`DeleteCategoryModal`) that prompts the user
     when attempting to delete a category containing items.
