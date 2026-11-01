@@ -1,6 +1,6 @@
 const FILE_PATH = 'testing/suites/services/categoryService.test.suite.ts';
 import { runLogicTest } from '../../helpers.ts';
-import { getVisibleCategories, reorderCategory, updateCategoryName, getManageableCategories } from '../../../common/services/categoryService.ts';
+import { getVisibleCategories, reorderCategory, updateCategoryName, getManageableCategories, deleteCategory } from '../../../common/services/categoryService.ts';
 import type { ShoppingListItem, Category, ShoppingListData } from '../../../types.ts';
 import { assertEquals } from '../../../common/testing/services/tests/helpers.ts';
 import { REMOVE_FROM_VIEW_CATEGORY_NAME } from '../../../00configs/app.ts';
@@ -200,6 +200,66 @@ const testHidesItemsWithHideUntilResetFlag = () => {
     assertEquals(visibleCategories[0].itemIds[0], 'i1');
 };
 
+const testDeletesEmptyCategory = () => {
+    const data: ShoppingListData = {
+        items: [],
+        shopCategories: [
+            { id: 'c1', name: 'Empty Cat', itemIds: [] },
+            { id: 'c2', name: 'Other Cat', itemIds: [] },
+        ],
+        homeCategories: [],
+    };
+    const updated = deleteCategory(data, 'c1', 'shop');
+    assertEquals(updated.shopCategories.length, 1);
+    assertEquals(updated.shopCategories[0].id, 'c2');
+};
+
+const testDeletesCategoryAndMovesItems = () => {
+    const data: ShoppingListData = {
+        items: [
+            { id: 'i1', name: 'Item 1' },
+            { id: 'i2', name: 'Item 2' },
+        ],
+        shopCategories: [
+            { id: 'c1', name: 'Old Cat', itemIds: ['i1', 'i2'] },
+            { id: 'c2', name: 'Target Cat', itemIds: [] },
+        ],
+        homeCategories: [
+            { id: 'hc1', name: 'Home Cat', itemIds: ['i1', 'i2'] },
+        ],
+    };
+    const updated = deleteCategory(data, 'c1', 'shop', { action: 'move', targetCategoryId: 'c2' });
+    assertEquals(updated.shopCategories.length, 1);
+    assertEquals(updated.shopCategories[0].id, 'c2');
+    assertEquals(updated.shopCategories[0].itemIds, ['i1', 'i2']);
+    // Items list and homeCategories should be untouched
+    assertEquals(updated.items.length, 2);
+    assertEquals(updated.homeCategories[0].itemIds.length, 2);
+};
+
+const testDeletesCategoryAndDeletesItems = () => {
+    const data: ShoppingListData = {
+        items: [
+            { id: 'i1', name: 'Item 1' },
+            { id: 'i2', name: 'Item 2' },
+            { id: 'i3', name: 'Item 3' },
+        ],
+        shopCategories: [
+            { id: 'c1', name: 'Delete Cat', itemIds: ['i1', 'i2'] },
+            { id: 'c2', name: 'Keep Cat', itemIds: ['i3'] },
+        ],
+        homeCategories: [
+            { id: 'hc1', name: 'Home Cat', itemIds: ['i1', 'i2', 'i3'] },
+        ],
+    };
+    const updated = deleteCategory(data, 'c1', 'shop', { action: 'deleteItems' });
+    assertEquals(updated.shopCategories.length, 1);
+    assertEquals(updated.shopCategories[0].id, 'c2');
+    assertEquals(updated.items.length, 1);
+    assertEquals(updated.items[0].id, 'i3');
+    assertEquals(updated.homeCategories[0].itemIds, ['i3']);
+};
+
 export function categoryServiceTestSuite() {
     const SUITE_NAME = categoryServiceTestSuite.name;
     return [
@@ -260,6 +320,24 @@ export function categoryServiceTestSuite() {
         runLogicTest(
             'Category Service: getVisibleCategories should hide items with hideUntilReset flag',
             testHidesItemsWithHideUntilResetFlag,
+            SUITE_NAME,
+            FILE_PATH
+        ),
+        runLogicTest(
+            'Category Service: deleteCategory should delete an empty category',
+            testDeletesEmptyCategory,
+            SUITE_NAME,
+            FILE_PATH
+        ),
+        runLogicTest(
+            'Category Service: deleteCategory should move items to target category when action is move',
+            testDeletesCategoryAndMovesItems,
+            SUITE_NAME,
+            FILE_PATH
+        ),
+        runLogicTest(
+            'Category Service: deleteCategory should delete category and all its items when action is deleteItems',
+            testDeletesCategoryAndDeletesItems,
             SUITE_NAME,
             FILE_PATH
         ),

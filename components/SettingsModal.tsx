@@ -2,6 +2,7 @@ const FILE_PATH = 'components/SettingsModal.tsx';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import type { ShoppingListData, ViewMode } from '../types';
+import type { DeleteCategoryOptions } from '../common/services/categoryService.ts';
 import type { Theme } from '../hooks/useTheme';
 import { IconX } from '../common/components/icons/index.ts';
 import AutomaticBackup from './settings/AutomaticBackup.tsx';
@@ -20,7 +21,7 @@ interface SettingsModalProps {
   backupData: ShoppingListData;
   onReorderCategory: (sourceIndex: number, destinationIndex: number, mode: ViewMode) => void;
   onAddCategory: (name: string, mode: ViewMode) => void;
-  onDeleteCategory: (categoryId: string, mode: ViewMode) => void;
+  onDeleteCategory: (categoryId: string, mode: ViewMode, options?: DeleteCategoryOptions) => void;
   onUpdateCategoryName: (categoryId: string, newName: string, mode: ViewMode) => void;
   backupIntervalHours: number;
   onSetBackupInterval: (hours: number) => void;

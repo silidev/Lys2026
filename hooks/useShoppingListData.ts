@@ -95,8 +95,8 @@ export const useShoppingListData = (mode: ViewMode, setLastInteractedInHomeViewI
         setData(prevData => categoryService.addCategoryAndMoveItem(prevData, newCategoryName, itemId, modeToUpdate));
     }, [setData]);
 
-    const handleDeleteCategory = useCallback((categoryId: string, modeToDelete: ViewMode) => {
-        setData(prevData => categoryService.deleteCategory(prevData, categoryId, modeToDelete));
+    const handleDeleteCategory = useCallback((categoryId: string, modeToDelete: ViewMode, options?: categoryService.DeleteCategoryOptions) => {
+        setData(prevData => categoryService.deleteCategory(prevData, categoryId, modeToDelete, options));
     }, [setData]);
 
     const handleToggleDefaultCompleted = useCallback((id: string) => {

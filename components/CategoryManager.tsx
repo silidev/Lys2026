@@ -1,9 +1,11 @@
 const FILE_PATH = 'components/CategoryManager.tsx';
 import React, { useState } from 'react';
 import type { Category } from '../types';
+import type { DeleteCategoryOptions } from '../common/services/categoryService.ts';
 import { IconPlus, IconChevronDown, IconChevronUp } from '../common/components/icons/index.ts';
 import AddCategoryForm from './AddCategoryForm.tsx';
 import CategoryManagerItem from './CategoryManagerItem.tsx';
+import DeleteCategoryModal from './DeleteCategoryModal.tsx';
 import { useCategoryManager } from '../hooks/useCategoryManager.ts';
 import { useLongPressTooltip } from '../common/longPressTooltip/LongPressProvider.tsx';
 import { useLocalization } from '../localization/i18n.ts';
@@ -13,13 +15,14 @@ interface CategoryManagerProps {
     categories: Category[];
     onReorder: (sourceIndex: number, destinationIndex: number) => void;
     onAdd: (name: string) => void;
-    onDelete: (categoryId: string) => void;
+    onDelete: (categoryId: string, options?: DeleteCategoryOptions) => void;
     onUpdateCategoryName: (categoryId: string, newName: string) => void;
 }
 
 const CategoryManager: React.FC<CategoryManagerProps> = ({ title, categories, onReorder, onAdd, onDelete, onUpdateCategoryName }) => {
     const { t } = useLocalization();
     const [isCollapsed, setIsCollapsed] = useState(true);
+    const [categoryPendingDelete, setCategoryPendingDelete] = useState<Category | null>(null);
     const {
         draggingIndex,
         dragOverIndex,
@@ -53,6 +56,30 @@ const CategoryManager: React.FC<CategoryManagerProps> = ({ title, categories, on
             // after the item currently at index 2. This is equivalent to inserting
             // it before the item that will be at index 3 in the final list.
             onReorder(index, index + 2);
+        }
+    };
+
+    const handleDeleteCategoryClick = (categoryId: string) => {
+        const category = categories.find(c => c.id === categoryId);
+        if (!category) return;
+        if (category.itemIds.length === 0) {
+            onDelete(categoryId);
+        } else {
+            setCategoryPendingDelete(category);
+        }
+    };
+
+    const handleConfirmMove = (targetCategoryId: string) => {
+        if (categoryPendingDelete) {
+            onDelete(categoryPendingDelete.id, { action: 'move', targetCategoryId });
+            setCategoryPendingDelete(null);
+        }
+    };
+
+    const handleConfirmDeleteAll = () => {
+        if (categoryPendingDelete) {
+            onDelete(categoryPendingDelete.id, { action: 'deleteItems' });
+            setCategoryPendingDelete(null);
         }
     };
 
@@ -108,7 +135,7 @@ const CategoryManager: React.FC<CategoryManagerProps> = ({ title, categories, on
                                         onSaveEdit={handleSaveEdit}
                                         onCancelEdit={handleCancelEdit}
                                         onEditClick={handleEditClick}
-                                        onDelete={onDelete}
+                                        onDelete={handleDeleteCategoryClick}
                                         onMoveUp={() => handleMoveUp(index)}
                                         onMoveDown={() => handleMoveDown(index)}
                                         isFirst={index === 0}
@@ -136,6 +163,14 @@ const CategoryManager: React.FC<CategoryManagerProps> = ({ title, categories, on
                     </div>
                 </div>
             )}
+            <DeleteCategoryModal
+                isOpen={!!categoryPendingDelete}
+                category={categoryPendingDelete}
+                availableCategories={categories.filter(c => categoryPendingDelete && c.id !== categoryPendingDelete.id)}
+                onClose={() => setCategoryPendingDelete(null)}
+                onConfirmMove={handleConfirmMove}
+                onConfirmDeleteAll={handleConfirmDeleteAll}
+            />
         </section>
     );
 };

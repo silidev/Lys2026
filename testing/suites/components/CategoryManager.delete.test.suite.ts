@@ -1,7 +1,3 @@
-
-
-
-
 import React from 'react';
 import { render } from '@testing-library/react';
 import { screen } from '@testing-library/dom';
@@ -47,11 +43,20 @@ const testEnablesDeleteForEmpty = async (user: User) => {
     assertEquals(deleteButton.disabled, false, "Delete button for empty category should be enabled");
 };
 
-const testDisablesDeleteForNonEmpty = async (user: User) => {
+const testEnablesDeleteForNonEmpty = async (user: User) => {
     renderWithProvider(React.createElement(CategoryManager, getProps()));
     await user.click(screen.getByRole('heading', { name: /delete test category manager/i }));
     const deleteButton = screen.getByRole('button', { name: en.categoryManagerItem.aria.delete.replace('{0}', 'Full Category') }) as HTMLButtonElement;
-    assertEquals(deleteButton.disabled, true, "Delete button for non-empty category should be disabled");
+    assertEquals(deleteButton.disabled, false, "Delete button for non-empty category should be enabled to open options dialog");
+};
+
+const testOpensDeleteOptionsModalForNonEmpty = async (user: User) => {
+    renderWithProvider(React.createElement(CategoryManager, getProps()));
+    await user.click(screen.getByRole('heading', { name: /delete test category manager/i }));
+    const deleteButton = screen.getByRole('button', { name: en.categoryManagerItem.aria.delete.replace('{0}', 'Full Category') });
+    await user.click(deleteButton);
+    const modalTitle = screen.getByRole('heading', { name: /delete category "full category"/i });
+    assertEquals(!!modalTitle, true, "Delete options modal should open when clicking delete on non-empty category");
 };
 
 const testCallsOnDelete = async (user: User) => {
@@ -60,14 +65,15 @@ const testCallsOnDelete = async (user: User) => {
     await user.click(screen.getByRole('heading', { name: /delete test category manager/i }));
     const deleteButton = screen.getByRole('button', { name: en.categoryManagerItem.aria.delete.replace('{0}', 'Empty Category') });
     await user.click(deleteButton);
-    assertEquals(onDelete.calledOnceWith('sec-empty'), true, "onDelete should be called with the correct category ID");
+    assertEquals(onDelete.calledOnceWith('sec-empty'), true, "onDelete should be called with the correct category ID for empty category");
 };
 
 export function categoryManagerDeleteTestSuite() {
     const SUITE_NAME = categoryManagerDeleteTestSuite.name;
     return [
         runComponentTest('CategoryManager Delete: enables delete button for empty categories', testEnablesDeleteForEmpty, SUITE_NAME, FILE_PATH),
-        runComponentTest('CategoryManager Delete: disables delete button for non-empty categories', testDisablesDeleteForNonEmpty, SUITE_NAME, FILE_PATH),
-        runComponentTest('CategoryManager Delete: calls onDelete with category id when delete button is clicked', testCallsOnDelete, SUITE_NAME, FILE_PATH),
+        runComponentTest('CategoryManager Delete: enables delete button for non-empty categories', testEnablesDeleteForNonEmpty, SUITE_NAME, FILE_PATH),
+        runComponentTest('CategoryManager Delete: opens options dialog when deleting non-empty category', testOpensDeleteOptionsModalForNonEmpty, SUITE_NAME, FILE_PATH),
+        runComponentTest('CategoryManager Delete: calls onDelete with category id when delete button is clicked on empty category', testCallsOnDelete, SUITE_NAME, FILE_PATH),
     ];
 }

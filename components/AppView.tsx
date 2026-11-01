@@ -1,6 +1,7 @@
 const FILE_PATH = 'components/AppView.tsx';
 import React from 'react';
 import type { ViewMode, ShoppingListData, ShoppingListItem, Category, ItemLocation } from '../types.ts';
+import type { DeleteCategoryOptions } from '../common/services/categoryService.ts';
 import type { Theme } from '../hooks/useTheme.ts';
 import Header from './Header.tsx';
 import SettingsModal from './SettingsModal.tsx';
@@ -71,7 +72,7 @@ interface AppViewProps {
     handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     handleReorderCategory: (sourceIndex: number, destinationIndex: number, mode: ViewMode) => void;
     handleAddCategory: (name: string, mode: ViewMode) => void;
-    handleDeleteCategory: (categoryId: string, mode: ViewMode) => void;
+    handleDeleteCategory: (categoryId: string, mode: ViewMode, options?: DeleteCategoryOptions) => void;
     handleUpdateCategoryName: (categoryId: string, newName: string, mode: ViewMode) => void;
     handleAddCategoryAndMoveItem: (newCategoryName: string, itemId: string, mode: ViewMode) => void;
     handleCopyMarkdownToClipboard: () => void;

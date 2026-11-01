@@ -103,10 +103,10 @@ const CategoryManagerItem: React.FC<CategoryManagerItemProps> = ({
                 <button
                     id={`delete-category-button-${category.id}`}
                     onClick={() => onDelete(category.id)}
-                    disabled={category.itemIds.length > 0 || isProtected}
+                    disabled={isProtected}
                     className="p-1.5 rounded-full text-gray-400 hover:text-red-500 hover:bg-red-100 dark:hover:bg-red-900/50 focus:outline-none focus:ring-2 focus:ring-red-500 disabled:opacity-30 disabled:cursor-not-allowed"
                     aria-label={t('categoryManagerItem.aria.delete', category.name)}
-                    title={category.itemIds.length > 0 ? t('categoryManagerItem.tooltips.deleteDisabledItems') : isProtected ? t('categoryManagerItem.tooltips.deleteDisabledProtected', category.name) : t('categoryManagerItem.tooltips.delete')}
+                    title={isProtected ? t('categoryManagerItem.tooltips.deleteDisabledProtected', category.name) : (category.itemIds.length > 0 ? t('categoryManagerItem.tooltips.deleteNonEmpty', category.name) : t('categoryManagerItem.tooltips.delete'))}
                     {...longPressHandlers}
                 >
                     <IconTrash className="h-4 w-4" />

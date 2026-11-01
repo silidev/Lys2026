@@ -24,6 +24,7 @@ const getBaseProps = (overrides = {}) => ({
   onUpdateItemAmount: () => {},
   onToggleItemCompleted: () => {},
   onDeleteItem: () => {},
+  onCloneItem: () => {},
   onMoveItemToCategory: () => {},
   onUpdateItem: () => {},
   onUpdateCategoryName: () => {},

@@ -78,23 +78,124 @@ export const addCategory = (data: ShoppingListData, name: string, modeToAdd: Vie
     };
 };
 
-export const deleteCategory = (data: ShoppingListData, categoryId: string, modeToDelete: ViewMode): ShoppingListData => {
+export interface DeleteCategoryOptions {
+    action: 'move' | 'deleteItems';
+    targetCategoryId?: string;
+}
+
+export const deleteCategory = (
+    data: ShoppingListData,
+    categoryId: string,
+    modeToDelete: ViewMode,
+    options?: DeleteCategoryOptions
+): ShoppingListData => {
     const categoriesKey = modeToDelete === 'shop' ? 'shopCategories' : 'homeCategories';
+    const otherKey = modeToDelete === 'shop' ? 'homeCategories' : 'shopCategories';
     const categories = data[categoriesKey];
 
     const categoryToDelete = categories.find(s => s.id === categoryId);
-    if (!categoryToDelete || categoryToDelete.itemIds.length > 0) {
-        console.warn(`Attempted to delete category ${categoryId} which is not empty or not found.`);
+    if (!categoryToDelete) {
+        console.warn(`Attempted to delete category ${categoryId} which is not found.`);
         return data;
     }
 
-    const newCategories = categories.filter(s => s.id !== categoryId);
+    // If category has no items, standard delete
+    if (categoryToDelete.itemIds.length === 0) {
+        return {
+            ...data,
+            [categoriesKey]: categories.filter(s => s.id !== categoryId),
+        };
+    }
 
-    return {
-        ...data,
-        [categoriesKey]: newCategories,
-    };
+    // Category has items: check options
+    if (!options) {
+        console.warn(`Attempted to delete category ${categoryId} which is not empty, but no delete options were provided.`);
+        return data;
+    }
+
+    if (options.action === 'move') {
+        const itemsToMove = categoryToDelete.itemIds;
+        const targetId = options.targetCategoryId;
+
+        let targetCategory = targetId
+            ? categories.find(c => c.id === targetId && c.id !== categoryId)
+            : undefined;
+
+        if (!targetCategory) {
+            targetCategory = categories.find(c => c.name.toLowerCase() === 'uncategorized' && c.id !== categoryId);
+        }
+
+        let newCategories: Category[];
+        if (targetCategory) {
+            const foundTargetId = targetCategory.id;
+            newCategories = categories
+                .filter(c => c.id !== categoryId)
+                .map(c => {
+                    if (c.id === foundTargetId) {
+                        const existingSet = new Set(c.itemIds);
+                        const toAdd = itemsToMove.filter(id => !existingSet.has(id));
+                        return { ...c, itemIds: [...c.itemIds, ...toAdd] };
+                    }
+                    return c;
+                });
+        } else {
+            // Target category doesn't exist, create "Uncategorized"
+            const newUncategorized: Category = {
+                id: crypto.randomUUID(),
+                name: 'Uncategorized',
+                itemIds: [...itemsToMove],
+            };
+            newCategories = [newUncategorized, ...categories.filter(c => c.id !== categoryId)];
+        }
+
+        return {
+            ...data,
+            [categoriesKey]: newCategories,
+        };
+    }
+
+    if (options.action === 'deleteItems') {
+        const itemIdsToDelete = new Set(categoryToDelete.itemIds);
+        const newItems = data.items.filter(item => !itemIdsToDelete.has(item.id));
+        const newOtherCategories = data[otherKey].map(c => ({
+            ...c,
+            itemIds: c.itemIds.filter(id => !itemIdsToDelete.has(id)),
+        }));
+        const newCategories = categories
+            .filter(c => c.id !== categoryId)
+            .map(c => ({
+                ...c,
+                itemIds: c.itemIds.filter(id => !itemIdsToDelete.has(id)),
+            }));
+
+        return {
+            ...data,
+            items: newItems,
+            [categoriesKey]: newCategories,
+            [otherKey]: newOtherCategories,
+        };
+    }
+
+    return data;
 };
+
+export const deleteCategoryAndMoveItems = (
+    data: ShoppingListData,
+    categoryId: string,
+    targetCategoryId: string,
+    modeToDelete: ViewMode
+): ShoppingListData => {
+    return deleteCategory(data, categoryId, modeToDelete, { action: 'move', targetCategoryId });
+};
+
+export const deleteCategoryAndItems = (
+    data: ShoppingListData,
+    categoryId: string,
+    modeToDelete: ViewMode
+): ShoppingListData => {
+    return deleteCategory(data, categoryId, modeToDelete, { action: 'deleteItems' });
+};
+
 
 export const getVisibleCategories = (
     categories: Category[],

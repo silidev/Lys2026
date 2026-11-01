@@ -276,9 +276,30 @@ export const en = {
             editIcon: "Edit the name of this category. The 'Uncategorized' category cannot be renamed.",
             deleteDisabledItems: 'Cannot delete category with items.',
             deleteDisabledProtected: 'Cannot delete the "{0}" category.',
-            delete: "Delete this category. A category can only be deleted if it is empty. 'Uncategorized' cannot be deleted.",
+            deleteNonEmpty: 'Delete category "{0}". Contains items - you will be asked to move or delete them.',
+            delete: "Delete this category. 'Uncategorized' cannot be deleted.",
             moveUp: 'Move this category one position up.',
             moveDown: 'Move this category one position down.',
+        }
+    },
+    deleteCategoryModal: {
+        title: 'Delete Category "{0}"',
+        message: 'This category contains {0} item(s). What would you like to do with these items?',
+        moveOptionTitle: 'Move items to another category (Recommended)',
+        selectCategory: 'Destination category:',
+        moveAndConfirm: 'Move items & delete category',
+        deleteOptionTitle: 'Or delete items as well (Destructive)',
+        deleteItemsWarning: 'This will permanently remove the category and all its {0} item(s) from your shopping list.',
+        deleteAndConfirm: 'Delete category and all items',
+        cancel: 'Cancel',
+        tooltips: {
+            targetSelect: 'Select which category to move the items to',
+            moveButton: 'Move all items to the selected category and remove this category',
+            deleteItemsButton: 'Permanently delete this category and all items inside it',
+            cancel: 'Cancel deletion and keep category and items unchanged',
+        },
+        aria: {
+            modal: 'Delete category options dialog',
         }
     },
     addCategoryForm: {

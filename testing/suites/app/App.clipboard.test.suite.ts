@@ -5,7 +5,7 @@ import { screen, waitFor } from '@testing-library/dom';
 import App from '../../../App.tsx';
 import { runComponentTest, type User } from '../../helpers.ts';
 import type { MockStorageService } from '../../mocks/storageService.mock.ts';
-import type { ShoppingListData } from '../../../types.ts';
+import type { ShoppingListData, ShoppingListItem } from '../../../types.ts';
 import { assertEquals } from '../../../common/testing/services/tests/helpers.ts';
 import { en } from '../../../localization/locales/en.ts';
 
