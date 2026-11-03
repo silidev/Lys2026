@@ -48,9 +48,9 @@ export const toggleItemCompleted = (data: ShoppingListData, id: string): Shoppin
                 const newAmount = isCompleted ? '1' : '0';
 
                 // If the item is being marked as completed, and it was a one-time urgent, uncheck the one-time urgent flag.
-                const newIsUrgentOnce = (newAmount === '0' && item.isRushOnce) ? false : item.isRushOnce;
+                const newIsUrgentOnce = (newAmount === '0' && item.isUrgentOnce) ? false : item.isUrgentOnce;
 
-                return { ...item, isRushOnce: newIsUrgentOnce, amount: newAmount };
+                return { ...item, isUrgentOnce: newIsUrgentOnce, amount: newAmount };
             }
             return item;
         }),
@@ -70,7 +70,7 @@ export const toggleItemUrgent = (data: ShoppingListData, id: string): ShoppingLi
     return {
         ...data,
         items: data.items.map(item =>
-            item.id === id ? { ...item, isRush: !item.isRush } : item
+            item.id === id ? { ...item, isUrgent: !item.isUrgent } : item
         ),
     };
 };
@@ -79,7 +79,7 @@ export const toggleItemUrgentOnce = (data: ShoppingListData, id: string): Shoppi
     return {
         ...data,
         items: data.items.map(item =>
-            item.id === id ? { ...item, isRushOnce: !item.isRushOnce } : item
+            item.id === id ? { ...item, isUrgentOnce: !item.isUrgentOnce } : item
         ),
     };
 };
@@ -97,7 +97,7 @@ export const resetPotentiallyUrgentItems = (data: ShoppingListData, isUrgentMode
     if (isUrgentMode) {
         const newItems = data.items.map(item => {
             const processedItem = { ...item, hideUntilReset: false };
-            if (item.isRush) {
+            if (item.isUrgent) {
                 const isCompleted = processedItem.amount === '0';
                 // If it's often needed (not defaultCompleted) and completed, reset to '1'
                 if (!item.defaultCompleted && isCompleted) {

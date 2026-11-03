@@ -129,11 +129,11 @@ const testToggleDefaultCompleted = () => {
 const testResetPotentiallyUrgentItemsWhenUrgentModeIsActive = () => {
     const data: ShoppingListData = {
         items: [
-            { id: '1', name: 'Milk', amount: '0', isRush: true }, // Urgent, Often needed, Completed -> Should become '1'
-            { id: '2', name: 'Bread', amount: '0', isRush: false }, // Not urgent -> Should not change
-            { id: '3', name: 'Eggs', amount: '1 dozen', isRush: true}, // Urgent, Not completed -> Should not change
-            { id: '4', name: 'Juice', amount: '2L', isRush: false }, // Not urgent -> Should not change
-            { id: '5', name: 'Yogurt', amount: '0', isRush: true, defaultCompleted: true }, // Urgent, Seldom needed, Completed -> Should stay '0'
+            { id: '1', name: 'Milk', amount: '0', isUrgent: true }, // Urgent, Often needed, Completed -> Should become '1'
+            { id: '2', name: 'Bread', amount: '0', isUrgent: false }, // Not urgent -> Should not change
+            { id: '3', name: 'Eggs', amount: '1 dozen', isUrgent: true}, // Urgent, Not completed -> Should not change
+            { id: '4', name: 'Juice', amount: '2L', isUrgent: false }, // Not urgent -> Should not change
+            { id: '5', name: 'Yogurt', amount: '0', isUrgent: true, defaultCompleted: true }, // Urgent, Seldom needed, Completed -> Should stay '0'
         ],
         shopCategories: [], homeCategories: [],
     };

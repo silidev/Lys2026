@@ -73,8 +73,8 @@ interface ShoppingListItem {
   nameExport?: string;
   amount?: string;
   defaultCompleted?: boolean;
-  isRush?: boolean;
-  isRushOnce?: boolean;
+  isUrgent?: boolean;
+  isUrgentOnce?: boolean;
   hideUntilReset?: boolean;
 }
 
@@ -97,6 +97,19 @@ compatibility for older backup formats:
 - `OldShoppingListDataWithOrder` (`shoppingOrder`, `homeOrder`)
 - `OldShoppingListDataWithSections` (`shopSections`, `homeSections`)
 See `/common/services/backupService.ts` for migration helpers.
+
+### Backup Scope & View Filters (Intended Behavior)
+- Backups intentionally serialize ONLY `ShoppingListData`
+  (`items`, `shopCategories`, `homeCategories`).
+- Filter and view settings (e.g., `shopping-list-show-only-urgent`,
+  `shopping-list-show-only-default-completed`,
+  `shopping-list-hide-completed`) are intentionally NOT
+  saved into backups.
+- Consequently, if an item is hidden in the UI due to an
+  active filter or view setting when a backup is created,
+  restoring that backup into a fresh app instance (where
+  filters are reset to defaults) will show that item again.
+  This behavior is explicitly intended and by design.
 
 ---
 

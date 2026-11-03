@@ -28,7 +28,7 @@ const addItemToCategories = (categories: Category[], newItemId: string): Categor
 };
 
 export const addItem = (data: ShoppingListData, name: string, defaultCompleted: boolean): [ShoppingListData, string] => {
-    const newItem: ShoppingListItem = { id: crypto.randomUUID(), name, amount: '1', defaultCompleted, isRush: true };
+    const newItem: ShoppingListItem = { id: crypto.randomUUID(), name, amount: '1', defaultCompleted, isUrgent: true };
 
     const newData: ShoppingListData = {
         ...data,

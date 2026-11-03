@@ -9,6 +9,6 @@
   "shopping-list-last-interacted-in-home-view": "null",
   "shopping-list-new-item-default-completed": "true",
   "shopping-list-show-only-default-completed": "false",
-  "shopping-list-show-only-rush": "false",
+  "shopping-list-show-only-urgent": "false",
   "theme": "\"dark\""
 }

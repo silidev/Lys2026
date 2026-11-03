@@ -1,38 +1,59 @@
 # Bug Analysis & Unit Test Plan: Unexpected One-Time Items Appearing After Backup Restore
 
 ## Summary
-Identify and reproduce the bug where one-time items (marked with `defaultCompleted: true` / "Seldom needed") that were not visible in the application when a backup was created unexpectedly appear in both Shop and Home views (specifically under the "Seldom needed" section in Home view) after restoring the backup into an empty or existing app.
+Identify and reproduce the bug where one-time items (marked with `defaultCompleted: true` / "Seldom needed") that were not visible in the application when a backup was created appear in both Shop and Home views (specifically under the "Seldom needed" section in Home view) after restoring the backup into an empty or existing app.
 
 ---
 
-## User Review & Critical Decisions
+## Confirmed Behavior & Architectural Invariants
 
 > [!NOTE]
-> **Resolved Dev Server Crash**: Fixed `TypeError: Cannot read properties of undefined (reading 'send')` by disabling `devOptions` in `VitePWA` in `vite.config.ts`, ensuring compatibility with the WebSocket-free development environment.
+> **Filters and Backup (Explicitly Intended Behavior)**:
+> As explicitly confirmed by the user, filter and view settings (`shopping-list-show-only-urgent`, `shopping-list-show-only-default-completed`, `shopping-list-hide-completed`) intentionally do **NOT** belong in backups. Items hidden purely by an active UI filter are expected and intended to reappear when restored into a fresh instance. This invariant has also been documented in `agents.md`.
+
+> [!NOTE]
+> **Naming Invariant**:
+> The term "rush" has been retired. The feature is named "urgent" everywhere across code, tests, documentation, and types.
 
 > [!IMPORTANT]
-> **No Production Code Change Without Explicit Order**: As requested in project guidelines, we will first verify the exact behavior by writing isolated unit tests covering the backup/restore logic and visibility filters. Production code will only be modified upon your explicit review and instruction.
-
-- **Confirmed Observation 1**: The unexpected items appear in both Shop and Home view (in Home view, in the "Seldom needed" section).
-- **Confirmed Observation 2**: The items have `amount: '1'` (they are not checked off with amount 0).
-- **Primary Root Cause Vector**: 
-  1. The regular backup mechanism (`handleBackup`) serializes only `ShoppingListData` (`items`, `shopCategories`, `homeCategories`). It does **not** back up `localStorage` filter/view settings (`shopping-list-show-only-rush`, `shopping-list-show-only-default-completed`, `shopping-list-hide-completed`). If items were hidden on-screen due to an active filter or view-specific category when the backup was taken, restoring the backup into a default state (where filters are reset) causes them to immediately appear.
-  2. In `ItemEditModal`, items with `defaultCompleted: true` have the Home Category move button disabled (`{advancedMode && !item.defaultCompleted && ...}`), preventing users from assigning or moving seldom-needed items to "Remove from this view" in the Home view.
-  3. Category synchronization asymmetry: An item moved to "Remove from this view" in Shop view is hidden from Shop view, but remains assigned to its Home category (appearing in "Seldom needed").
+> **No Production Code Change Without Explicit Order**:
+> Per project guidelines, we will first verify the exact behavior by writing isolated unit tests covering the backup/restore logic and visibility filters. Production code will only be modified upon explicit user review and instruction.
 
 ---
 
-## 1. Bug Mechanism & Diagnostic Architecture
+## 1. Bug Diagnostic Architecture & Hypotheses
+
+The user noted:
+- The unexpected items appear in both Shop and Home view (in Home view, in the "Seldom needed" section).
+- The items have `amount: '1'` (they are not checked off with amount `0`).
+- They were not visible when the backup was taken.
+
+Given that filter settings intentionally do NOT belong in backups, what mechanisms could cause an item with `amount: '1'` to be hidden before backup, and visible after restore?
+
+### Diagnostic Vectors
+1. **`hideUntilReset` Persistence**:
+   - In `ShoppingList.tsx` / `categoryService.ts`: Items with `hideUntilReset: true` are excluded from view via `getVisibleCategories`.
+   - If an item was hidden via `hideUntilReset: true`, is `hideUntilReset` saved in the backup?
+   - In `types.ts`, `ShoppingListItem` defines `hideUntilReset?: boolean;`.
+   - If `hideUntilReset` is in the backup, does restore preserve it or does anything clear it?
+2. **"Remove from this view" Asymmetry**:
+   - An item can be assigned to `REMOVE_FROM_VIEW_CATEGORY_NAME` in `shopCategories` or `homeCategories`.
+   - In `ItemEditModal`, items with `defaultCompleted: true` have the Home Category move button disabled (`{advancedMode && !item.defaultCompleted && ...}`), preventing users from easily removing seldom-needed items from the Home view.
+   - If an item was removed from Shop view, it is hidden from Shop view, but still present in its Home category (rendered in "Seldom needed").
+3. **One-Time Item Lifecycle (`defaultCompleted: true`)**:
+   - When a seldom needed item is added or reset, its amount is `0` or `undefined` or `1`.
+   - If `amount: '1'`, it is treated as needed (uncompleted).
+   - In Home view, items with `defaultCompleted: true` and `amount !== '0'` appear in the `seldomNeededItems` section at the bottom.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                       Original App State                    │
 ├─────────────────────────────────────────────────────────────┤
-│ • Item created with defaultCompleted: true, amount: '1'     │
+│ • Item: defaultCompleted: true, amount: '1'                 │
 │ • Hidden from screen via:                                   │
-│   - View filter (e.g., Rush/Urgent mode filter)             │
-│   - OR moved to 'Remove from this view' in Shop view only   │
-│   - OR hideUntilReset flag                                  │
+│   - hideUntilReset flag (temporary hide)                    │
+│   - OR category assignment (e.g. Remove from this view)     │
+│   - OR active search / filter state                         │
 └──────────────────────────────┬──────────────────────────────┘
                                │
                        [ Backup Now ]
@@ -41,9 +62,8 @@ Identify and reproduce the bug where one-time items (marked with `defaultComplet
 ┌─────────────────────────────────────────────────────────────┐
 │                      lys-backup.json                        │
 ├─────────────────────────────────────────────────────────────┤
-│ Contains raw items:                                         │
-│   { id, name, amount: '1', defaultCompleted: true }         │
-│ Does NOT contain: filter settings (showOnlyRush, etc.)     │
+│ Serializes items, shopCategories, homeCategories            │
+│ Filters are omitted by design                               │
 └──────────────────────────────┬──────────────────────────────┘
                                │
                      [ Restore from File ]
@@ -52,24 +72,26 @@ Identify and reproduce the bug where one-time items (marked with `defaultComplet
 ┌─────────────────────────────────────────────────────────────┐
 │                      Restored App State                     │
 ├─────────────────────────────────────────────────────────────┤
-│ • Fresh localStorage: showOnlyRush=false, showOnlySeldom=false│
-│ • Home View: Item rendered in 'Seldom needed' section!      │
-│ • Shop View: Item rendered in its Category!                 │
-└──────────────────────────────┘
+│ • Restores raw items & categories                           │
+│ • If hideUntilReset was present, does it persist?           │
+│ • If removed from Shop view, Home view still displays it!   │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 2. Proposed Unit Test Suite
+## 2. Unit Test Suite Plan
 
-We will add a dedicated unit test suite in `testing/suites/services/backupService.test.suite.ts` adhering to all project requirements:
+We will add a dedicated unit test suite in `testing/suites/services/backupService.test.suite.ts`:
 
-1. **Test 1: Backup & Restore Data Integrity for One-Time Items**:
-   - Verify what properties of `ShoppingListItem` (including `amount`, `defaultCompleted`, `hideUntilReset`, `isRush`) are preserved across JSON serialization and deserialization.
-2. **Test 2: View Visibility Discrepancy on Restore**:
-   - Verify that an item with `defaultCompleted: true` and `amount: '1'` is filtered out when special filters or view categories are applied, but becomes visible in `getVisibleCategories` and `seldomNeededItems` once restored into standard view mode.
-3. **Test 3: Category Asymmetry Between Views**:
-   - Test item present in `shopCategories` under `REMOVE_FROM_VIEW_CATEGORY_NAME` but present in `homeCategories` under `Uncategorized`, verifying that it remains visible in Home view under `seldomNeededItems`.
+1. **Test 1: JSON Serialization & Property Preservation**:
+   - Verify that all properties of `ShoppingListItem` (`amount`, `defaultCompleted`, `hideUntilReset`, `isUrgent`, `isUrgentOnce`) serialize and deserialize cleanly through `backupService.createBackupJson` and `backupService.parseBackupJson`.
+2. **Test 2: `hideUntilReset` Lifecycle Across Backup/Restore**:
+   - Verify whether an item hidden with `hideUntilReset: true` and `amount: '1'` maintains its hidden status after backup and restore.
+3. **Test 3: Home & Shop View Visibility for Restored Seldom-Needed Items**:
+   - Verify how `getVisibleCategories` and the `seldomNeededItems` logic in Home view treat restored items with `defaultCompleted: true` and `amount: '1'`.
+4. **Test 4: View-Specific Removal Asymmetry**:
+   - Verify behavior when an item is in `REMOVE_FROM_VIEW_CATEGORY_NAME` in `shopCategories` but in an active category in `homeCategories`.
 
 ---
 
@@ -78,8 +100,8 @@ We will add a dedicated unit test suite in `testing/suites/services/backupServic
 - Every new file begins with:
   `const FILE_PATH = '<relative_path>';`
 - Line wrapping at column ~60.
-- Strict TypeScript types (no `any`, no `unknown`).
+- Strict TypeScript types (no `any`, avoid `unknown`).
 - All assertions use `assertEquals(actual, expected, message)`.
 - Test failure logs report test name, file name, and path.
-- Separation of concerns: Test code strictly in separate files from production code.
+- Separation of concerns: Test code strictly separated from production code.
 - No production code modified without explicit order.

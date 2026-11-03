@@ -7,8 +7,8 @@
       "completed": false,
       "amount": "1",
       "defaultCompleted": false,
-      "isRush": false,
-      "isRushOnce": false
+      "isUrgent": false,
+      "isUrgentOnce": false
     },
     {
       "id": "ref-item-2",
@@ -17,8 +17,8 @@
       "completed": true,
       "amount": "2kg",
       "defaultCompleted": true,
-      "isRush": true,
-      "isRushOnce": false
+      "isUrgent": true,
+      "isUrgentOnce": false
     }
   ],
   "shopCategories": [

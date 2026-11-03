@@ -330,7 +330,7 @@ export const en = {
         enableSplitItemNames: 'Enable different item names in Home and Shop view',
         checkOnReset: 'Check "Seldom needed" for new items',
         tooltips: {
-            advancedMode: 'Enable advanced features like developer tools, Rush mode, and more.',
+            advancedMode: 'Enable advanced features like developer tools, Urgent mode, and more.',
             enableSplitItemNames: 'Instead of one item name field, two will be shown, for Home and Shop view',
             checkOnReset: "When enabled, any new item you add will have its 'Seldom needed' option turned on by default. Useful for items you buy regularly.",
         }

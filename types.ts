@@ -7,8 +7,8 @@ export interface ShoppingListItem {
   nameExport?: string;
   amount?: string;
   defaultCompleted?: boolean;
-  isRush?: boolean;
-  isRushOnce?: boolean;
+  isUrgent?: boolean;
+  isUrgentOnce?: boolean;
   hideUntilReset?: boolean;
 }
 

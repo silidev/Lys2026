@@ -106,8 +106,8 @@ const testCopyMarkdownAllCombinations = async (user: User, mockStorage: MockStor
     
     const amounts = [undefined, '0', '2'];
     const nameShops = [undefined, 'Shop Name'];
-    const isRushes = [false, true];
-    const isRushOnces = [false, true];
+    const isUrgents = [false, true];
+    const isUrgentOnces = [false, true];
     const defaultCompleteds = [false, true];
     const hideUntilResets = [false, true];
     const aliases = [undefined, 'Alias'];
@@ -117,8 +117,8 @@ const testCopyMarkdownAllCombinations = async (user: User, mockStorage: MockStor
 
     for (const amount of amounts) {
         for (const nameShop of nameShops) {
-            for (const isRush of isRushes) {
-                for (const isRushOnce of isRushOnces) {
+            for (const isUrgent of isUrgents) {
+                for (const isUrgentOnce of isUrgentOnces) {
                     for (const defaultCompleted of defaultCompleteds) {
                         for (const hideUntilReset of hideUntilResets) {
                             for (const alias of aliases) {
@@ -129,8 +129,8 @@ const testCopyMarkdownAllCombinations = async (user: User, mockStorage: MockStor
                                         name: `Item ${id}`,
                                         amount,
                                         nameShop,
-                                        isRush,
-                                        isRushOnce,
+                                        isUrgent,
+                                        isUrgentOnce,
                                         defaultCompleted,
                                         hideUntilReset,
                                         alias,
@@ -194,8 +194,8 @@ const testCopyUncheckedAllCombinations = async (user: User, mockStorage: MockSto
     
     const amounts = [undefined, '0', '2'];
     const nameShops = [undefined, 'Shop Name'];
-    const isRushes = [false, true];
-    const isRushOnces = [false, true];
+    const isUrgents = [false, true];
+    const isUrgentOnces = [false, true];
     const defaultCompleteds = [false, true];
     const hideUntilResets = [false, true];
     const aliases = [undefined, 'Alias'];
@@ -205,8 +205,8 @@ const testCopyUncheckedAllCombinations = async (user: User, mockStorage: MockSto
 
     for (const amount of amounts) {
         for (const nameShop of nameShops) {
-            for (const isRush of isRushes) {
-                for (const isRushOnce of isRushOnces) {
+            for (const isUrgent of isUrgents) {
+                for (const isUrgentOnce of isUrgentOnces) {
                     for (const defaultCompleted of defaultCompleteds) {
                         for (const hideUntilReset of hideUntilResets) {
                             for (const alias of aliases) {
@@ -217,8 +217,8 @@ const testCopyUncheckedAllCombinations = async (user: User, mockStorage: MockSto
                                         name: `Item ${id}`,
                                         amount,
                                         nameShop,
-                                        isRush,
-                                        isRushOnce,
+                                        isUrgent,
+                                        isUrgentOnce,
                                         defaultCompleted,
                                         hideUntilReset,
                                         alias,
@@ -282,8 +282,8 @@ const testCopyMarkdownAllCombinationsHideCompleted = async (user: User, mockStor
     
     const amounts = [undefined, '0', '2'];
     const nameShops = [undefined, 'Shop Name'];
-    const isRushes = [false, true];
-    const isRushOnces = [false, true];
+    const isUrgents = [false, true];
+    const isUrgentOnces = [false, true];
     const defaultCompleteds = [false, true];
     const hideUntilResets = [false, true];
     const aliases = [undefined, 'Alias'];
@@ -293,8 +293,8 @@ const testCopyMarkdownAllCombinationsHideCompleted = async (user: User, mockStor
 
     for (const amount of amounts) {
         for (const nameShop of nameShops) {
-            for (const isRush of isRushes) {
-                for (const isRushOnce of isRushOnces) {
+            for (const isUrgent of isUrgents) {
+                for (const isUrgentOnce of isUrgentOnces) {
                     for (const defaultCompleted of defaultCompleteds) {
                         for (const hideUntilReset of hideUntilResets) {
                             for (const alias of aliases) {
@@ -305,8 +305,8 @@ const testCopyMarkdownAllCombinationsHideCompleted = async (user: User, mockStor
                                         name: `Item ${id}`,
                                         amount,
                                         nameShop,
-                                        isRush,
-                                        isRushOnce,
+                                        isUrgent,
+                                        isUrgentOnce,
                                         defaultCompleted,
                                         hideUntilReset,
                                         alias,

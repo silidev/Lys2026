@@ -177,8 +177,8 @@ const testToggleDefaultCompletedAction = async (user: User) => {
 const testToggleItemUrgentAction = async (user: User) => {
     // ARRANGE: Set up test data and spies
     const onToggleUrgentSpy = sinon.spy();
-    const initialItem = { ...mockItem, isRush: false }; // Start with non-urgent item
-    const updatedItem = { ...mockItem, isRush: true };  // Expected state after toggle
+    const initialItem = { ...mockItem, isUrgent: false }; // Start with non-urgent item
+    const updatedItem = { ...mockItem, isUrgent: true };  // Expected state after toggle
     
     const initialProps = getProps({
         item: initialItem,

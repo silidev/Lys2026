@@ -76,7 +76,7 @@ const ItemEditModal: React.FC<ItemEditModalProps> = ({
   const [alias, setAlias] = useState(item.alias || '');
   const [nameExport, setNameExport] = useState(item.nameExport || '');
   const [amount, setAmount] = useState(item.amount || '');
-  const [isRushOnce, setIsRushOnce] = useState(!!item.isRushOnce);
+  const [isUrgentOnce, setIsUrgentOnce] = useState(!!item.isUrgentOnce);
   const [hideUntilReset, setHideUntilReset] = useState(!!item.hideUntilReset);
   const [isNameFullscreen, setIsNameFullscreen] = useState(false);
   const [isConfirmDeleteOpen, setIsConfirmDeleteOpen] = useState(false);
@@ -105,7 +105,7 @@ const ItemEditModal: React.FC<ItemEditModalProps> = ({
         setAlias(item.alias || '');
         setNameExport(item.nameExport || '');
         setAmount(item.amount || '');
-        setIsRushOnce(!!item.isRushOnce);
+        setIsUrgentOnce(!!item.isUrgentOnce);
         setHideUntilReset(!!item.hideUntilReset);
         nameInputRef.current?.focus();
         nameInputRef.current?.select();
@@ -130,7 +130,7 @@ const ItemEditModal: React.FC<ItemEditModalProps> = ({
         }
     }
 
-    if (isRushOnce !== !!item.isRushOnce) {
+    if (isUrgentOnce !== !!item.isUrgentOnce) {
         onToggleItemUrgentOnce(item.id);
     }
     if (hideUntilReset !== !!item.hideUntilReset) {
@@ -287,7 +287,7 @@ const ItemEditModal: React.FC<ItemEditModalProps> = ({
                             id="is-urgent-checkbox"
                             data-testid="item-edit-urgent-checkbox"
                             type="checkbox"
-                            checked={!!item.isRush}
+                            checked={!!item.isUrgent}
                             onChange={() => onToggleItemUrgent(item.id)}
                             className="h-5 w-5 rounded border-gray-300 dark:border-gray-600 text-orange-600 focus:ring-orange-500 cursor-pointer"
                             {...longPressHandlers}
@@ -307,8 +307,8 @@ const ItemEditModal: React.FC<ItemEditModalProps> = ({
                               id="is-urgent-once-checkbox"
                               data-testid="item-edit-urgent-once-checkbox"
                               type="checkbox"
-                              checked={isRushOnce}
-                              onChange={(e) => setIsRushOnce(e.target.checked)}
+                              checked={isUrgentOnce}
+                              onChange={(e) => setIsUrgentOnce(e.target.checked)}
                               className="h-5 w-5 rounded border-gray-300 dark:border-gray-600 text-orange-600 focus:ring-orange-500 cursor-pointer"
                               {...longPressHandlers}
                               title={t('itemEditModal.tooltips.urgentThisTime')}

@@ -1,4 +1,10 @@
 const FILE_PATH = 'common/services/backupService.ts';
+// Architectural Note: Backups intentionally contain ONLY core
+// ShoppingListData (items, shopCategories, homeCategories).
+// Transient UI view filter settings (e.g. showOnlyUrgent,
+// showOnlyDefaultCompleted, hideCompleted) are deliberately
+// excluded from backups so that items hidden by filters
+// reappear upon restore into a fresh instance. This is by design.
 import { ShoppingListItem, ShoppingListData, OldShoppingListDataWithOrder, OldShoppingListDataWithSections } from '../../types';
 
 export const isShoppingListItem = (obj: unknown): obj is ShoppingListItem => {

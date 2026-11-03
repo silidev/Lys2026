@@ -27,7 +27,7 @@ const testAddItem = () => {
     assertEquals(newData.items.length, 1);
     assertEquals(newData.items[0].name, 'Cheese');
     assertEquals(newData.items[0].id, newItemId);
-    assertEquals(newData.items[0].isRush, true, "New items should be urgent by default");
+    assertEquals(newData.items[0].isUrgent, true, "New items should be urgent by default");
 
     assertEquals(newData.shopCategories[0].itemIds.includes(newItemId), true, "New item should be in shop category");
     assertEquals(newData.homeCategories[0].itemIds.includes(newItemId), true, "New item should be in home category");

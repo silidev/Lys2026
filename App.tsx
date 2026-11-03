@@ -27,7 +27,10 @@ const AppContent: React.FC = () => {
   const [mode, setMode] = useState<ViewMode>('home');
   const [backupIntervalHours, setBackupIntervalHours] = useLocalStorage<number>('shopping-list-autobackup-interval-h', 24);
   const [hideCompleted, setHideCompleted] = useLocalStorage<boolean>('shopping-list-hide-completed', true);
-  const [showOnlyUrgent, setShowOnlyUrgent] = useLocalStorage<boolean>('shopping-list-show-only-rush', false);
+  const [showOnlyUrgent, setShowOnlyUrgent] = useLocalStorage<boolean>(
+    'shopping-list-show-only-urgent',
+    false
+  );
   const [showOnlyDefaultCompleted, setShowOnlyDefaultCompleted] = useLocalStorage<boolean>('shopping-list-show-only-default-completed', false);
   const [newItemDefaultCompleted, setNewItemDefaultCompleted] = useLocalStorage<boolean>('shopping-list-new-item-default-completed', true);
   const [advancedMode, setAdvancedMode] = useLocalStorage<boolean>('shopping-list-advanced-mode', AppConfig.DevMode);
@@ -197,8 +200,12 @@ const AppContent: React.FC = () => {
         }
 
         if (dataToRestore) {
-            // Migrate items from old `completed` boolean to new `amount` system
-            dataToRestore.items = dataToRestore.items.map((item: any) => {
+            // Migrate items from old formats to new format
+            interface LegacyItem extends ShoppingListItem {
+                completed?: boolean;
+            }
+            dataToRestore.items = dataToRestore.items.map((rawItem: ShoppingListItem) => {
+              const item = rawItem as LegacyItem;
               if ('completed' in item) {
                   if (item.completed === true) {
                       item.amount = '0';
@@ -296,7 +303,7 @@ const AppContent: React.FC = () => {
             ...category,
             itemIds: category.itemIds.filter(itemId => {
                 const item = itemMap.get(itemId);
-                return item?.isRush || item?.isRushOnce;
+                return item?.isUrgent || item?.isUrgentOnce;
             })
         }));
     }
