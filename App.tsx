@@ -200,24 +200,10 @@ const AppContent: React.FC = () => {
         }
 
         if (dataToRestore) {
-            // Migrate items from old formats to new format
-            interface LegacyItem extends ShoppingListItem {
-                completed?: boolean;
-            }
-            dataToRestore.items = dataToRestore.items.map((rawItem: ShoppingListItem) => {
-              const item = rawItem as LegacyItem;
-              if ('completed' in item) {
-                  if (item.completed === true) {
-                      item.amount = '0';
-                  } else if (item.amount === '0') {
-                      delete item.amount;
-                  }
-                  delete item.completed;
-              }
-              return item;
+            setConfirmRestoreState({
+                isOpen: true,
+                data: dataToRestore,
             });
-
-            setConfirmRestoreState({ isOpen: true, data: dataToRestore });
         } else {
             throw new Error(t('alerts.restore.invalidFormat'));
         }

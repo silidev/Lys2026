@@ -105,3 +105,10 @@ We will add a dedicated unit test suite in `testing/suites/services/backupServic
 - Test failure logs report test name, file name, and path.
 - Separation of concerns: Test code strictly separated from production code.
 - No production code modified without explicit order.
+
+---
+
+## 4. Execution Log
+
+- **Legacy Migration Removed**: Per explicit user order, the legacy data migration block in `App.tsx` (which mutated `item.amount` and deleted `completed`) has been completely removed. Backups now restore exact item data without modifying `amount` or properties.
+- **Verification**: `lint_applet` passed (`tsc --noEmit`), `compile_applet` passed cleanly. Version timestamp updated.
