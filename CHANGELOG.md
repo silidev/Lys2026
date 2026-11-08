@@ -6,7 +6,18 @@ this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [Unreleased] - 2026-11-01
+## [Unreleased] - 2026-11-08
+
+### Changed
+- **PWA Application Icons**:
+  - Replaced all PWA icon assets (`pwa-512x512.png`, `pwa-192x192.png`,
+    `pwa-maskable-512x512.png`, `apple-touch-icon.png`, `favicon.png`,
+    `favicon.ico`, `icon.svg`, and `icon-maskable.svg`) with the
+    new grocery basket brand artwork.
+  - Ensured maskable icon has safe-zone padding to prevent clipping on
+    Android home screens.
+
+## [0.1.0] - 2026-11-01
 
 ### Added
 - **PWA (Progressive Web App) Installability Support**:
