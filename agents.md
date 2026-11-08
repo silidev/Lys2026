@@ -58,6 +58,11 @@ work efficiently and safely on the Lys codebase.
 9. **Version Date Tracking**:
    - Update `/00alwaysUpdate/version.ts` timestamp whenever
      making meaningful application changes.
+10. **Changelog Maintenance**:
+   - The changelog is kept at the end of `/README.md`
+     (do NOT create or maintain a separate `CHANGELOG.md`).
+   - Document notable changes under the `# Changelog` section
+     at the end of `README.md`.
 
 ---
 
@@ -192,3 +197,5 @@ Before concluding any task or turn, always run:
    ensure strict TypeScript types pass.
 2. `compile_applet` to ensure Vite bundle builds cleanly.
 3. Keep `00alwaysUpdate/version.ts` timestamp synchronized.
+4. Document notable changes under `# Changelog` at the end
+   of `/README.md`.
