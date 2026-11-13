@@ -20,6 +20,8 @@ import { categoryManagerDeleteTestSuite } from './suites/components/CategoryMana
 import { categoryManagerEditKeysTestSuite } from './suites/components/CategoryManager.edit.keys.test.suite.ts';
 import { categoryManagerEditNameTestSuite } from './suites/components/CategoryManager.edit.name.test.suite.ts';
 import { backupServiceTestSuite } from './suites/services/backupService.test.suite.ts';
+import { backupValidationTestSuite } from './suites/services/backupValidation.test.suite.ts';
+import { backupParseTestSuite } from './suites/services/backupParse.test.suite.ts';
 import { backupUrgentTestSuite } from './suites/services/backupUrgent.test.suite.ts';
 import { appReorderBetweenCategoriesDndTestSuite } from './suites/app/App.reorder.betweenCategories.dnd.test.suite.ts';
 import { appReorderBetweenCategoriesModalTestSuite } from './suites/app/App.reorder.betweenCategories.modal.test.suite.ts';
@@ -32,12 +34,16 @@ import { categoryServiceTestSuite } from './suites/services/categoryService.test
 import { searchServiceTestSuite } from './suites/services/searchService.test.suite.ts';
 import { itemServiceTestSuite } from './suites/services/itemService.test.suite.ts';
 import { useUndoableStateTestSuite } from './suites/hooks/useUndoableState.test.suite.ts';
+import { useUndoableStatePersistenceTestSuite } from './suites/hooks/useUndoableStatePersistence.test.suite.ts';
+import { useUndoableStateSafetyTestSuite } from './suites/hooks/useUndoableStateSafety.test.suite.ts';
 import { useAutobackupTestSuite } from './suites/common/hooks/useAutobackup.test.suite.ts';
 import { useAutobackupUrgentTestSuite } from './suites/common/hooks/useAutobackup.urgent.test.suite.ts';
 import { listServiceTestSuite } from './suites/services/listService.test.suite.ts';
 import { headerMenuTestSuite } from './suites/components/HeaderMenu.test.suite.ts';
 import { usePreviousTestSuite } from './suites/common/hooks/usePrevious.test.suite.ts';
 import { appBackupTestSuite } from './suites/app/App.backup.test.suite.ts';
+import { appBackupRestoreEdgesTestSuite } from './suites/app/App.backup.restoreEdges.test.suite.ts';
+import { appBackupRestoreErrorsTestSuite } from './suites/app/App.backup.restoreErrors.test.suite.ts';
 import { appBackupUrgentTestSuite } from './suites/app/App.backup.urgent.test.suite.ts';
 import { appLocalStorageTestSuite } from './suites/app/App.localStorage.test.suite.ts';
 import { appClipboardTestSuite } from './suites/app/App.clipboard.test.suite.ts';
@@ -60,6 +66,8 @@ export const logicTestSuites: TestSuite[] = [
   useLocalStorageTestSuite,
   useThemeTestSuite,
   backupServiceTestSuite,
+  backupValidationTestSuite,
+  backupParseTestSuite,
   backupUrgentTestSuite,
   storageServiceTestSuite,
   useShoppingListDataTestSuite,
@@ -68,6 +76,8 @@ export const logicTestSuites: TestSuite[] = [
   searchServiceTestSuite,
   itemServiceTestSuite,
   useUndoableStateTestSuite,
+  useUndoableStatePersistenceTestSuite,
+  useUndoableStateSafetyTestSuite,
   useAutobackupTestSuite,
   useAutobackupUrgentTestSuite,
   listServiceTestSuite,
@@ -96,6 +106,8 @@ export const uiTestSuites: TestSuite[] = [
   shoppingListBaseTestSuite,
   shoppingListActionsTestSuite,
   appBackupTestSuite,
+  appBackupRestoreEdgesTestSuite,
+  appBackupRestoreErrorsTestSuite,
   appBackupUrgentTestSuite,
   appLocalStorageTestSuite,
   appClipboardTestSuite,

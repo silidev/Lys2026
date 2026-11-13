@@ -12,6 +12,7 @@ import AppFooter from './AppFooter.tsx';
 import ReloadOverlay from './ReloadOverlay.tsx';
 import CancelUiTestsOverlay from './CancelUiTestsOverlay.tsx';
 import ConfirmModal from './ConfirmModal.tsx';
+import ErrorModal from './ErrorModal.tsx';
 import HelpModal from './HelpModal.tsx';
 
 interface AppViewProps {
@@ -96,12 +97,22 @@ interface AppViewProps {
     onAutoEditComplete: () => void;
     handleAddDemoData: () => void;
     handleConvertHiddenSections: () => void;
-    confirmRestoreState: { isOpen: boolean; data: ShoppingListData | null };
+    confirmRestoreState: {
+        isOpen: boolean;
+        data: ShoppingListData | null;
+        warnings: string[];
+    };
     handleConfirmRestore: () => void;
     handleCloseConfirmRestore: () => void;
     confirmRestoreModalTitle: string;
     confirmRestoreModalConfirmText: string;
     confirmRestoreModalContent: React.ReactNode;
+    errorModalState: {
+        isOpen: boolean;
+        title: string;
+        message: string;
+    };
+    handleCloseErrorModal: () => void;
     lastInteractedInHomeViewId: string | null;
     onSetLastInteractedInHomeViewId: (id: string | null) => void;
 }
@@ -126,6 +137,7 @@ const AppView: React.FC<AppViewProps> = ({
     itemToAutoEditId, onAutoEditComplete, handleAddDemoData, handleConvertHiddenSections,
     confirmRestoreState, handleConfirmRestore, handleCloseConfirmRestore,
     confirmRestoreModalTitle, confirmRestoreModalConfirmText, confirmRestoreModalContent,
+    errorModalState, handleCloseErrorModal,
     lastInteractedInHomeViewId, onSetLastInteractedInHomeViewId
 }) => (
     <div className="bg-gray-100 dark:bg-gray-900 min-h-screen font-sans text-gray-900 dark:text-gray-100 py-2 sm:py-4 lg:py-6 flex justify-center items-start">
@@ -254,6 +266,12 @@ const AppView: React.FC<AppViewProps> = ({
                 {confirmRestoreModalContent}
             </ConfirmModal>
         )}
+        <ErrorModal
+            isOpen={errorModalState.isOpen}
+            onClose={handleCloseErrorModal}
+            title={errorModalState.title}
+            message={errorModalState.message}
+        />
         <input
             id="restore-input"
             type="file"

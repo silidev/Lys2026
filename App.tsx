@@ -10,10 +10,11 @@ import AppView from './components/AppView.tsx';
 import { filterVisibleCategories } from './common/services/searchService.ts';
 import downloaderService from './common/services/downloader.ts';
 import storageService from './common/services/storageService.ts';
-import { isShoppingListData, isShoppingListItem, migrateToCategories, migrateFromSections } from './common/services/backupService.ts';
+import { parseBackupText } from './common/services/backupService.ts';
 import { getVisibleCategories } from './common/services/categoryService.ts';
 import { getClipboardDisplayName } from './common/services/itemService.ts';
-import type { OldShoppingListDataWithOrder, ShoppingListItem, OldShoppingListDataWithSections } from './types.ts';
+import type { ShoppingListItem } from './types.ts';
+import { IconAlertTriangle } from './common/components/icons/index.ts';
 import { AppConfig } from './00configs/app.ts';
 import { LongPressProvider } from './common/longPressTooltip/LongPressProvider.tsx';
 import { LocalizationProvider, useLocalization } from './localization/i18n.ts';
@@ -38,10 +39,31 @@ const AppContent: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [lastBackupTimestamp, setLastBackupTimestamp] = useState<number | null>(null);
   const [itemToAutoEditId, setItemToAutoEditId] = useState<string | null>(null);
-  const [confirmRestoreState, setConfirmRestoreState] = useState<{ isOpen: boolean; data: ShoppingListData | null }>({ isOpen: false, data: null });
+  const [confirmRestoreState, setConfirmRestoreState] = useState<{
+    isOpen: boolean;
+    data: ShoppingListData | null;
+    warnings: string[];
+  }>({ isOpen: false, data: null, warnings: [] });
+  const [errorModalState, setErrorModalState] = useState<{
+    isOpen: boolean;
+    title: string;
+    message: string;
+  }>({ isOpen: false, title: '', message: '' });
   const [lastInteractedInHomeViewId, setLastInteractedInHomeViewId] = useLocalStorage<string | null>('shopping-list-last-interacted-in-home-view', null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const addItemInputRef = useRef<HTMLInputElement>(null);
+
+  const handleStorageError = useCallback((message: string) => {
+    setErrorModalState({
+      isOpen: true,
+      title: t('errorModal.storageTitle'),
+      message,
+    });
+  }, [t]);
+
+  const handleCloseErrorModal = useCallback(() => {
+    setErrorModalState({ isOpen: false, title: '', message: '' });
+  }, []);
 
   useEffect(() => {
     const refreshTimestamp = () => {
@@ -96,7 +118,7 @@ const AppContent: React.FC = () => {
       handleToggleHideUntilReset,
       handleAddDemoData,
       handleConvertHiddenSections,
-  } = useShoppingListData(mode, setLastInteractedInHomeViewId);
+  } = useShoppingListData(mode, setLastInteractedInHomeViewId, handleStorageError);
   
   const handleResetWithUrgent = useCallback(() => {
     setItemToAutoEditId(null);
@@ -175,6 +197,12 @@ const AppContent: React.FC = () => {
     const file = event.target.files?.[0];
     if (!file) return;
 
+    const resetFileInput = () => {
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
+    };
+
     const reader = new FileReader();
     reader.onload = (e) => {
       try {
@@ -182,42 +210,38 @@ const AppContent: React.FC = () => {
         if (typeof text !== 'string') {
           throw new Error(t('alerts.restore.fileNotReadable'));
         }
-        const parsedData: unknown = JSON.parse(text);
-        
-        let dataToRestore: ShoppingListData | null = null;
-
-        if (isShoppingListData(parsedData)) {
-            if ('shopCategories' in parsedData) {
-                dataToRestore = parsedData as ShoppingListData;
-            } else if ('shopSections' in parsedData) {
-                dataToRestore = migrateFromSections(parsedData as OldShoppingListDataWithSections);
-            } else if ('shoppingOrder' in parsedData) {
-                dataToRestore = migrateToCategories(parsedData as OldShoppingListDataWithOrder);
-            }
-        } else if (Array.isArray(parsedData) && parsedData.every(isShoppingListItem)) {
-            const itemIds = parsedData.map(item => item.id);
-            dataToRestore = migrateToCategories({ items: parsedData, shoppingOrder: itemIds, homeOrder: itemIds });
-        }
-
-        if (dataToRestore) {
-            setConfirmRestoreState({
-                isOpen: true,
-                data: dataToRestore,
-            });
+        const result = parseBackupText(text);
+        if ('data' in result) {
+          setConfirmRestoreState({
+            isOpen: true,
+            data: result.data,
+            warnings: result.warnings,
+          });
         } else {
-            throw new Error(t('alerts.restore.invalidFormat'));
+          setErrorModalState({
+            isOpen: true,
+            title: t('errorModal.restoreTitle'),
+            message: `${t('alerts.restore.genericError')} ${result.error}`,
+          });
+          resetFileInput();
         }
-
       } catch (error: unknown) {
         console.error('Failed to restore backup:', error);
-        alert(`${t('alerts.restore.genericError')} ${error instanceof Error ? error.message : t('alerts.unknownError')}`);
+        setErrorModalState({
+          isOpen: true,
+          title: t('errorModal.restoreTitle'),
+          message: `${t('alerts.restore.genericError')} ${error instanceof Error ? error.message : t('alerts.unknownError')}`,
+        });
+        resetFileInput();
       }
     };
     reader.onerror = () => {
-        alert(t('alerts.restore.fileReadError'));
-        if (fileInputRef.current) {
-            fileInputRef.current.value = '';
-        }
+      setErrorModalState({
+        isOpen: true,
+        title: t('errorModal.restoreTitle'),
+        message: t('alerts.restore.fileReadError'),
+      });
+      resetFileInput();
     };
     reader.readAsText(file);
   }, [t]);
@@ -227,14 +251,14 @@ const AppContent: React.FC = () => {
         handleRestore(confirmRestoreState.data);
         alert(t('alerts.restore.success'));
     }
-    setConfirmRestoreState({ isOpen: false, data: null });
+    setConfirmRestoreState({ isOpen: false, data: null, warnings: [] });
     if (fileInputRef.current) {
         fileInputRef.current.value = '';
     }
   }, [confirmRestoreState.data, handleRestore, t]);
   
   const handleCloseConfirmRestore = useCallback(() => {
-    setConfirmRestoreState({ isOpen: false, data: null });
+    setConfirmRestoreState({ isOpen: false, data: null, warnings: [] });
     if (fileInputRef.current) {
         fileInputRef.current.value = '';
     }
@@ -388,8 +412,30 @@ const AppContent: React.FC = () => {
   const handleAutoEditComplete = useCallback(() => setItemToAutoEditId(null), []);
 
   const confirmRestoreModalContent = useMemo(() => (
-    <p>{t('confirmModal.restore.message')}</p>
-  ), [t]);
+    <div className="space-y-3">
+      <p>{t('confirmModal.restore.message')}</p>
+      {confirmRestoreState.warnings.length > 0 && (
+        <div
+          id="restore-unknown-fields-warning"
+          role="alert"
+          className="p-3 bg-red-50 dark:bg-red-950/70 border-2 border-red-600 rounded-md text-red-900 dark:text-red-100 space-y-2"
+        >
+          <div className="flex items-center gap-2 font-extrabold text-sm">
+            <IconAlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400 flex-shrink-0" />
+            <span>{t('confirmModal.restore.unknownWarningTitle')}</span>
+          </div>
+          <p className="text-xs font-medium">
+            {t('confirmModal.restore.unknownWarningBody')}
+          </p>
+          <ul className="list-disc pl-5 text-xs font-semibold space-y-1">
+            {confirmRestoreState.warnings.map((warning) => (
+              <li key={warning}>{warning}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  ), [t, confirmRestoreState.warnings]);
 
   const handleExportLocalStorage = useCallback(() => {
     const allKeys = storageService.getAllKeys();
@@ -508,6 +554,8 @@ const AppContent: React.FC = () => {
           confirmRestoreModalTitle={t('confirmModal.restore.title')}
           confirmRestoreModalConfirmText={t('confirmModal.restore.confirm')}
           confirmRestoreModalContent={confirmRestoreModalContent}
+          errorModalState={errorModalState}
+          handleCloseErrorModal={handleCloseErrorModal}
           lastInteractedInHomeViewId={lastInteractedInHomeViewId}
           onSetLastInteractedInHomeViewId={setLastInteractedInHomeViewId}
         />

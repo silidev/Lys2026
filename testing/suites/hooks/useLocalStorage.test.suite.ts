@@ -1,24 +1,41 @@
+const FILE_PATH =
+    'testing/suites/hooks/useLocalStorage.test.suite.ts';
+import sinon from 'sinon';
 import { renderHook, act } from '@testing-library/react';
 import { useLocalStorage } from '../../../hooks/useLocalStorage.ts';
 import { runComponentTest, type User } from '../../helpers.ts';
-import type { MockStorageService } from '../../mocks/storageService.mock.ts';
-import { assertEquals } from '../../../common/testing/services/tests/helpers.ts';
+import type {
+    MockStorageService,
+} from '../../mocks/storageService.mock.ts';
+import {
+    assertEquals,
+} from '../../../common/testing/services/tests/helpers.ts';
 
-const FILE_PATH = 'testing/suites/hooks/useLocalStorage.test.suite.ts';
-
-const testSetInitialValue = async (_user: User, mockStorage: MockStorageService) => {
+const testSetInitialValue = async (
+    _user: User,
+    mockStorage: MockStorageService
+) => {
     mockStorage.setItem('test-key', 'stored value');
-    const { result } = renderHook(() => useLocalStorage('test-key', 'initial value'));
+    const { result } = renderHook(() =>
+        useLocalStorage('test-key', 'initial value')
+    );
     assertEquals(result.current[0], 'stored value');
 };
 
 const testUseInitialValue = async () => {
-    const { result } = renderHook(() => useLocalStorage('test-key', 'initial value'));
+    const { result } = renderHook(() =>
+        useLocalStorage('test-key', 'initial value')
+    );
     assertEquals(result.current[0], 'initial value');
 };
 
-const testUpdateStateAndLocalStorage = async (_user: User, mockStorage: MockStorageService) => {
-    const { result } = renderHook(() => useLocalStorage('test-key', 'initial value'));
+const testUpdateStateAndLocalStorage = async (
+    _user: User,
+    mockStorage: MockStorageService
+) => {
+    const { result } = renderHook(() =>
+        useLocalStorage('test-key', 'initial value')
+    );
     act(() => {
         result.current[1]('new value');
     });
@@ -26,8 +43,13 @@ const testUpdateStateAndLocalStorage = async (_user: User, mockStorage: MockStor
     assertEquals(mockStorage.getItem('test-key'), 'new value');
 };
 
-const testUpdateStateWithFunction = async (_user: User, mockStorage: MockStorageService) => {
-    const { result } = renderHook(() => useLocalStorage('test-key', 10));
+const testUpdateStateWithFunction = async (
+    _user: User,
+    mockStorage: MockStorageService
+) => {
+    const { result } = renderHook(() =>
+        useLocalStorage('test-key', 10)
+    );
     act(() => {
         result.current[1]((prev: number) => prev + 5);
     });
@@ -35,12 +57,89 @@ const testUpdateStateWithFunction = async (_user: User, mockStorage: MockStorage
     assertEquals(mockStorage.getItem('test-key'), 15);
 };
 
+const testRapidFunctionalUpdatesAndCorruptGuard = async (
+    _user: User,
+    mockStorage: MockStorageService
+) => {
+    const fn = testRapidFunctionalUpdatesAndCorruptGuard.name;
+    const ctx = `${fn} in ${FILE_PATH}`;
+    const sandbox = sinon.createSandbox();
+    const errorStub = sandbox.stub(console, 'error');
+    try {
+        mockStorage.setRawItem('corrupt-key', '{invalid');
+        const corruptHook = renderHook(() =>
+            useLocalStorage('corrupt-key', 'fallback')
+        );
+        assertEquals(
+            corruptHook.result.current[0],
+            'fallback',
+            `${ctx}: fallback state`
+        );
+        assertEquals(
+            mockStorage.getRawItem('corrupt-key'),
+            '{invalid',
+            `${ctx}: raw corrupt value not overwritten`
+        );
+        assertEquals(
+            errorStub.calledOnce,
+            true,
+            `${ctx}: logged parse failure`
+        );
+
+        const { result } = renderHook(() =>
+            useLocalStorage('counter-key', 0)
+        );
+        act(() => {
+            result.current[1]((prev: number) => prev + 1);
+            result.current[1]((prev: number) => prev + 2);
+        });
+        assertEquals(
+            result.current[0],
+            3,
+            `${ctx}: rapid updates preserved`
+        );
+        assertEquals(
+            mockStorage.getItem('counter-key'),
+            3,
+            `${ctx}: persisted sum`
+        );
+    } finally {
+        sandbox.restore();
+    }
+};
+
 export function useLocalStorageTestSuite() {
     const SUITE_NAME = useLocalStorageTestSuite.name;
     return [
-        runComponentTest('useLocalStorage: should set initial value from localStorage', testSetInitialValue, SUITE_NAME, FILE_PATH),
-        runComponentTest('useLocalStorage: should use initialValue if localStorage is empty', testUseInitialValue, SUITE_NAME, FILE_PATH),
-        runComponentTest('useLocalStorage: should update state and localStorage', testUpdateStateAndLocalStorage, SUITE_NAME, FILE_PATH),
-        runComponentTest('useLocalStorage: should update state with a function', testUpdateStateWithFunction, SUITE_NAME, FILE_PATH),
+        runComponentTest(
+            'useLocalStorage: sets initial value from storage',
+            testSetInitialValue,
+            SUITE_NAME,
+            FILE_PATH
+        ),
+        runComponentTest(
+            'useLocalStorage: uses initialValue when empty',
+            testUseInitialValue,
+            SUITE_NAME,
+            FILE_PATH
+        ),
+        runComponentTest(
+            'useLocalStorage: updates state and localStorage',
+            testUpdateStateAndLocalStorage,
+            SUITE_NAME,
+            FILE_PATH
+        ),
+        runComponentTest(
+            'useLocalStorage: updates state with a function',
+            testUpdateStateWithFunction,
+            SUITE_NAME,
+            FILE_PATH
+        ),
+        runComponentTest(
+            'useLocalStorage: handles rapid updates & corrupt raw',
+            testRapidFunctionalUpdatesAndCorruptGuard,
+            SUITE_NAME,
+            FILE_PATH
+        ),
     ];
 }

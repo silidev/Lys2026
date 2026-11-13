@@ -1,67 +1,89 @@
-// common/services/storageService.ts
+const FILE_PATH = 'common/services/storageService.ts';
 
 export interface IStorageService {
   getItem<T>(key: string): T | null;
   getRawItem(key: string): string | null;
-  setItem<T>(key: string, value: T): void;
+  setItem<T>(key: string, value: T): boolean;
   removeItem(key: string): void;
   clear(): void;
   getAllKeys(): string[];
 }
 
-const storageService: IStorageService = {
-  getItem: <T,>(key:string): T | null => {
-    if (typeof window === 'undefined') {
+export const createStorageService = (
+  getStorage: () => Storage | undefined = () =>
+    typeof window !== 'undefined'
+      ? window.localStorage
+      : undefined
+): IStorageService => ({
+  getItem: <T,>(key: string): T | null => {
+    const storage = getStorage();
+    if (!storage) {
       return null;
     }
     try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : null;
+      const item = storage.getItem(key);
+      return item ? (JSON.parse(item) as T) : null;
     } catch (error: unknown) {
-      console.error(`Error reading localStorage key “${key}”:`, error);
+      console.error(
+        `Error reading localStorage key “${key}”:`,
+        error
+      );
       return null;
     }
   },
-  
+
   getRawItem: (key: string): string | null => {
-    if (typeof window === 'undefined') {
-        return null;
+    const storage = getStorage();
+    if (!storage) {
+      return null;
     }
-    return window.localStorage.getItem(key);
+    return storage.getItem(key);
   },
-  
-  setItem: <T,>(key: string, value: T): void => {
-    if (typeof window === 'undefined') {
-      return;
+
+  setItem: <T,>(key: string, value: T): boolean => {
+    const storage = getStorage();
+    if (!storage) {
+      return false;
     }
     try {
       const stringValue = JSON.stringify(value);
-      window.localStorage.setItem(key, stringValue);
+      storage.setItem(key, stringValue);
+      return true;
     } catch (error: unknown) {
-      console.error(`Error setting localStorage key “${key}”:`, error);
+      console.error(
+        `Error setting localStorage key “${key}”:`,
+        error
+      );
+      return false;
     }
   },
-  
+
   removeItem: (key: string): void => {
-    if (typeof window === 'undefined') {
+    const storage = getStorage();
+    if (!storage) {
       return;
     }
-    window.localStorage.removeItem(key);
+    storage.removeItem(key);
   },
-  
+
   clear: (): void => {
-      if (typeof window === 'undefined') {
-        return;
-      }
-      window.localStorage.clear();
-  },
-  
-  getAllKeys: (): string[] => {
-    if (typeof window === 'undefined') {
-        return [];
+    const storage = getStorage();
+    if (!storage) {
+      return;
     }
-    return Object.keys(window.localStorage);
+    storage.clear();
   },
-};
+
+  getAllKeys: (): string[] => {
+    const storage = getStorage();
+    if (!storage) {
+      return [];
+    }
+    return Object.keys(storage);
+  },
+});
+
+const storageService: IStorageService =
+  createStorageService();
 
 export default storageService;

@@ -28,7 +28,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased] - 2026-11-13
 
+### Added
+- **Backup Restore Validation & Error Modal**:
+  - Added strict backup validation (`common/services/backupValidation.ts`)
+    and `ErrorModal` (`components/ErrorModal.tsx`) to display prominent
+    error dialogs when an imported backup is malformed or invalid.
+  - Added a prominent warning banner in the Restore Confirmation dialog
+    listing any unknown/ignored properties found in the imported file.
+  - Added unit and UI test suites (`backupValidation.test.suite.ts`,
+    `useUndoableStateSafety.test.suite.ts`,
+    `App.backup.restoreEdges.test.suite.ts`,
+    `App.backup.restoreErrors.test.suite.ts`).
+
 ### Fixed
+- **Undo History Storage Quota & Data Preservation**:
+  - Moved undo/redo history in `hooks/useUndoableState.ts` to in-memory
+    state only, preventing 50-snapshot `shopping-list-data-history-state`
+    quota exhaustion and stale rollbacks while preserving one-time
+    recovery from legacy `shopping-list-data-history-state`.
+  - Protected unparseable `localStorage` data from silent overwrite and
+    surfaced `QuotaExceededError` / storage failures via `ErrorModal`.
+  - Fixed stale-closure overwrites on rapid consecutive updates in
+    `hooks/useLocalStorage.ts` and `hooks/useUndoableState.ts`.
 - **Duplicate React Instance / Invalid Hook Call in Dev**:
   - Updated `public/sw.js` (`lysi-cache-v2`) to purge stale
     caches, bypass Vite dev modules (`/@*`,

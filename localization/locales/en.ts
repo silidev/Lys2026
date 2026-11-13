@@ -386,7 +386,17 @@ export const en = {
             title: 'Confirm Restore',
             confirm: 'Restore',
             message: 'Are you sure you want to restore this backup? This will overwrite your current list.',
+            unknownWarningTitle: 'WARNING: Unknown properties will be ignored!',
+            unknownWarningBody: 'This file contains fields the app does not recognize. Restoring will ignore and drop them:',
         }
+    },
+    errorModal: {
+        restoreTitle: 'Restore Failed',
+        storageTitle: 'Storage Error',
+        close: 'OK',
+        tooltips: {
+            close: 'Dismiss this error message.',
+        },
     },
     helpModal: {
         title: 'How to get help',

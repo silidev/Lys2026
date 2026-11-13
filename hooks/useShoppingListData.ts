@@ -8,7 +8,11 @@ import * as listService from '../common/services/listService.ts';
 import { useUndoableState } from './useUndoableState.ts';
 import { demoItemsToAdd } from '../data/demoData.ts';
 
-export const useShoppingListData = (mode: ViewMode, setLastInteractedInHomeViewId: (id: string | null) => void) => {
+export const useShoppingListData = (
+    mode: ViewMode,
+    setLastInteractedInHomeViewId: (id: string | null) => void,
+    onStorageError?: (message: string) => void
+) => {
     const { 
       state: data,
       setState: setData,
@@ -17,7 +21,11 @@ export const useShoppingListData = (mode: ViewMode, setLastInteractedInHomeViewI
       redo: handleRedo,
       canUndo,
       canRedo,
-    } = useUndoableState<ShoppingListData>('shopping-list-data', defaultData);
+    } = useUndoableState<ShoppingListData>(
+      'shopping-list-data',
+      defaultData,
+      onStorageError
+    );
 
     const { items, shopCategories, homeCategories: dataHomeCategories } = data;
 
