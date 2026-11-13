@@ -26,6 +26,20 @@ this section of `README.md`.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased] - 2026-11-13
+
+### Fixed
+- **Duplicate React Instance / Invalid Hook Call in Dev**:
+  - Updated `public/sw.js` (`lysi-cache-v2`) to purge stale
+    caches, bypass Vite dev modules (`/@*`,
+    `/node_modules/*`, `.ts`/`.tsx`, `?v=`), and use
+    network-first for navigation/HTML requests.
+  - Restricted Service Worker registration in `index.tsx`
+    to production builds and added
+    `unregisterPwaServiceWorkers` cleanup in dev mode.
+  - Added `resolve.dedupe` and `optimizeDeps.include` for
+    React and test dependencies in `vite.config.ts`.
+
 ## [Unreleased] - 2026-11-08
 
 ### Changed

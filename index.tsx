@@ -4,12 +4,19 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import {
   registerPwaServiceWorker,
+  unregisterPwaServiceWorkers,
 } from './common/services/pwaService.ts';
 
-// Register PWA service worker for installability
+// Register PWA service worker only in production builds;
+// in dev mode unregister any stale SW to avoid mixed
+// Vite dependency chunks.
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
-    void registerPwaServiceWorker();
+    if (import.meta.env.PROD) {
+      void registerPwaServiceWorker();
+    } else {
+      void unregisterPwaServiceWorkers();
+    }
   });
 }
 

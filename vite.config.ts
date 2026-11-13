@@ -18,9 +18,23 @@ export default defineConfig(() => {
       react(),
     ],
     resolve: {
+      dedupe: ['react', 'react-dom'],
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
+    },
+    optimizeDeps: {
+      include: [
+        'react',
+        'react-dom',
+        'react-dom/client',
+        'react/jsx-runtime',
+        'react/jsx-dev-runtime',
+        '@testing-library/react',
+        '@testing-library/dom',
+        '@testing-library/user-event',
+        'sinon',
+      ],
     },
   };
 });

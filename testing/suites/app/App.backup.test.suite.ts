@@ -7,10 +7,13 @@ import { runComponentTest, type User } from '../../helpers.ts';
 import type { MockStorageService } from '../../mocks/storageService.mock.ts';
 import { assertEquals } from '../../../common/testing/services/tests/helpers.ts';
 import { en } from '../../../localization/locales/en.ts';
+import type { ShoppingListData } from '../../../types.ts';
 
 import referenceBackup from '../../../data/reference-backup-format.json';
 
 const testRestoreFromReferenceBackup = async (user: User, mockStorage: MockStorageService) => {
+    const fn = testRestoreFromReferenceBackup.name;
+    const ctx = `${fn} in ${FILE_PATH}`;
     // Start with an empty list
     mockStorage.setItem('shopping-list-data', { items: [], shopCategories: [], homeCategories: [] });
     
@@ -58,6 +61,41 @@ const testRestoreFromReferenceBackup = async (user: User, mockStorage: MockStora
         
         const item = screen.getByText('Ref Shop Item');
         assertEquals(!!item, true, 'Restored item should be visible in shop view.');
+    });
+
+    const restoredData = mockStorage.getItem<ShoppingListData>(
+        'shopping-list-data'
+    );
+    const item1 = restoredData?.items.find(
+        i => i.id === 'ref-item-1'
+    );
+    const item2 = restoredData?.items.find(
+        i => i.id === 'ref-item-2'
+    );
+    assertEquals(item1?.isUrgent, false, ctx);
+    assertEquals(item1?.isUrgentOnce, false, ctx);
+    assertEquals(item2?.isUrgent, true, ctx);
+    assertEquals(item2?.isUrgentOnce, false, ctx);
+
+    const urgentToggle = container.querySelector(
+        '#urgent-toggle-button'
+    );
+    if (!urgentToggle) {
+        throw new Error('Urgent toggle button not found');
+    }
+    await user.click(urgentToggle);
+
+    await waitFor(() => {
+        assertEquals(
+            !!container.querySelector('#item-name-ref-item-2'),
+            true,
+            ctx
+        );
+        assertEquals(
+            container.querySelector('#item-name-ref-item-1'),
+            null,
+            ctx
+        );
     });
 };
 

@@ -59,3 +59,62 @@ export async function registerPwaServiceWorker(
     return false;
   }
 }
+
+export interface PwaRegistrationLike {
+  unregister: () => Promise<boolean>;
+}
+
+export interface PwaServiceWorkerLike {
+  getRegistrations: () => Promise<
+    readonly PwaRegistrationLike[]
+  >;
+}
+
+export interface PwaCachesLike {
+  keys: () => Promise<readonly string[]>;
+  delete: (cacheName: string) => Promise<boolean>;
+}
+
+export interface PwaCleanupDeps {
+  serviceWorker?: PwaServiceWorkerLike;
+  caches?: PwaCachesLike;
+}
+
+/**
+ * Unregisters active Service Workers and clears PWA
+ * caches, preventing stale module caching in dev mode.
+ */
+export async function unregisterPwaServiceWorkers(
+  deps?: PwaCleanupDeps
+): Promise<boolean> {
+  const sw =
+    deps?.serviceWorker ??
+    (isServiceWorkerSupported()
+      ? navigator.serviceWorker
+      : undefined);
+  if (!sw) {
+    return false;
+  }
+  try {
+    const registrations = await sw.getRegistrations();
+    await Promise.all(
+      registrations.map((reg) => reg.unregister())
+    );
+    const cacheStorage =
+      deps?.caches ??
+      (typeof window !== 'undefined' && 'caches' in window
+        ? window.caches
+        : undefined);
+    if (cacheStorage) {
+      const keys = await cacheStorage.keys();
+      await Promise.all(
+        keys
+          .filter((k) => k.startsWith('lysi-cache-'))
+          .map((k) => cacheStorage.delete(k))
+      );
+    }
+    return true;
+  } catch {
+    return false;
+  }
+}

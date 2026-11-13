@@ -1,5 +1,6 @@
 const FILE_PATH =
   'testing/suites/services/pwaService.test.suite.ts';
+import sinon from 'sinon';
 import { runLogicTest } from '../../helpers.ts';
 import {
   getPwaThemeColor,
@@ -7,6 +8,7 @@ import {
   isServiceWorkerSupported,
   isStandaloneDisplayMode,
   registerPwaServiceWorker,
+  unregisterPwaServiceWorkers,
 } from '../../../common/services/pwaService.ts';
 import {
   assertEquals,
@@ -57,6 +59,80 @@ const testRegisterPwaServiceWorkerGraceful = async () => {
   );
 };
 
+const testUnregisterSwAndClearLysCaches = async () => {
+  const unreg1 = sinon.stub().resolves(true);
+  const unreg2 = sinon.stub().resolves(true);
+  const deleteCache = sinon.stub().resolves(true);
+
+  const result = await unregisterPwaServiceWorkers({
+    serviceWorker: {
+      getRegistrations: async () => [
+        { unregister: unreg1 },
+        { unregister: unreg2 },
+      ],
+    },
+    caches: {
+      keys: async () => [
+        'lysi-cache-v1',
+        'lysi-cache-v2',
+        'other-app-cache',
+      ],
+      delete: deleteCache,
+    },
+  });
+
+  assertEquals(
+    result,
+    true,
+    'Cleanup should return true on success'
+  );
+  assertEquals(
+    unreg1.callCount,
+    1,
+    'First registration should be unregistered'
+  );
+  assertEquals(
+    unreg2.callCount,
+    1,
+    'Second registration should be unregistered'
+  );
+  assertEquals(
+    deleteCache.callCount,
+    2,
+    'Only lysi-cache-* caches should be deleted'
+  );
+  assertEquals(
+    deleteCache.calledWith('lysi-cache-v1'),
+    true,
+    'lysi-cache-v1 should be deleted'
+  );
+  assertEquals(
+    deleteCache.calledWith('lysi-cache-v2'),
+    true,
+    'lysi-cache-v2 should be deleted'
+  );
+  assertEquals(
+    deleteCache.calledWith('other-app-cache'),
+    false,
+    'Non-lysi caches must not be deleted'
+  );
+};
+
+const testUnregisterSwHandlesErrors = async () => {
+  const result = await unregisterPwaServiceWorkers({
+    serviceWorker: {
+      getRegistrations: async () => {
+        throw new Error('Cleanup failed');
+      },
+    },
+  });
+  assertEquals(
+    result,
+    false,
+    'Cleanup should return false on error'
+  );
+};
+
 export function pwaServiceTestSuite() {
   const SUITE_NAME = pwaServiceTestSuite.name;
   return [
@@ -87,6 +163,18 @@ export function pwaServiceTestSuite() {
     runLogicTest(
       'PWA Service: handles registration safely',
       testRegisterPwaServiceWorkerGraceful,
+      SUITE_NAME,
+      FILE_PATH
+    ),
+    runLogicTest(
+      'PWA Service: unregisters SW and clears lysi caches',
+      testUnregisterSwAndClearLysCaches,
+      SUITE_NAME,
+      FILE_PATH
+    ),
+    runLogicTest(
+      'PWA Service: handles unregister errors safely',
+      testUnregisterSwHandlesErrors,
       SUITE_NAME,
       FILE_PATH
     ),
