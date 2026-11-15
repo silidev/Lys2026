@@ -1,7 +1,7 @@
 const FILE_PATH = 'common/services/backupItemValidation.ts';
 import type { Category, ShoppingListItem } from '../../types.ts';
 
-const KNOWN_ITEM_KEYS = new Set<string>([
+export const KNOWN_ITEM_KEYS = new Set<string>([
   'id',
   'name',
   'nameShop',
@@ -14,7 +14,7 @@ const KNOWN_ITEM_KEYS = new Set<string>([
   'hideUntilReset',
 ]);
 
-const KNOWN_CATEGORY_KEYS = new Set<string>([
+export const KNOWN_CATEGORY_KEYS = new Set<string>([
   'id',
   'name',
   'itemIds',

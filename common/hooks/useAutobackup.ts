@@ -2,6 +2,9 @@
 import { useEffect, useCallback } from 'react';
 import downloaderService from '../services/downloader.ts';
 import storageService from '../services/storageService.ts';
+import {
+  sanitizeShoppingListDataForBackup,
+} from '../services/shoppingListMigrationCategories.ts';
 import type { ShoppingListData } from '../../types.ts';
 
 interface UseAutobackupOptions {
@@ -18,13 +21,19 @@ export const useAutobackup = (
 
   const performBackup = useCallback(() => {
     try {
-      const backupData = getBackupData();
-      // A simple check to see if there are items to back up.
-      if (backupData.items.length === 0) {
-          return;
+      const cleanData = sanitizeShoppingListDataForBackup(
+        getBackupData()
+      );
+      if (cleanData.items.length === 0) {
+        return;
       }
-      const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
-      const filename = `${filenamePrefix}_backup_${crypto.randomUUID().substring(0, 8)}.json`;
+      const blob = new Blob(
+        [JSON.stringify(cleanData, null, 2)],
+        { type: 'application/json' }
+      );
+      const filename =
+        `${filenamePrefix}_backup_` +
+        `${crypto.randomUUID().substring(0, 8)}.json`;
       downloaderService.downloadBlob(blob, filename);
       // Also update the manual backup timestamp to reset the timer after an auto-backup
       storageService.setItem(timestampKey, Date.now());

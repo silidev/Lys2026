@@ -5,7 +5,7 @@ import type { VersionDate } from '../common/services/versionUtils.ts';
 export const versionDate: VersionDate = {
     year: 2026,
     month: 11, // November
-    day: 13,
-    hours: 12,
-    minutes: 33,
+    day: 15,
+    hours: 10,
+    minutes: 30,
 };

@@ -23,6 +23,10 @@ import { backupServiceTestSuite } from './suites/services/backupService.test.sui
 import { backupValidationTestSuite } from './suites/services/backupValidation.test.suite.ts';
 import { backupParseTestSuite } from './suites/services/backupParse.test.suite.ts';
 import { backupUrgentTestSuite } from './suites/services/backupUrgent.test.suite.ts';
+import { shoppingListMigrationTestSuite } from './suites/services/shoppingListMigration.test.suite.ts';
+import { backupSanitizerTestSuite } from './suites/services/backupSanitizer.test.suite.ts';
+import { localStorageMigrationTestSuite } from './suites/services/localStorageMigration.test.suite.ts';
+import { localStorageListAuditTestSuite } from './suites/services/localStorageListAudit.test.suite.ts';
 import { appReorderBetweenCategoriesDndTestSuite } from './suites/app/App.reorder.betweenCategories.dnd.test.suite.ts';
 import { appReorderBetweenCategoriesModalTestSuite } from './suites/app/App.reorder.betweenCategories.modal.test.suite.ts';
 import { shoppingListBaseTestSuite } from './suites/components/ShoppingList.base.test.suite.ts';
@@ -69,6 +73,10 @@ export const logicTestSuites: TestSuite[] = [
   backupValidationTestSuite,
   backupParseTestSuite,
   backupUrgentTestSuite,
+  shoppingListMigrationTestSuite,
+  backupSanitizerTestSuite,
+  localStorageMigrationTestSuite,
+  localStorageListAuditTestSuite,
   storageServiceTestSuite,
   useShoppingListDataTestSuite,
   useAppTestRunnerTestSuite,

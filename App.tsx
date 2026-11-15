@@ -3,6 +3,7 @@ import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import { ViewMode, ShoppingListData } from './types';
 import { useTheme } from './hooks/useTheme';
 import { useShoppingListData } from './hooks/useShoppingListData.ts';
+import { useShoppingListMigration } from './hooks/useShoppingListMigration.ts';
 import { useLocalStorage } from './hooks/useLocalStorage.ts';
 import { useAutobackup } from './common/hooks/useAutobackup.ts';
 import { useAppTestRunner } from './hooks/useAppTestRunner.ts';
@@ -11,6 +12,7 @@ import { filterVisibleCategories } from './common/services/searchService.ts';
 import downloaderService from './common/services/downloader.ts';
 import storageService from './common/services/storageService.ts';
 import { parseBackupText } from './common/services/backupService.ts';
+import { sanitizeShoppingListDataForBackup } from './common/services/shoppingListMigrationCategories.ts';
 import { getVisibleCategories } from './common/services/categoryService.ts';
 import { getClipboardDisplayName } from './common/services/itemService.ts';
 import type { ShoppingListItem } from './types.ts';
@@ -22,6 +24,13 @@ import { LocalizationProvider, useLocalization } from './localization/i18n.ts';
 
 const AppContent: React.FC = () => {
   const { t } = useLocalization();
+  const {
+    findings: startupFindings,
+    hasCorruptListData,
+    isModalOpen: isStartupModalOpen,
+    closeModal: handleCloseStartupModal,
+  } = useShoppingListMigration();
+  const suppressStartupCorruptErrorRef = useRef(hasCorruptListData);
   const [theme, setTheme] = useTheme();
   const [isSettingsOpen, setSettingsOpen] = useState(false);
   const [isHelpModalOpen, setHelpModalOpen] = useState(false);
@@ -54,6 +63,13 @@ const AppContent: React.FC = () => {
   const addItemInputRef = useRef<HTMLInputElement>(null);
 
   const handleStorageError = useCallback((message: string) => {
+    if (
+      suppressStartupCorruptErrorRef.current &&
+      message.includes('could not be parsed')
+    ) {
+      suppressStartupCorruptErrorRef.current = false;
+      return;
+    }
     setErrorModalState({
       isOpen: true,
       title: t('errorModal.storageTitle'),
@@ -125,7 +141,10 @@ const AppContent: React.FC = () => {
     handleReset(showOnlyUrgent && advancedMode);
   }, [handleReset, showOnlyUrgent, advancedMode]);
   
-  const getBackupData = useCallback(() => data, [data]);
+  const getBackupData = useCallback(
+    () => sanitizeShoppingListDataForBackup(data),
+    [data]
+  );
 
   const handleFocusAddItem = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -180,7 +199,8 @@ const AppContent: React.FC = () => {
     const timestamp = `${yy}${mm}${dd}${hh}${min}`;
     const filename = `lys-${timestamp}.json`;
 
-    const dataStr = JSON.stringify(data, null, 2);
+    const cleanBackup = sanitizeShoppingListDataForBackup(data);
+    const dataStr = JSON.stringify(cleanBackup, null, 2);
     const dataBlob = new Blob([dataStr], { type: 'application/json' });
     
     downloaderService.downloadBlob(dataBlob, filename);
@@ -556,6 +576,9 @@ const AppContent: React.FC = () => {
           confirmRestoreModalContent={confirmRestoreModalContent}
           errorModalState={errorModalState}
           handleCloseErrorModal={handleCloseErrorModal}
+          startupFindings={startupFindings}
+          isStartupModalOpen={isStartupModalOpen}
+          handleCloseStartupModal={handleCloseStartupModal}
           lastInteractedInHomeViewId={lastInteractedInHomeViewId}
           onSetLastInteractedInHomeViewId={setLastInteractedInHomeViewId}
         />

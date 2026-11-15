@@ -13,6 +13,8 @@ import ReloadOverlay from './ReloadOverlay.tsx';
 import CancelUiTestsOverlay from './CancelUiTestsOverlay.tsx';
 import ConfirmModal from './ConfirmModal.tsx';
 import ErrorModal from './ErrorModal.tsx';
+import StartupFindingsModal from './StartupFindingsModal.tsx';
+import type { StartupFinding } from '../common/services/localStorageAuditTypes.ts';
 import HelpModal from './HelpModal.tsx';
 
 interface AppViewProps {
@@ -113,6 +115,9 @@ interface AppViewProps {
         message: string;
     };
     handleCloseErrorModal: () => void;
+    startupFindings: StartupFinding[];
+    isStartupModalOpen: boolean;
+    handleCloseStartupModal: () => void;
     lastInteractedInHomeViewId: string | null;
     onSetLastInteractedInHomeViewId: (id: string | null) => void;
 }
@@ -138,6 +143,7 @@ const AppView: React.FC<AppViewProps> = ({
     confirmRestoreState, handleConfirmRestore, handleCloseConfirmRestore,
     confirmRestoreModalTitle, confirmRestoreModalConfirmText, confirmRestoreModalContent,
     errorModalState, handleCloseErrorModal,
+    startupFindings, isStartupModalOpen, handleCloseStartupModal,
     lastInteractedInHomeViewId, onSetLastInteractedInHomeViewId
 }) => (
     <div className="bg-gray-100 dark:bg-gray-900 min-h-screen font-sans text-gray-900 dark:text-gray-100 py-2 sm:py-4 lg:py-6 flex justify-center items-start">
@@ -271,6 +277,11 @@ const AppView: React.FC<AppViewProps> = ({
             onClose={handleCloseErrorModal}
             title={errorModalState.title}
             message={errorModalState.message}
+        />
+        <StartupFindingsModal
+            isOpen={isStartupModalOpen}
+            onClose={handleCloseStartupModal}
+            findings={startupFindings}
         />
         <input
             id="restore-input"

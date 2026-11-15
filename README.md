@@ -26,6 +26,21 @@ this section of `README.md`.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased] - 2026-11-15
+
+### Added
+- **Startup LocalStorage Audit & Cleanup**:
+  - Added strict startup validation and cleanup across all app
+    `localStorage` keys (`common/services/localStorageMigrationService.ts`),
+    removing ignored legacy fields (`isRush`, `isRushOnce`, `hideable`,
+    `completed`), invalid settings, unknown app keys, and structural list
+    anomalies while leaving non-app vendor keys untouched.
+  - Added `components/StartupFindingsModal.tsx` with an OK dismissal flow
+    to report startup migrations (as Info) and detected storage issues.
+  - Ensured both manual and automatic backups sanitize list payloads via
+    `sanitizeShoppingListDataForBackup` so only valid schema fields are
+    exported.
+
 ## [Unreleased] - 2026-11-13
 
 ### Added

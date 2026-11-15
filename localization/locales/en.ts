@@ -398,6 +398,19 @@ export const en = {
             close: 'Dismiss this error message.',
         },
     },
+    startupModal: {
+        title: 'Storage Check & Cleanup Report',
+        subtitle: 'The following storage issues or migrations were detected during startup:',
+        ok: 'OK',
+        severity: {
+            info: 'Info',
+            warning: 'Warning',
+            error: 'Error',
+        },
+        tooltips: {
+            ok: 'Acknowledge these startup findings and close this dialog.',
+        },
+    },
     helpModal: {
         title: 'How to get help',
         close: 'Close help',

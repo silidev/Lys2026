@@ -14,18 +14,13 @@ import {
   sanitizeItem,
   validateItemFields,
 } from './backupItemValidation.ts';
+import { formatKeyCounts } from './localStorageAuditTypes.ts';
 
 export { validateItemFields };
 
 export type BackupParseResult =
   | { ok: true; data: ShoppingListData; warnings: string[] }
   | { ok: false; error: string };
-
-const formatKeyCounts = (counts: Map<string, number>): string =>
-  Array.from(counts.entries())
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([key, count]) => `"${key}" (${count}x)`)
-    .join(', ');
 
 export const validateAndParseBackup = (
   rawText: string,

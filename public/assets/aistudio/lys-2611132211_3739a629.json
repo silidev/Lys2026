@@ -1,0 +1,5082 @@
+{
+  "items": [
+    {
+      "id": "d-1",
+      "name": "grüne Bananen 🍌",
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-2",
+      "name": "reife Bananen 🍌",
+      "isRush": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0",
+      "alias": "",
+      "nameExport": "",
+      "isUrgent": true
+    },
+    {
+      "id": "d-3",
+      "name": "Tomaten 🍅, viele für Reifung",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "isRushOnce": false,
+      "nameShop": "Tomaten 🍅",
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-4",
+      "name": "Immer nur gegen Abend einkaufen, denn es überreizt mich oft",
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-5",
+      "name": "Salat Zwillinge",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "isRushOnce": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-7",
+      "name": "Brötchen: Noch eingefrorene da?",
+      "isRush": true,
+      "nameShop": "Brötchen",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d-9",
+      "name": "Milch auf 7",
+      "isRush": true,
+      "nameShop": "Milch",
+      "hideUntilReset": false,
+      "amount": "2",
+      "alias": "",
+      "nameExport": "",
+      "isUrgent": true
+    },
+    {
+      "id": "d-10",
+      "name": "Quark auf 8",
+      "isRush": true,
+      "nameShop": "Quark",
+      "hideUntilReset": false,
+      "amount": "6",
+      "alias": "",
+      "nameExport": "Magerquark 500g, NICHT 20% oder 40%!",
+      "isUrgent": true
+    },
+    {
+      "id": "d-11",
+      "name": "Gouda mittelalt am Stück",
+      "hideUntilReset": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-12",
+      "name": "Paprika",
+      "hideUntilReset": false,
+      "isRushOnce": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "Paprika 3er",
+      "defaultCompleted": true
+    },
+    {
+      "id": "d-13",
+      "name": "Streukäse",
+      "nameShop": "Geriebener Käse, lange haltbar",
+      "hideUntilReset": false,
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-14",
+      "name": "Salatgurke",
+      "isRush": true,
+      "hideUntilReset": false,
+      "defaultCompleted": false,
+      "nameShop": "",
+      "amount": "1",
+      "alias": "Gurke"
+    },
+    {
+      "id": "d-15",
+      "name": "Rote Grütze",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d-16",
+      "name": "Das Pure 🍞 bis ich auswendig weiß, dass wir zu viel haben",
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "Das Pure 🍞",
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-17",
+      "name": "Rustikale Art Gemüsepfanne",
+      "isRush": true,
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d-18",
+      "name": "Möhrenbrot",
+      "isRush": true,
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-19",
+      "name": "Frosta, was haben wir noch oben oder was haben wir gegessen?",
+      "isRush": false,
+      "nameShop": "Frosta oben, auch Holger anrufen",
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "d-20",
+      "name": "Fischstäbchen",
+      "isRush": false,
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "d-21",
+      "name": "Kaiser-Gemüse",
+      "isRush": true,
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d-22",
+      "name": "Mandeln, ganze",
+      "hideUntilReset": false,
+      "defaultCompleted": true,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-23",
+      "name": "Apfelmus auf 2",
+      "hideUntilReset": false,
+      "nameShop": "Apfelmus",
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-24",
+      "name": "Haferflocken auf 15 preppen",
+      "nameShop": "Haferflocken hellblau",
+      "hideUntilReset": false,
+      "amount": "9",
+      "alias": "",
+      "nameExport": "Zarte Haferflocken"
+    },
+    {
+      "id": "d-25",
+      "name": "Hafermilch auf 7",
+      "nameShop": "Hafermilch",
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "2"
+    },
+    {
+      "id": "d-26",
+      "name": "Tomatensoße für die Kinder",
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "d-27",
+      "name": "Tomatendosen für Pizza",
+      "nameShop": "Tomatendosen",
+      "hideUntilReset": false,
+      "amount": "2",
+      "alias": "Dosentomaten",
+      "nameExport": ""
+    },
+    {
+      "id": "d-28",
+      "name": "Würstchen",
+      "hideUntilReset": false,
+      "defaultCompleted": true,
+      "isRushOnce": false,
+      "amount": "0"
+    },
+    {
+      "id": "d-29",
+      "name": "Salami",
+      "nameShop": "Salami",
+      "hideUntilReset": false,
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-30",
+      "name": "Frischkäse",
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "d-31",
+      "name": "Blattspinat, ausschließlich",
+      "hideUntilReset": false,
+      "defaultCompleted": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d-32",
+      "name": "Coupons aktivieren",
+      "hideUntilReset": false,
+      "defaultCompleted": true,
+      "amount": "0"
+    },
+    {
+      "id": "d-33",
+      "name": "Erdbeeren, nur richtig gute",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d-34",
+      "name": "Wenn Sarah einkauft: \n- Erinn machen, dass ich Gekauftes als gekauft markiere\n- neben alles, insbesondere auch Möhren und Kaisergemüse, Mengenangaben.",
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "d-35",
+      "name": "Kartoffelsalat",
+      "hideUntilReset": false,
+      "defaultCompleted": true,
+      "amount": "0"
+    },
+    {
+      "id": "d-36",
+      "name": "Kühlakkus",
+      "hideUntilReset": false,
+      "isRush": true,
+      "amount": "1"
+    },
+    {
+      "id": "d-37",
+      "name": "Äpfel",
+      "isRush": false,
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "isRushOnce": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "",
+      "nameExport": "Äpfel Elstar oä im Sack 🍎",
+      "isUrgent": true
+    },
+    {
+      "id": "d-38",
+      "name": "2 kg Beutel Möhren für Möhrensalat, auf GRÖSSER ALS 4 kg, entscheiden wie viel kaufen",
+      "isRush": false,
+      "nameShop": "Möhre 2 kg Packungen, genau angucken!",
+      "hideUntilReset": false,
+      "alias": "",
+      "nameExport": "2 kg Beutel Möhren",
+      "defaultCompleted": true,
+      "amount": "0"
+    },
+    {
+      "id": "d-39",
+      "name": "Kartoffeln 🥔",
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "Kartoffeln 🥔, die dicksten",
+      "alias": "",
+      "nameExport": "Kartoffeln 🥔",
+      "defaultCompleted": true,
+      "amount": "0"
+    },
+    {
+      "id": "d-40",
+      "name": "Frosta, was haben wir noch?",
+      "isRush": true,
+      "nameShop": "Frosta obsidian://adv-uri?vault=o1&uid=Frosta",
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "d-42",
+      "name": "Ikea Tüten",
+      "hideUntilReset": false,
+      "isRush": true,
+      "amount": "1"
+    },
+    {
+      "id": "d-43",
+      "name": "Kasten",
+      "hideUntilReset": false,
+      "isRush": true,
+      "amount": "1"
+    },
+    {
+      "id": "01c19822-515c-4067-bfc9-4af68dec703f",
+      "name": "Gutscheine einpacken",
+      "hideUntilReset": false,
+      "defaultCompleted": true,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "788b94c5-4aa1-462c-bb42-e01eafd0bcca",
+      "name": "Blaubeeren 500g",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "eba53fae-8a54-4f1b-ba25-2ee291d04c22",
+      "name": "Limettensaft auf 3",
+      "nameShop": "Limettensaft",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "alias": "Zitronensaft",
+      "nameExport": "",
+      "amount": "0"
+    },
+    {
+      "id": "470a9b18-ad56-4373-ab87-f403aa90d6e7",
+      "name": "Cornichons zweimal",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "73266516-ebf2-4fd0-963c-36cac26e4963",
+      "name": "Plattpfirsiche",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "7bbcf356-663a-4193-90c0-5527293c2be7",
+      "name": "Feuchtes Toilettenpapier",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "cb186f12-fdad-462a-adfe-e6b0239ce359",
+      "name": "Penny wegen Kaugummis",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "67fa2e87-b373-4376-90fb-b4b603262a9c",
+      "name": "H-Milch",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "e5c4d8b3-2c4f-4e98-9cc8-2e3a63d0e800",
+      "name": "AA Batterien",
+      "defaultCompleted": true,
+      "isRush": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "df3101fd-a8a0-42f0-88db-2eb4df7de57e",
+      "name": "Gelbe Säcke",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "Gelbe Säcke, mind 35 l",
+      "alias": ""
+    },
+    {
+      "id": "ed9da751-8160-4a0f-9efb-36e50d0adbc6",
+      "name": "Süßstoff auf 3",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "6d69e4c4-b7c5-4504-a456-4f72401c7f29",
+      "name": "Zucker",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "1bc59c60-ded2-4231-8a25-bdf1195d75ff",
+      "name": "Hafermehl",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "2e74a49e-3508-4e9b-a08a-8ddbcd57e2f0",
+      "name": "Omi-Suppe",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "Omi-Hühnersuppe, vorsicht, schon aus Versehen Erbsensuppe von Omi gekauft.",
+      "alias": "",
+      "amount": "3"
+    },
+    {
+      "id": "a71e7a16-fa40-4536-9b7a-20f9d2f1fee4",
+      "name": "schwarzes Schauma",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "ab57b8bb-a830-4ad2-926a-07a24747ccdd",
+      "name": "Gutschein benutzen",
+      "hideUntilReset": false,
+      "defaultCompleted": true,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "42b56c65-f804-4b6f-aa0f-69c15222a4a0",
+      "name": "Ebly",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "7ed27034-f0da-40d8-95dd-74e0bc1a3efa",
+      "name": "Frosta Butter Chicken",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "3457e264-f271-4e06-a9e8-bd2e6db6bfe9",
+      "name": "Olivenöl mit dem jüngsten Produktionsdatum",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "isRush": true
+    },
+    {
+      "id": "94f4fbc8-86f4-4bff-9d45-99266e348376",
+      "name": "Taschentücher Boxen",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Tempo",
+      "nameExport": ""
+    },
+    {
+      "id": "72205523-f564-43cd-bfae-d617881d4a0d",
+      "name": "Schokolade 🍫 für Brei",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "8f54c3ad-4106-4065-b64c-171215e05018",
+      "name": "Paracetamol",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "9bcbbdb9-6a62-424c-baed-1c008acec6b6",
+      "name": "Rez",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "bbfe24f5-b9df-4e99-9db0-84e48ad89679",
+      "name": "Brokkoli TK",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "isRush": true,
+      "nameShop": "",
+      "amount": "2",
+      "isUrgent": true
+    },
+    {
+      "id": "d1efba15-d394-45ec-859b-dbd4d6ce1cec",
+      "name": "Raiffeisen: Dolomitkalk gegen Bittersalz tauschen",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "alias": "",
+      "nameExport": "",
+      "amount": "0"
+    },
+    {
+      "id": "3d310759-f1fc-47df-8084-a0c7e6e6b706",
+      "name": "Paket von Larisch abholen, für Holger",
+      "defaultCompleted": true,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "7d676708-5078-4360-9741-7b5e20e6934b",
+      "name": "Bargeld",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "c6a6c404-e99c-4d48-9b9c-8f42407e4645",
+      "name": "Sonnenblumenöl",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "70c050b3-6e89-4bca-baba-0d2c7b0fd557",
+      "name": "Küchenpapier",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "eedf00c0-6776-4fe1-9300-6b94e1f56d7d",
+      "name": "Paniermehl",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "998ed101-de24-4084-aac7-f0bf1b42f694",
+      "name": "Alkoholfreies Bier 6er",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "69f2b92a-9b73-47ab-8631-a7aeb8261a17",
+      "name": "bar und 4€-Gutscheine",
+      "defaultCompleted": false,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "1",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "d2727442-9f68-4ff4-8832-b5e40815b5d0",
+      "name": "Mandel Sojajoghurt",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "a60515c3-2fe0-4740-abf7-c0b303dbc802",
+      "name": "Klopapier",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "84480e27-3106-4b14-9587-ce6ef19e9d53",
+      "name": "Pizzateig 🍕",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "c33f5855-2a4e-4641-bd65-451abab473ab",
+      "name": "Skyr",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "ffafcb03-0982-4a0d-9bab-7924b0bee2c5",
+      "name": "Kokosmilch",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "f52b74c0-a681-4615-b5c8-981df421edc8",
+      "name": "Schokomüsli",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "1876894e-6545-44a2-8ea2-94b5a5d5512a",
+      "name": "Sojasoße",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "905b3cf7-7f09-4cc8-830d-b5882432f6ea",
+      "name": "AAA Batterien, billige",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "3e2cd51a-c80c-42ad-8181-95856c56d952",
+      "name": "Mandelmilch",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "isRush": true,
+      "amount": "0"
+    },
+    {
+      "id": "3fa282ed-fb62-4f3c-bdb5-bd954f7f9bfc",
+      "name": "Platz auf der Insel machen",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "ccc86bd9-4301-4e55-8070-6e33190b5ee0",
+      "name": "Tasch mit Karten für 5k",
+      "defaultCompleted": true,
+      "nameShop": "5k",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "08e0ceaa-c2a6-4cea-bc39-62a0e661fe95",
+      "name": "Grana Padano",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Parmesan",
+      "nameExport": ""
+    },
+    {
+      "id": "f6b02008-eaf6-4e65-aa93-07f72fb77cac",
+      "name": "Remoulade",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d32df33b-7048-4cde-aec6-00109a409696",
+      "name": "Grüner Tee",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "af3af5cf-d197-4791-92a1-7f18edc1e26c",
+      "name": "Kekse",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "8795e844-bf2a-4ce6-91d1-7d0e5a883448",
+      "name": "Ibuprofen 200 für Kinder",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "60a89328-e953-49cb-bdc5-56817b9d4aca",
+      "name": "Skyr auf 1",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "1e447add-2f92-4e2a-b8ff-74485275cfbb",
+      "name": "Joghurt",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "a9a6f392-a586-4914-bbf2-16ae2b95700b",
+      "name": "Pfandflaschen",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "95d162f6-ad2b-4625-b4bb-469c0af5acff",
+      "name": "Salz",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "14e8de4a-52b2-42f9-9ae8-a61e293b6e48",
+      "name": "Saure Gurken",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "561b0bc4-a949-40e5-adde-60b57ced6e71",
+      "name": "Bratwürste",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "94af9352-be60-40fa-9eff-c3f0be8224c4",
+      "name": "Cornflakes",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "2fd8d7cc-d8ab-4f53-9510-5b9364ea4114",
+      "name": "Kleine Schokoküsse für Irmgard",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "8fa40e4b-05f1-470a-8c2a-fc4260db546f",
+      "name": "Cevapcici",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "isRushOnce": false,
+      "amount": "0"
+    },
+    {
+      "id": "8bf423f6-f3d4-44d1-8f3d-8dcff93ffa97",
+      "name": "Erdnussbutter",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "466580ce-0519-44a1-a660-1345cb6470b0",
+      "name": "Erbsen, TK",
+      "defaultCompleted": true,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "isRush": true,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "a794bc1d-dcd7-4430-bfc6-4edd91c05085",
+      "name": "Zucchini",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "ac8c97a3-58da-4546-abb9-8a0eed1b3d13",
+      "name": "Süßkartoffel",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "deed777b-d46d-41bf-b78e-16395591a047",
+      "name": "Kichererbsen",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "a7c48ba6-431b-438d-859a-b1a1b04b8a58",
+      "name": "Kidney-Bohnen",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "34935073-423c-4f26-a285-82f584476792",
+      "name": "Zwiebeln",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "1ab5dd1c-aae7-4e31-a805-ef26e4d612a7",
+      "name": "Stangen für Frieda, blau",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "aa31baba-20ef-4e48-9a60-cc4ad3cf1fb9",
+      "name": "Altkleider",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "isRush": false,
+      "amount": "0",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "51fef25f-ea1c-4f11-a36c-e43628b2e72c",
+      "name": "Altglas",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "4314247f-8f89-4728-9597-aa155202611e",
+      "name": "Kohlrabi",
+      "defaultCompleted": true,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "932429d6-e145-4cbe-854e-12d52e26cc1b",
+      "name": "Große Tomaten 🍅",
+      "defaultCompleted": true,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "851bfd90-33ca-4854-9eb2-c40226ff836f",
+      "name": "Pfand Gutschein",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "2a86ad99-93dd-4ea9-b6a8-506fbe2f4376",
+      "name": "Tanken",
+      "defaultCompleted": true,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "46ca1fbd-e761-4cea-a61b-a4dcae999c0e",
+      "name": "Rote Beete",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "ae5e6a48-88f9-465b-b54e-1ca35bcc6771",
+      "name": "Mayonese",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "Majo",
+      "nameExport": ""
+    },
+    {
+      "id": "c99c54d7-3fb7-4d4f-a0d6-7a5bdb524682",
+      "name": "Arbeitshandschuhe",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "f0b01e86-8951-4370-9347-73a4513a76d4",
+      "name": "WC-Reiniger",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "cc8b037c-8933-4856-bf4b-199969cacf75",
+      "name": "Knäckebrot Vollkorn Roggen",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "55215835-7d2d-4194-b7d9-a42324697950",
+      "name": "Omasuppe",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "Hühnersuppe"
+    },
+    {
+      "id": "6898decf-9095-45ec-9016-72931208d1a8",
+      "name": "Eier 🍳🥚, 10er Packungen",
+      "defaultCompleted": true,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "isRush": true,
+      "amount": "0",
+      "nameShop": "",
+      "alias": ""
+    },
+    {
+      "id": "b064633a-455f-4abd-807e-e2fa3097186c",
+      "name": "Weißes Balsamico-Essig",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "9d633e76-9f66-4277-afeb-eb0eaf56e086",
+      "name": "Möhren für Eintopf, ein Kilo und Kartoffeln",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "eec3dc2c-b2ec-41cd-a82a-0267df34d004",
+      "name": "Bio-Dinkelmehl (noch bei Gitta?)",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "f1ddcb9b-30f0-410d-babc-9c40c6a66414",
+      "name": "Sonnenblumenöl für Gitta",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "a10d6264-9fc9-434c-9a6f-7e5b0e8f3e70",
+      "name": "Kürbiskerne",
+      "defaultCompleted": true,
+      "nameShop": "Kürbiskerne (beim Gemüse im Nussregal ganz unten)",
+      "hideUntilReset": false,
+      "amount": "0",
+      "alias": "",
+      "nameExport": "Kürbiskerne"
+    },
+    {
+      "id": "45a13a52-81e0-4b31-9ea0-20ced2574102",
+      "name": "Center Shock",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "68db627a-ae32-4816-9150-7d5f68729f83",
+      "name": "Vokabelheft",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "056652ab-7130-4b32-9695-95ee5ce76a68",
+      "name": "H-Sahne",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "isRushOnce": false,
+      "amount": "1"
+    },
+    {
+      "id": "df16ef69-5ceb-47cb-8cc7-6791a7ede53c",
+      "name": "Alufolie",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "9ade1fbe-b19d-4d45-a5a1-99fda2840fc9",
+      "name": "CR2032",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "edbec6ca-c196-421a-8f42-ca17f14a5237",
+      "name": "Avocado 🥑",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "isRushOnce": false,
+      "amount": "0"
+    },
+    {
+      "id": "a9df5bea-df94-4d90-b99a-e51db8b37b39",
+      "name": "Bio-Dinkel-Vollkornmehl (noch bei Gitta?)",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "09176125-62c2-4ea8-af12-28058385da62",
+      "name": "Vollkorn-Nudeln",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "20c5d676-17b2-4597-9f1c-2880182f4c20",
+      "name": "Knäckebrot für Lotta",
+      "defaultCompleted": true,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "3d330f1d-1552-4e49-9034-b8e44113dce5",
+      "name": "Hübscher Seifenspender",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "00b3b641-99d8-4049-a8eb-00aef1b222cc",
+      "name": "Kassler-Aufschnitt",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "fb0f0fbf-b807-4676-94ed-71e1533dd2ca",
+      "name": "Backkakao",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "538c93fb-df40-4d0b-bbf8-360190994b99",
+      "name": "Beerenmüsli",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "nameShop": "Beeren-Müsli",
+      "hideUntilReset": false,
+      "amount": "0",
+      "alias": "Früchtemüsli"
+    },
+    {
+      "id": "93480235-4969-47dd-a7c5-00bb42692dc8",
+      "name": "Kaugummis",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "486a57bf-1abe-4bf9-9b5c-7a33ce081c15",
+      "name": "Sonnenblumenkerne",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "54a8985f-74f5-45e5-842b-234e02851972",
+      "name": "Vollwaschmittel",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "b954a6bf-d648-4c41-8eb4-45f35cf40d35",
+      "name": "Flaschentomaten",
+      "defaultCompleted": false,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "a8b1f288-76c8-4f6f-afa1-348429c5fa88",
+      "name": "Mozzarella",
+      "defaultCompleted": false,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "2"
+    },
+    {
+      "id": "945a1359-6751-4b94-8778-66e756ff219d",
+      "name": "Roggenaufbrötchen Herzstücke",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "4744a1e6-cc01-4e72-87b6-ddea3c54b8d0",
+      "name": "Sarah anrufen",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "fe9d455f-c720-4a40-b59b-660d121f9983",
+      "name": "Crema balsamico",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "4ba0512d-57c2-4626-9ea2-c19f1a80a619",
+      "name": "5000",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "caa364e1-93ad-4453-bc62-4ec885178ba7",
+      "name": "Hollandaise",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "dbfcc7a2-1f4b-4fa6-be01-46970a231229",
+      "name": "Margarine",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Magarine",
+      "nameExport": ""
+    },
+    {
+      "id": "406b4c90-650c-43df-96ea-6f4f7b80515f",
+      "name": "Leinöl",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "9175b20e-ad2f-46a7-917a-0a14cf7fdc02",
+      "name": "Butterschmalz",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "b43a25e7-1c0a-4127-8866-5025e34be925",
+      "name": "Karten für 5000 in richtiger Tasche?",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "ce7718f5-3136-46e8-a5c5-9f0c73e11285",
+      "name": "Impfausweise abholen",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "Wassersprudler-CO2-Kartusche, Soda-Stream",
+      "nameExport": ""
+    },
+    {
+      "id": "3ffc0828-6352-4b89-a989-d1625d2f96bb",
+      "name": "Linierten Schreibblock",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "55b2fde0-95bd-4401-9449-7e055ac1375a",
+      "name": "Karierten Block",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "e626a9d2-f4b6-4e70-83a2-45f23c6bdbbc",
+      "name": "Coupon aus MyDealz",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "b34802c2-ffe6-4b7e-85bf-b1396f560b96",
+      "name": "Rotes Pesto",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "5aad527e-7a2b-4124-be36-a5c318e7cca2",
+      "name": "Hähnchenfleisch",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d5e8af1b-fa34-4595-9887-7e1a0e867c49",
+      "name": "Couscous",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "9a9f6257-1f1e-431a-82a8-95f80f6f508b",
+      "name": "Vanillepaste",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "0d5c7c5a-00ea-4e7d-8027-9494f74f5e79",
+      "name": "Portmo in Hosentasche",
+      "defaultCompleted": false,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "d95631ea-90b1-4af8-9ac0-4828b1d0d6f4",
+      "name": "Chia-Samen",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "47c5f8ad-9885-4125-ba0c-944ac8930646",
+      "name": "Lasagne-Blätter",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "6e597131-7210-4b91-afb9-568bddec0593",
+      "name": "Hack Bio",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "Hackfleisch",
+      "nameExport": ""
+    },
+    {
+      "id": "9445e819-d1bf-4e92-b49d-5c28e298b049",
+      "name": "Feta",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "e768d18c-9c90-4c4b-8783-2d5fa7f30c5e",
+      "name": "Mini-Salamis",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d758906a-21c4-4054-92a4-df92934083a6",
+      "name": "Linierter College-Block mit Löchern und Rand",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "c8560e3f-8ae4-44ee-bf88-9b75f79c7bae",
+      "name": "Griechischer Joghurt",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "a9ebd62f-5a12-464d-a60d-cce41e1c2fcc",
+      "name": "Spirelli, NICHT Vollkorn",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "1dd9f7e0-f374-48da-a06c-e322b458d539",
+      "name": "Tubble Gum",
+      "defaultCompleted": true,
+      "isRush": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "bbc2cac3-6d96-4439-9945-c9dc42548834",
+      "name": "Zuckerfreie Bonbons gegen Friedas Reizhusten",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "9cad73d7-b18f-4398-bc11-f3996c4315ad",
+      "name": "Dunkles Baguette für Lotta",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "8f71753a-1fca-4573-be1d-caef5466b1c4",
+      "name": "Zahnstocher",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "2d2bdb5a-8691-42bd-95fa-80d7a0e0e8af",
+      "name": "Zuckerfreie Erdbeer Bonbons für L",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "c5b33753-2d04-40e2-988a-cdbd95bfe515",
+      "name": "Tee Heiße Liebe",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "0e01f840-2fdc-4636-91cf-a3c0e200d659",
+      "name": "Steckrübe",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "ee1fd06e-cb2d-46a0-93ee-4ce23f2b0f91",
+      "name": "Kürbis oder Süßkartoffel",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "94ca5e15-f56f-46ed-b0ef-03125fdfa55d",
+      "name": "Kaffeekapseln",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "499164ff-329b-406b-9f6e-22312ab1a569",
+      "name": "Hermes Paket abgeben",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "dd2b7ab2-67ff-43df-9210-f5413118e036",
+      "name": "Coupons etc vom Kühlschrank",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "6083ec99-526b-42d9-a3fd-b310e5cb07e2",
+      "name": "Enthaarungscreme",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "cd509681-0722-440a-b235-917c486aa15c",
+      "name": "Fischsoße",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "bf8bce0e-a339-4d95-9956-cd95f141259a",
+      "name": "WhatsApp",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "56692cdf-42ee-48d6-bd92-a48d5085e8b6",
+      "name": "Bargeld umbuchen, Kleingeld einzahlen, dazu Rucksack mit",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "e747f989-6d07-44fe-a30b-995d0e7a9719",
+      "name": "Reifendruck obsidian://adv-uri?vault=o1&uid=ReifendruckAuto",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "e4394dfe-2398-4336-ba2a-48bd08a73ba7",
+      "name": "Nahkauf: Eis Papa",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "8ed3af05-e5be-4ffb-bd1b-8c7bf9f02fd8",
+      "name": "Räuchertofu (vorne beim Gemüse im Kühlregal)",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "b8cd2edb-f060-4e7e-9ef9-ac55ba7b56e9",
+      "name": "Sauerkraut, Dose",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "89fe9ed4-659e-49b5-bef0-8acad915a52a",
+      "name": "Kiwis 🥝",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "a73908d5-c77b-4468-9b6a-642e88526bd2",
+      "name": "Anspitzer für Frieda",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "5e18cc1b-7a18-46de-acdf-d23c50106c96",
+      "name": "Senf",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "c91753e8-f092-4aec-9487-d37b59867693",
+      "name": "Kräuterquark",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "9eb0ac78-7d1f-475a-8fd3-d4aab700a7e2",
+      "name": "Auto Gitta",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "99fcd80c-3cf5-47ec-a29a-75106d3189dc",
+      "name": "Loszettel",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "e89fdf4d-3adc-4e6a-be50-f5d104b2d79c",
+      "name": "Paket mitnehmen und wegschicken",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "c5584c03-3347-4009-a046-dfbf230d5a8a",
+      "name": "Paprika edelsüß",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "cfb62025-b68e-4270-875a-ad946c07d528",
+      "name": "Spüli-Konzentrat",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Spülmittel"
+    },
+    {
+      "id": "0b99bd20-07a9-431b-a47a-e1a8dec14eba",
+      "name": "Sesam",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d7087359-c542-4b02-9ae5-0b01ace530ea",
+      "name": "Ketchup",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "ef7b3034-9051-4887-b0cb-b1bada48ff4d",
+      "name": "BLÜTE-ZEIT Hyaluron Gelcreme mit Bio-Aloe Vera Siehe auch still",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "24db6e2d-70d0-40c2-b33a-9a1e5974bd64",
+      "name": "Magnesium löslich, Mg",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "ba3d5c56-431b-4d65-a867-7ed9ceb4c2ba",
+      "name": "Apotheke für Sarah",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "a87b2dd1-2416-4f08-a8ad-cbd0510db22d",
+      "name": "Flüssigkleber",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "77dd968b-2d41-4d2f-9fd6-19293fe5a889",
+      "name": "Apfelessig",
+      "defaultCompleted": true,
+      "isRush": true,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "56259319-1dde-45f1-b3fe-569bd723eb42",
+      "name": "Joghurt, natur, cremig",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "c7dcbdb3-d71c-4ec5-91db-cef70900af24",
+      "name": "Gefrierbeutel 3 l",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "0652ec1c-f1d9-49e8-b59c-2e7f6a2b7a14",
+      "name": "Müllbeutel 50 l",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "isRushOnce": true,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "bd6fb957-c909-4cab-8736-3555dc53c552",
+      "name": "Raclette-Käse",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "90864a7a-bd2d-4bba-b929-b66b7fcae222",
+      "name": "Honig 🍯",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "2c5a3828-2477-47e4-a287-24c1962aad5b",
+      "name": "Tomatenmark",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "86360541-58de-47a9-8d5a-6911f2bc4592",
+      "name": "Spülbürste bunt",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "58c8df83-741a-4ca5-8a1a-de2a7abc267a",
+      "name": "Knaller-Sortiment",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "aff52422-9762-4bbb-9f14-71b0e760eb28",
+      "name": "Rapsöl raffiniert",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "0d4259ec-1e26-4881-93b4-a4159d123493",
+      "name": "Spülmaschinen-Tabs, NICHT All-in-One!",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Geschirrspüler-Tabs",
+      "nameExport": ""
+    },
+    {
+      "id": "d156301c-5a2b-4178-afec-b12fd3d5f958",
+      "name": "Mais",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "c5c651a6-0e44-4bb8-8d3e-e960b7aeb162",
+      "name": "Müllbeutel größer gleich 20 l für die Küche",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "8c1b8821-c430-45da-9981-2d36d402251f",
+      "name": "Erdnüsse, UNgesalzen",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "Erdnüsse, gesalzen, Beutel"
+    },
+    {
+      "id": "1833bf93-ac2f-4d58-813e-fbe1238184c3",
+      "name": "Batterien 🔋 alte abgeben",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "a59ddf98-c6c4-406a-a019-4055b03ca7c2",
+      "name": "Orangen 🍊",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "da679e90-f697-40d1-bc74-9d559d846123",
+      "name": "Haferbrot Lieken",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "5e96e175-82af-46f6-996c-d90eb39cd905",
+      "name": "Tofu-Natur (vorne beim Gemüse im Kühlregal)",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "2278fa0e-6670-4481-9541-779a73660da0",
+      "name": "Ananas 🍍 frisch",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "a2978510-d5cf-4fcf-9688-408451075a56",
+      "name": "Pflück-Salat in Plastikschale",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "3bb68f70-31af-41ac-b10f-dcf6bf596d6e",
+      "name": "Blumenkohl, falls nicht gut TK",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0"
+    },
+    {
+      "id": "a3ed7f59-8a07-49d8-98e0-939837778149",
+      "name": "WhatsApp \"still\"",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "01a1aeb4-bc02-4f97-aec3-9edf3a5b98aa",
+      "name": "Baby-Spinat frisch",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "Baby-Spinat oder Salat",
+      "amount": "0",
+      "alias": "Blattspinat"
+    },
+    {
+      "id": "9425d4a8-6ce9-4b72-8fa1-ccd666ab7e54",
+      "name": "Hüttenkäse",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d0deb66a-e33b-4ee1-8e1f-b8a6b240cde2",
+      "name": "Alpro wie Skyr Vanille",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0",
+      "alias": "",
+      "nameExport": "Alpro wie Skyr Vanille"
+    },
+    {
+      "id": "a24f8fc2-a5ba-4465-88cd-10334c77efaf",
+      "name": "Quinoa",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "12ec026f-d147-48f0-81db-aa4882d315d6",
+      "name": "Ras el Hannout Gewürz",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "a9ce2974-becb-4119-92a1-1d734890cc31",
+      "name": "Alpro wie Skyr natur",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "bdc21ed3-cbcd-4512-83b4-0bac6d805a48",
+      "name": "Magnesium-Tabletten",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Mg",
+      "nameExport": ""
+    },
+    {
+      "id": "ceccb8c8-6319-4b6e-8697-2a6211eb3aed",
+      "name": "Weckglasgummis",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "67b773fa-bbdd-4aff-937d-6b0974bb27f4",
+      "name": "Instant-Kaffee",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "eb877683-f206-4e65-a1c3-d99e19124a68",
+      "name": "Zahnpasta Blenda-Med",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "cd97e741-8973-43af-8e24-36836d6e73cc",
+      "name": "Pfefferkörner",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d8ba1edb-fe95-4f27-a94a-7405e620fe13",
+      "name": "Nachfüllseife",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Handseife"
+    },
+    {
+      "id": "ef6e8281-9a06-4756-859c-7b5bfd37cc3f",
+      "name": "Schokodrops zum Backen",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "127b9975-8c25-4c99-bea5-6916ffeeab1c",
+      "name": "Vegetarische Mortadella",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Kinderwurst",
+      "nameExport": ""
+    },
+    {
+      "id": "617cacb1-0b93-4534-bec2-17a83e6bba3c",
+      "name": "Rosenkohl (Netz)",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "d080b045-00a7-4aac-9767-3073750c55a0",
+      "name": "TK-Wildheidelbeeren",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "Blaubeeren",
+      "nameExport": ""
+    },
+    {
+      "id": "c0b0935d-3a09-4c82-b546-06e846f36650",
+      "name": "Möhren",
+      "defaultCompleted": false,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "23ad00aa-48dc-4f02-af3d-0efb279b7ed7",
+      "name": "Frosta: Grüne Nudeln und Frikasse getrennt überprüfen, oben",
+      "defaultCompleted": false,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": ""
+    },
+    {
+      "id": "47c3370d-3f88-49bd-bded-c8fcf38da482",
+      "name": "Zink-Tabletten",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "b2a69b85-9497-4000-a052-4bf6c7d92f4c",
+      "name": "Ingwer, Bio",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "db5095a4-8eef-4979-af3b-c59325d6c36e",
+      "name": "Erdbeermarmelade",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "43be8db3-ff6b-4705-a528-a5cef56f35f0",
+      "name": "Mandelmuß braun",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "0fac37cb-e152-4a8a-8dfb-627a29cbbb4c",
+      "name": "Brötchen: 1 Roggen",
+      "defaultCompleted": false,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "isUrgent": true
+    },
+    {
+      "id": "fd000912-4692-4caf-9a65-2455a80b1fd4",
+      "name": "Bug-Check auf Sachen vom Kühlschrank",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "9698e1f9-f41f-49f3-b174-0bd186bea2e4",
+      "name": "Backpulver",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "964c7641-4f93-4563-aa13-a5c3cee4ca79",
+      "name": "Kästchenheft, möglichst gelocht",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "2cde63fd-4997-42ee-8ca6-c2e66de0b633",
+      "name": "Lachsfilet",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "efbad4c6-d47f-4885-bee0-1d3b5724d7e1",
+      "name": "80% Dunkle Schokolade",
+      "defaultCompleted": false,
+      "isRush": false,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "9efc4c08-7dec-49fc-bd64-65c65e7bac2d",
+      "name": "Frostschutz Scheibenwischer",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "df9b5885-f4e3-46d7-b6d2-603816d30ffb",
+      "name": "Zahnseide",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "4015a01d-941b-495d-92a9-ef1dacdd0704",
+      "name": "Mango",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "07ab842d-f573-434b-b00c-46fa23fe8832",
+      "name": "Vanillezucker",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "dd7821f5-7a30-4dcb-b66f-9675a6d5a093",
+      "name": "Choco Serial",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "fa3738dd-d71b-4956-a0e1-4e15938caf8a",
+      "name": "Zahnpasta Helge",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "90188eec-526a-48a6-9f90-ae36b636ae37",
+      "name": "Tulpen 🌷 🌷 🌷 wünscht Sarah sich",
+      "amount": "1",
+      "defaultCompleted": false,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "f8719bff-de03-4533-9f90-0771091c370e",
+      "name": "Blume Pohlmeier",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "270533ee-f518-4a8d-9264-7d542738d36f",
+      "name": "Thunfisch im Saft",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "afebdf35-142c-4c58-8a83-3d1055578e4c",
+      "name": "Frosta: Grüne Nudeln und Frikasse getrennt überprüfen",
+      "defaultCompleted": false,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "4c8308c2-bb3b-4c5d-ad14-8915eb7e6fca",
+      "name": "Dose braune Linsen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "26d2836e-757b-4c1b-a97f-bf7661407371",
+      "name": "Arzt: Candesartan",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "d103410d-903e-41d6-9db9-4bd9e4482b64",
+      "name": "Spülmaschinensalz",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "c72e4d8e-a4b2-41ab-8309-03bbb9e248c2",
+      "name": "Strohhalme",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "27417393-19d0-45ab-9cdb-c3a07230a748",
+      "name": "Moosentferner",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "3700e8d3-bc9c-40b8-907e-b0b587a7dbba",
+      "name": "Moosentferner",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "c2219838-4160-4bee-84c7-3951e63f3a1d",
+      "name": "Apfelsaft",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "Apfelsaft möglichst naturtrüb, denn der ist gesünder.",
+      "alias": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "08db0a1e-8396-41e8-a062-ac970ff91d43",
+      "name": "Laborwerte vom Hausarzt ausdrucken lassen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "ec536891-509e-4e35-bfb0-f697120b70dc",
+      "name": "Paket zu Larisch bringen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": ""
+    },
+    {
+      "id": "01197b3e-dd90-45d9-947e-ee4c6809ee88",
+      "name": "Apotheke für Holger abholen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "75e8ba45-cec8-42f4-b000-7ef518e2fff9",
+      "name": "TK Petersilie",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "67368b9b-b1d0-415c-b475-1b6227102c44",
+      "name": "Karoblock",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "48b0702e-71cb-493e-b9c0-b51691870f40",
+      "name": "Sonnencreme 50er",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "dbf7571d-d9fc-4fe7-a191-ff32da936331",
+      "name": "Eistee - Teebeutel gibt es nicht sondern nur beim Rossmann",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "96148217-806c-4e7b-92c2-6eb55d7a8240",
+      "name": "Benzin für den Rasenmäher",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "41c0c8df-2301-4dfa-be50-378804dc6cc0",
+      "name": "Hagelslag",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "02bd496a-98f2-437c-a8fd-5f0adcfe04f5",
+      "name": "Knoblauch",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "074fefd0-348a-4846-b578-a1766620667d",
+      "name": "Eier aus Hühnerstall",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "f8e4aa04-56be-4ea7-8739-e9b6597872d1",
+      "name": "Leberwurst, aufs Haltbarkeitsdatum achten, Komma, gegenüber Frischetheke",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "28448e7b-25ad-477f-8423-8a6339aace4a",
+      "name": "Sushi im Angebot?",
+      "amount": "1",
+      "defaultCompleted": false,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "b1d6f419-7978-4d28-aae8-bc3b741f4113",
+      "name": "Sushi",
+      "amount": "1",
+      "defaultCompleted": false,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "de4d1ce2-e886-404a-aa6c-f3613825f81f",
+      "name": "Tüte und Kühltasche mit rein",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "071b8ed0-3b90-4a39-a380-5136f8c9f497",
+      "name": "Grünes Pesto",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "39e86eb0-6117-41ca-8aa9-858576ef13c9",
+      "name": "SchulHEFT, liniert",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "e7ee56e0-e541-474b-bf66-19b383456b54",
+      "name": "Erdnüsse, gesalzen",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Salzige",
+      "nameExport": "Erdnüsse, gesalzen, Beutel",
+      "isUrgentOnce": true
+    },
+    {
+      "id": "d9a53c42-20b0-4621-8d6a-947b609143c8",
+      "name": "Ingwer zum Einnehmen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "efddbb86-a7a1-4965-b1d0-545c72f1ec4e",
+      "name": "TK-Himbeeren",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "80051e1f-0ee8-4bb3-aa77-45cd015eb7f1",
+      "name": "Farbe für Ostereier",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "bec9865c-6de5-4b78-b42d-8a0aac00f736",
+      "name": "Wraps",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d310556e-b01d-4047-b7ab-e21ccd471b9c",
+      "name": "Tafel-Essig, billig",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "10f9662c-b372-4259-85fb-d6b5cfa7a674",
+      "name": "Cola für Torsten in Milchkammer",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "34821a71-5774-49c4-8101-3db85a10310d",
+      "name": "TK-Blumenkohl",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "d3cf5db4-4e45-4d30-9e02-5e9e1cc8c960",
+      "name": "Zahnpasta Oral b oder Blenda med, mild",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "13665b4b-24b5-4304-b440-419cd42e9db5",
+      "name": "Entkoffeinierter Kaffee",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "Koffeinfreier Kaffee",
+      "nameExport": ""
+    },
+    {
+      "id": "429f8b24-fd50-4b0d-a231-8809e53ef213",
+      "name": "Gemüsesaft",
+      "amount": "1",
+      "defaultCompleted": false,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "b56b10e4-23d8-494b-ad1d-9a62e509f305",
+      "name": "Butterkäse",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "da27e46f-139f-4250-b85c-7315eeefceec",
+      "name": "Braeburn für Sarah?",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "e9fff0c6-0f88-4896-8b4a-9e2f8e11e853",
+      "name": "Bunter Pfeffer",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "823b332b-61cc-44f5-b36e-b4ed1cdf1fc3",
+      "name": "Cheddar",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "327f9f60-aef9-455e-b74c-917c1867e881",
+      "name": "Leergut abgeben",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "ce704f19-9578-488c-a73e-1588f09c566d",
+      "name": "Leergut einpacken",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "f101ff15-90c8-4a88-aa93-aa89b1037d51",
+      "name": "Haferkleie",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "f5a7a5a4-ad36-47a3-9611-96da15a51fd3",
+      "name": "Würstchen für Gitta nachkaufen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "da923ad6-eaa3-4bb6-a6c6-7247ce1e0bca",
+      "name": "Wortmann bezahlen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "73236bd6-bd1d-47a7-a9d9-f1b24232f79c",
+      "name": "Mi: mit Kaugummi aufrunden (132€)",
+      "amount": "1",
+      "defaultCompleted": false,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "6f4cf305-8c0d-4a22-a45d-e28eb7d6c980",
+      "name": "Käse-Stangen ohne Käse, sondern mit Salz für Frieda",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "c6548462-82e0-45cf-a5f6-aff8c736f5e7",
+      "name": "O-Saft",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "d8854814-f833-4178-b2a3-6720f81d3311",
+      "name": "Pistazien, UNgesalzen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "fe0e0e95-58c9-4cda-a82b-a5d7fdb6602b",
+      "name": "Merci für Volti",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "784eb9ae-da7c-4b8b-9ecb-f49c946d89af",
+      "name": "Schnitzel",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "7f9833cb-6005-4219-9be8-aaf5e7e9b3b3",
+      "name": "Trockenbohnen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "efdab47a-935d-423b-ba1e-a9f973ed315e",
+      "name": "Muskatnuss",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "e23b8e70-4ca9-465f-879c-4f46d154f164",
+      "name": "Cola 700 ml",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "c3dfb200-02cc-4506-841a-4e9235f9950d",
+      "name": "Weizenkleie",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "bab642e7-8203-4e81-ab05-d3888e6eb55b",
+      "name": "Leinschrot",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "0ef68e30-6639-454d-b8f2-fd1e94063f50",
+      "name": "Butter",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "5924b086-f97c-4d8d-81fa-b2265e555045",
+      "name": "Zitronen 🍋, Netz, Bio",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "6acfccc7-0f1b-4499-9507-27a6ba56539b",
+      "name": "Rosinen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "c6b273c6-24dd-40c3-95af-b48d3a525ca4",
+      "name": "Dinkel-Flakes",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "56089774-e187-491a-bef0-3f5685886981",
+      "name": "Fertiggerichte für die Kinder, da Sarah so wenig kocht",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": true,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-",
+      "hideUntilReset": false
+    },
+    {
+      "id": "51289dd8-a1bf-405a-97ce-df0d72629752",
+      "name": "Alternative zu Cevapcici oder gewürztes Gemüse",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "e81f8ed4-29c2-4927-90a3-fea040a6c234",
+      "name": "Pergamentpapier für Backofen gibt es 2026 nicht beim EDEKA nur Backpapier?",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "b73606b8-e3d1-49e7-ad58-e2d51c5c358e",
+      "name": "Toastbrot für Holger",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "35def21c-3554-4ced-82a2-e5e9822bbfd3",
+      "name": "Glas Sauerkirschen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "de4cb560-3bb9-48b6-8b5f-3c8036f66881",
+      "name": "Vanilleeis",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "bd3cd1f3-67b4-4f13-8aae-c54236a3c4a9",
+      "name": "Bio-Müll-Tüten",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "ae42d0c9-86b4-44eb-a606-7f91067e0970",
+      "name": "Dose Bohnen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "d98610e6-0ff4-4351-8056-1c12024cecca",
+      "name": "Glasreiniger",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "e2e568c6-3999-42c3-bd1d-a7473d8324b3",
+      "name": "Badreiniger",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "89a58d99-b10b-4cc1-aa98-e0cf2d5d0304",
+      "name": "Staubsaugerbeutel Swirl M40",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "7302d976-e104-49f0-ba21-201db34a9ae1",
+      "name": "Elektroschrott zum Raiffeisen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "004e7cb6-286b-40cd-a3d6-a9b2e1955f64",
+      "name": "Elektroschrott einpacken",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "93e9453b-c991-4bde-9c13-920f17813890",
+      "name": "Gummis",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "6d1c8485-1dfe-4b41-8dd8-8814bad3fefd",
+      "name": "Apotheke: Aciclovir",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "8dc57d5d-cd6f-464e-a41a-c7341489d047",
+      "name": "Walnüsse",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "467a9b20-fd89-41a7-8371-35b2ae298a24",
+      "name": "Scheine für Gabi, 5er und 20er",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "-"
+    },
+    {
+      "id": "ba940884-3ea4-439e-abb1-c435b76af77b",
+      "name": "Klebestifte, klein",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "78db8d64-1441-4fe8-b776-fb35e6bcebbf",
+      "name": "Röstzwiebeln",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "9348dbf0-4c30-420c-9149-1b3649f300e7",
+      "name": "Himbeer-Marmelade",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "abb123c2-4e9d-49d2-b641-ad30ff76ba69",
+      "name": "Mangosaft",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "e8201da4-96ec-435c-9edc-535d32e6c614",
+      "name": "Frischhaltefolie",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "43b61584-dc22-4011-bbd2-f9d76797a7b6",
+      "name": "Müllbeutel 5l",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "87e2796d-7958-4ea8-8b17-721aa298fcbe",
+      "name": "Dünger mit Magnesium, zB Dolomit für Wein",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "7afcb6fc-5776-4a31-8b49-9a2b8913a54e",
+      "name": "Kirschen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "b1e3f21b-391f-45a7-9acf-0affc412cbd7",
+      "name": "Raiffeisen: Gutschein benutzen",
+      "defaultCompleted": true,
+      "nameShop": "",
+      "hideUntilReset": false,
+      "alias": "",
+      "nameExport": "",
+      "amount": "0"
+    },
+    {
+      "id": "146f5606-d89a-4a32-83ed-65ae204d52f0",
+      "name": "Müllbeutel 10 l",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0"
+    },
+    {
+      "id": "5434b42d-27c4-4bb1-abb6-792faa3c6d16",
+      "name": "Vanilleeis",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "isRushOnce": true
+    },
+    {
+      "id": "d1fe7976-093c-4b7d-8216-3c6f9438986c",
+      "name": "Mückensalben",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "cf59709e-5fbf-4ddb-91b5-1ff3d93eb175",
+      "name": "Wassermelone 🍉",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "137e62c7-d7a5-417f-ae5e-5102a33a8877",
+      "name": "TK gemischte Beeren",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "b102421d-8a89-4cec-9290-93e7e8d5dc7e",
+      "name": "Brokkoli ungefroren",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "b8928600-5e2a-4a27-b4cc-d63da2745585",
+      "name": "Kefir",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "2",
+      "alias": "",
+      "nameExport": "",
+      "isRush": true
+    },
+    {
+      "id": "7836cfd8-621e-437d-93f8-775c81b9fb08",
+      "name": "Tahin",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "41ccf0a4-b776-485c-8793-56410ae93d7a",
+      "name": "Chips",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "84b0a8f3-cd2d-434c-aa63-c10203e63ec8",
+      "name": "Küchenreiniger",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "8ba5e7d8-d8fe-4255-a77d-bafce0f260ba",
+      "name": "Sonnencreme für Holger",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "ceaad612-0f8c-4066-8a87-b2875b1095ff",
+      "name": "Grillgut",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "7783f50b-207c-49de-8c59-ee2dc100378b",
+      "name": "Milchpulver",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "cbcb9dbd-0a04-4a59-85a9-8867b1852328",
+      "name": "Wasa Vollkorn Roggen-Knäckebrot für Frieda",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "f93af7b7-12f1-4a5a-8dfa-107da826b793",
+      "name": "Joghurt 3,5%",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "2f0db8f3-4d61-41c7-9337-14a3301eaebf",
+      "name": "Backpapier-ZUSCHNITTE",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "2921121d-fe06-4b51-b8ef-e9e07e6494c1",
+      "name": "Milchreis",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "a96e99c2-9f2e-42be-beed-075a3836ea49",
+      "name": "Holgers Wurst",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "5467a743-85a6-42e8-abac-fbb8ddbc2761",
+      "name": "Eis für Holger",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "13d2a2d5-9e08-4258-8727-6f3eb7306b88",
+      "name": "Johannisbeeren zum Einfrieren",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "4f828f59-0d9d-490e-9e8d-87a2d07ff115",
+      "name": "Blätterteig",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "03bf2d8b-4605-4706-9d4a-664573190b2b",
+      "name": "Mango TK, kein Bio",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "67f813d0-c17a-4a5d-9bb7-2c7da8e26c36",
+      "name": "Pizzagewürz",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "63da870c-3e4d-4ec0-9e85-58e279f85cc5",
+      "name": "Trockenhefe",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "a0485ce5-3049-4070-94ae-72d693c65d11",
+      "name": "Sahne 400g",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "8c299b0b-c4a1-4c2d-bb31-1042854ec489",
+      "name": "Alkoholfreier Sekt Light Live 0,0%",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "98a2ee9f-30ef-4bdf-9f9e-aaf3439fc28e",
+      "name": "Wasser mit Zitronengeschmack von Vilsa",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "d29c81a8-9d46-47b8-879c-3c2ed08c2a3a",
+      "name": "Schwämme, aber nur kleine",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "69f0e7ee-8f25-4208-94a7-d32dea8c7e2a",
+      "name": "Schoko-Koala, NICHT weiße Schokolade",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "71e1362e-d706-449c-bb4a-9a519c526c4a",
+      "name": "Ohrenstäbchen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "c620382a-eedb-4f22-b844-ca97293a3b0a",
+      "name": "Rezept HKS",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "dd210333-9034-45d3-93bf-088a1eae1fbe",
+      "name": "Getrockneter Basilikum",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "cdd90a2c-578f-460e-b55c-381813134383",
+      "name": "Schoko für Schokokekse",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "6f9d21ae-bd1e-488d-b57c-0844c2e13c68",
+      "name": "Pflaster Tabalugo",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "8ff2081b-ea02-45d8-8cd7-6b6bd6285ba5",
+      "name": "Kamillentee",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "60c722a0-d1b3-4bcb-8d9d-4438e82e1624",
+      "name": "Taschentücher, kleine Packungen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "856b51b0-16c6-4a3e-8324-ca63f66a09b1",
+      "name": "Apple Pie Caramel Tea",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "d921a78e-f336-4623-9074-1589b5155302",
+      "name": "Gemüse für Gemüsesuppe, auch TK",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "1b8f6672-5123-427d-9567-b53c93a2d2da",
+      "name": "Nektarinen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "8a5fa666-5223-4853-98f5-de2d8020fad1",
+      "name": "Zu netten Menschen gehen und fragen, wie es läuft",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "668bac69-07c0-4705-98d1-3054995e134e",
+      "name": "Cantuccini",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "ffc27a62-7be2-4170-944c-d9a26173ec53",
+      "name": "Karte beim Arzt scannen lassen und alle Tabletten bestellen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "29804e04-9fae-4942-8581-f362c0513cd6",
+      "name": "Wattepads",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "9067d080-1bb5-4897-8c47-4e8e20aa0b7b",
+      "name": "Dosenpfirsiche",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "aaa25fbc-c693-433a-9e3b-55aaf6b0c139",
+      "name": "Gittas Auto waschen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "Auto-Wäsche",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "b8cc64c6-eb93-45ca-8575-3e5d85353942",
+      "name": "Klarspüler",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "3c9bbab7-63e9-46bb-b7e3-b24fec8bb130",
+      "name": "Räucherlachs",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "a4577f5a-b373-46dc-aeaf-8570928090d8",
+      "name": "Brötchen normal",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "04fa6bcd-55ef-4572-bd4c-70d24e9abbbe",
+      "name": "Schokowaffeln",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "e8ff53a6-77a5-4e4f-814c-8295ffb5d564",
+      "name": "Deo",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "c9ce8fbe-d035-4c21-b137-2505b8fc7654",
+      "name": "Tortellini Spinat Ricotta",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "14acff6d-5579-458a-a1c3-6f90560f694b",
+      "name": "Bananensaft",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "6ebb6709-ea34-42cf-901f-9bdd3b73f6fe",
+      "name": "Kirschsaft 🍒",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "f9a90555-66e9-4fcd-831c-19dda57e8efb",
+      "name": "Treuepunkte",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "4e351511-4811-422e-9595-b464e712cfbf",
+      "name": "Dose Mandarinen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "9431d431-1344-4e2e-8c60-e76e0ad3dba0",
+      "name": "Bargeld für Holger, dazu Rucksack mit",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "0",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "a7fcec1d-26b2-4633-accc-58af9713d614",
+      "name": "Schoko-Chips",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "306af4b1-8201-4745-96ae-9bc0d5c59ab2",
+      "name": "Burlander Original von Milram, mild nussig steht noch klein drauf",
+      "amount": "0",
+      "defaultCompleted": false,
+      "isRush": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "isUrgentOnce": true
+    },
+    {
+      "id": "85f09df6-38b5-4619-ab4e-625ce11eb1f9",
+      "name": "Kühlschrank-Liste: auf Fragen prüfen, besonders falls von den Kindern, wegwischen",
+      "isRush": true,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "3964ddc1-6070-4bfa-8208-e063ee9ff535",
+      "name": "Mehl",
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "dcb198f4-3205-443c-a4ec-855a53cf985c",
+      "name": "CO2-Kartusche",
+      "defaultCompleted": true,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "0",
+      "alias": "Wassersprudler-CO2-Kartusche, Soda-Stream",
+      "nameExport": ""
+    },
+    {
+      "id": "0950131e-d2ba-463e-b8c3-b287f20b1089",
+      "name": "Vorsicht Urlaub!",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "535b51ac-8db4-4d1c-94d7-5ab736245371",
+      "name": "Schokopudding Alpro 4er Pack ungekühlt",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "edaeabee-8ae6-42cd-8913-9412ba2dc852",
+      "name": "Reis",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "57fa5323-ae92-4bb7-a155-01fae425b120",
+      "name": "Graubrot oder Weltmeisterbrot, geschnitten",
+      "isRush": true,
+      "defaultCompleted": false,
+      "hideUntilReset": false,
+      "nameShop": "",
+      "amount": "1",
+      "alias": "",
+      "nameExport": ""
+    },
+    {
+      "id": "400d51bf-f10d-439c-bf3c-c54bdbfc690b",
+      "name": "Rote Linsen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "fc4440c3-168a-4dc9-bc00-42f66e0b7e4e",
+      "name": "Lorbeerblätter",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "5f80925a-84b7-49fa-a638-ad00ccd8e2b8",
+      "name": "Gouda am Stück",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "94e0ebeb-1bed-490b-ab99-078d67f9243c",
+      "name": "Eisbergsalat",
+      "defaultCompleted": true,
+      "hideUntilReset": false,
+      "isRushOnce": false,
+      "amount": "0"
+    },
+    {
+      "id": "3724d802-01cf-410a-be76-b6b4e424f0bc",
+      "name": "Paprika auf 6",
+      "hideUntilReset": false,
+      "isRushOnce": false,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "Paprika 3er"
+    },
+    {
+      "id": "bd60d435-c8ba-471a-a640-19cc3a3a3d4b",
+      "name": "Tilsiter",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "7a4357b6-eac6-405d-a28b-23234a3563f9",
+      "name": "Laktosefreier Naturjoghurt oder Skyr 500 Milliliter",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "f852ba90-a076-4c2e-b319-29e5e4e09b6c",
+      "name": "Laktosefreier Frischkäse",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "d72dddbc-f55e-4215-8d54-3b276de347d0",
+      "name": "Quark 40%, 250 Gramm",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "hideUntilReset": false
+    },
+    {
+      "id": "22612d4d-76b0-4784-a2f6-d2fcb33b819d",
+      "name": "Eier 🍳🥚, 10er Packungen",
+      "defaultCompleted": false,
+      "isRushOnce": false,
+      "hideUntilReset": false,
+      "isRush": true,
+      "amount": "1",
+      "nameShop": "",
+      "alias": "",
+      "isUrgent": true
+    },
+    {
+      "id": "0a006807-991c-4841-b622-e814893cb904",
+      "name": "Weintrauben",
+      "amount": "1",
+      "defaultCompleted": false,
+      "isRush": false,
+      "isRushOnce": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "f3654e95-4242-4711-b21e-d645c89408b9",
+      "name": "Kiba",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "a3c89541-2cea-4328-8005-054bfea46b76",
+      "name": "Tassenkuchen",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "b0caab74-6aad-4218-9a75-17027e036d15",
+      "name": "Mandarinen",
+      "amount": "1",
+      "defaultCompleted": false,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "62b0b9ce-711c-40bb-88f3-2f6698bed3ea",
+      "name": "Scheibenkäse",
+      "hideUntilReset": false,
+      "amount": "1"
+    },
+    {
+      "id": "64a2f9b6-c97a-4dd9-9ac8-1e003667bdef",
+      "name": "Weißkohl",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "d1c0760d-1b82-4d49-a29f-902319867331",
+      "name": "Kuvertüre Vollmilch",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "5da3c110-b147-40b3-8d2a-6e7ef6e188ce",
+      "name": "Datteln",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "b6c46070-a45d-400c-aad2-30e465761824",
+      "name": "Salsbretzeln",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": false,
+      "hideUntilReset": false
+    },
+    {
+      "id": "8a5500dd-5471-474c-8c6e-01ba217e35e4",
+      "name": "Brot vom Bäcker",
+      "amount": "0",
+      "defaultCompleted": true,
+      "isRush": true,
+      "nameShop": "",
+      "alias": "",
+      "nameExport": "",
+      "hideUntilReset": false
+    },
+    {
+      "id": "52c168a0-ebe1-43c1-bbc3-6fac45964147",
+      "name": "gutes 30% Brot vom Bäcker?",
+      "amount": "0",
+      "defaultCompleted": false,
+      "isUrgent": true,
+      "hideUntilReset": false
+    }
+  ],
+  "shopCategories": [
+    {
+      "id": "shop-uncategorized",
+      "name": "Uncategorized",
+      "itemIds": [
+        "60c722a0-d1b3-4bcb-8d9d-4438e82e1624",
+        "4f828f59-0d9d-490e-9e8d-87a2d07ff115",
+        "7783f50b-207c-49de-8c59-ee2dc100378b",
+        "ceaad612-0f8c-4066-8a87-b2875b1095ff",
+        "e8201da4-96ec-435c-9edc-535d32e6c614",
+        "80051e1f-0ee8-4bb3-aa77-45cd015eb7f1",
+        "d9a53c42-20b0-4621-8d6a-947b609143c8",
+        "c72e4d8e-a4b2-41ab-8309-03bbb9e248c2",
+        "f8719bff-de03-4533-9f90-0771091c370e",
+        "9efc4c08-7dec-49fc-bd64-65c65e7bac2d",
+        "ceccb8c8-6319-4b6e-8697-2a6211eb3aed",
+        "58c8df83-741a-4ca5-8a1a-de2a7abc267a",
+        "a87b2dd1-2416-4f08-a8ad-cbd0510db22d",
+        "0b99bd20-07a9-431b-a47a-e1a8dec14eba"
+      ]
+    },
+    {
+      "id": "0c7f5ec2-e965-476f-b543-50b0170952e5",
+      "name": "Apotheke",
+      "itemIds": [
+        "8795e844-bf2a-4ce6-91d1-7d0e5a883448",
+        "8f54c3ad-4106-4065-b64c-171215e05018",
+        "01197b3e-dd90-45d9-947e-ee4c6809ee88",
+        "d1fe7976-093c-4b7d-8216-3c6f9438986c"
+      ]
+    },
+    {
+      "id": "2df19734-6738-4a74-bc03-70609a5cec17",
+      "name": "vorher",
+      "itemIds": [
+        "d1efba15-d394-45ec-859b-dbd4d6ce1cec",
+        "b1e3f21b-391f-45a7-9acf-0affc412cbd7",
+        "cb186f12-fdad-462a-adfe-e6b0239ce359",
+        "9bcbbdb9-6a62-424c-baed-1c008acec6b6",
+        "3d310759-f1fc-47df-8084-a0c7e6e6b706",
+        "ccc86bd9-4301-4e55-8070-6e33190b5ee0",
+        "a9a6f392-a586-4914-bbf2-16ae2b95700b",
+        "2a86ad99-93dd-4ea9-b6a8-506fbe2f4376",
+        "aa31baba-20ef-4e48-9a60-cc4ad3cf1fb9",
+        "51fef25f-ea1c-4f11-a36c-e43628b2e72c",
+        "4ba0512d-57c2-4626-9ea2-c19f1a80a619",
+        "b43a25e7-1c0a-4127-8866-5025e34be925",
+        "ce7718f5-3136-46e8-a5c5-9f0c73e11285",
+        "dcb198f4-3205-443c-a4ec-855a53cf985c",
+        "499164ff-329b-406b-9f6e-22312ab1a569",
+        "e747f989-6d07-44fe-a30b-995d0e7a9719",
+        "9eb0ac78-7d1f-475a-8fd3-d4aab700a7e2",
+        "e89fdf4d-3adc-4e6a-be50-f5d104b2d79c",
+        "ba3d5c56-431b-4d65-a867-7ed9ceb4c2ba",
+        "1833bf93-ac2f-4d58-813e-fbe1238184c3",
+        "26d2836e-757b-4c1b-a97f-bf7661407371",
+        "08db0a1e-8396-41e8-a062-ac970ff91d43",
+        "ec536891-509e-4e35-bfb0-f697120b70dc",
+        "96148217-806c-4e7b-92c2-6eb55d7a8240",
+        "de4d1ce2-e886-404a-aa6c-f3613825f81f",
+        "327f9f60-aef9-455e-b74c-917c1867e881",
+        "da923ad6-eaa3-4bb6-a6c6-7247ce1e0bca",
+        "7302d976-e104-49f0-ba21-201db34a9ae1",
+        "6d1c8485-1dfe-4b41-8dd8-8814bad3fefd",
+        "87e2796d-7958-4ea8-8b17-721aa298fcbe",
+        "c620382a-eedb-4f22-b844-ca97293a3b0a",
+        "ffc27a62-7be2-4170-944c-d9a26173ec53",
+        "aaa25fbc-c693-433a-9e3b-55aaf6b0c139",
+        "0950131e-d2ba-463e-b8c3-b287f20b1089",
+        "56692cdf-42ee-48d6-bd92-a48d5085e8b6",
+        "52c168a0-ebe1-43c1-bbc3-6fac45964147"
+      ]
+    },
+    {
+      "id": "5b924eda-4967-4823-aa9d-4110288d618a",
+      "name": "Äpfel",
+      "itemIds": [
+        "d-37"
+      ]
+    },
+    {
+      "id": "f6a99420-dd8b-4394-8f24-a3e1d6399427",
+      "name": "Nüsse beim Gemüse",
+      "itemIds": [
+        "a10d6264-9fc9-434c-9a6f-7e5b0e8f3e70",
+        "486a57bf-1abe-4bf9-9b5c-7a33ce081c15",
+        "8dc57d5d-cd6f-464e-a41a-c7341489d047"
+      ]
+    },
+    {
+      "id": "30834c49-d173-459d-b017-0a992a51c71a",
+      "name": "Obst",
+      "itemIds": [
+        "0a006807-991c-4841-b622-e814893cb904",
+        "b0caab74-6aad-4218-9a75-17027e036d15",
+        "5da3c110-b147-40b3-8d2a-6e7ef6e188ce",
+        "73266516-ebf2-4fd0-963c-36cac26e4963",
+        "8a5fa666-5223-4853-98f5-de2d8020fad1",
+        "d-2",
+        "d-1",
+        "89fe9ed4-659e-49b5-bef0-8acad915a52a",
+        "da27e46f-139f-4250-b85c-7315eeefceec",
+        "13d2a2d5-9e08-4258-8727-6f3eb7306b88",
+        "1b8f6672-5123-427d-9567-b53c93a2d2da"
+      ]
+    },
+    {
+      "id": "shop-vegetables",
+      "name": "Gemüse",
+      "itemIds": [
+        "d-12",
+        "3724d802-01cf-410a-be76-b6b4e424f0bc",
+        "d-5",
+        "94e0ebeb-1bed-490b-ab99-078d67f9243c",
+        "d-14",
+        "d-3",
+        "d-38",
+        "d-39",
+        "ac8c97a3-58da-4546-abb9-8a0eed1b3d13",
+        "a794bc1d-dcd7-4430-bfc6-4edd91c05085",
+        "34935073-423c-4f26-a285-82f584476792",
+        "4314247f-8f89-4728-9597-aa155202611e",
+        "932429d6-e145-4cbe-854e-12d52e26cc1b",
+        "9d633e76-9f66-4277-afeb-eb0eaf56e086",
+        "edbec6ca-c196-421a-8f42-ca17f14a5237",
+        "0e01f840-2fdc-4636-91cf-a3c0e200d659",
+        "ee1fd06e-cb2d-46a0-93ee-4ce23f2b0f91",
+        "a59ddf98-c6c4-406a-a019-4055b03ca7c2",
+        "a2978510-d5cf-4fcf-9688-408451075a56",
+        "01a1aeb4-bc02-4f97-aec3-9edf3a5b98aa",
+        "2278fa0e-6670-4481-9541-779a73660da0",
+        "3bb68f70-31af-41ac-b10f-dcf6bf596d6e",
+        "617cacb1-0b93-4534-bec2-17a83e6bba3c",
+        "c0b0935d-3a09-4c82-b546-06e846f36650",
+        "b2a69b85-9497-4000-a052-4bf6c7d92f4c",
+        "4015a01d-941b-495d-92a9-ef1dacdd0704",
+        "0fac37cb-e152-4a8a-8dfb-627a29cbbb4c",
+        "02bd496a-98f2-437c-a8fd-5f0adcfe04f5",
+        "28448e7b-25ad-477f-8423-8a6339aace4a",
+        "5924b086-f97c-4d8d-81fa-b2265e555045",
+        "d-33",
+        "7afcb6fc-5776-4a31-8b49-9a2b8913a54e",
+        "cf59709e-5fbf-4ddb-91b5-1ff3d93eb175",
+        "b102421d-8a89-4cec-9290-93e7e8d5dc7e",
+        "d-31",
+        "d921a78e-f336-4623-9074-1589b5155302",
+        "64a2f9b6-c97a-4dd9-9ac8-1e003667bdef"
+      ]
+    },
+    {
+      "id": "f8bd3fe5-ac71-42da-9f9c-5579e4134827",
+      "name": "Brötchen",
+      "itemIds": [
+        "d-7",
+        "d-18",
+        "57fa5323-ae92-4bb7-a155-01fae425b120",
+        "6898decf-9095-45ec-9016-72931208d1a8",
+        "22612d4d-76b0-4784-a2f6-d2fcb33b819d",
+        "a4577f5a-b373-46dc-aeaf-8570928090d8"
+      ]
+    },
+    {
+      "id": "7b87e1e1-f7eb-47c6-bda7-6ae023272563",
+      "name": "Bio-Regal bei TK",
+      "itemIds": [
+        "538c93fb-df40-4d0b-bbf8-360190994b99",
+        "a24f8fc2-a5ba-4465-88cd-10334c77efaf",
+        "d95631ea-90b1-4af8-9ac0-4828b1d0d6f4",
+        "c3dfb200-02cc-4506-841a-4e9235f9950d",
+        "bab642e7-8203-4e81-ab05-d3888e6eb55b",
+        "c6b273c6-24dd-40c3-95af-b48d3a525ca4",
+        "f101ff15-90c8-4a88-aa93-aa89b1037d51"
+      ]
+    },
+    {
+      "id": "5ba8d59d-9997-44de-b53b-4c6e4a1d015c",
+      "name": "Drogerie",
+      "itemIds": [
+        "a71e7a16-fa40-4536-9b7a-20f9d2f1fee4",
+        "3d330f1d-1552-4e49-9034-b8e44113dce5",
+        "6083ec99-526b-42d9-a3fd-b310e5cb07e2",
+        "cfb62025-b68e-4270-875a-ad946c07d528",
+        "ef7b3034-9051-4887-b0cb-b1bada48ff4d",
+        "24db6e2d-70d0-40c2-b33a-9a1e5974bd64",
+        "bdc21ed3-cbcd-4512-83b4-0bac6d805a48",
+        "eb877683-f206-4e65-a1c3-d99e19124a68",
+        "d8ba1edb-fe95-4f27-a94a-7405e620fe13",
+        "47c3370d-3f88-49bd-bded-c8fcf38da482",
+        "df9b5885-f4e3-46d7-b6d2-603816d30ffb",
+        "fa3738dd-d71b-4956-a0e1-4e15938caf8a",
+        "48b0702e-71cb-493e-b9c0-b51691870f40",
+        "8ba5e7d8-d8fe-4255-a77d-bafce0f260ba",
+        "d3cf5db4-4e45-4d30-9e02-5e9e1cc8c960",
+        "71e1362e-d706-449c-bb4a-9a519c526c4a",
+        "6f9d21ae-bd1e-488d-b57c-0844c2e13c68",
+        "29804e04-9fae-4942-8581-f362c0513cd6",
+        "e8ff53a6-77a5-4e4f-814c-8295ffb5d564",
+        "93480235-4969-47dd-a7c5-00bb42692dc8"
+      ]
+    },
+    {
+      "id": "0002bda4-9513-4595-9205-83fc0b2235f0",
+      "name": "Klopapier",
+      "itemIds": [
+        "7bbcf356-663a-4193-90c0-5527293c2be7",
+        "94f4fbc8-86f4-4bff-9d45-99266e348376",
+        "70c050b3-6e89-4bca-baba-0d2c7b0fd557",
+        "a60515c3-2fe0-4740-abf7-c0b303dbc802",
+        "df16ef69-5ceb-47cb-8cc7-6791a7ede53c",
+        "8f71753a-1fca-4573-be1d-caef5466b1c4",
+        "c5c651a6-0e44-4bb8-8d3e-e960b7aeb162",
+        "e81f8ed4-29c2-4927-90a3-fea040a6c234",
+        "bd3cd1f3-67b4-4f13-8aae-c54236a3c4a9",
+        "d98610e6-0ff4-4351-8056-1c12024cecca",
+        "e2e568c6-3999-42c3-bd1d-a7473d8324b3",
+        "89a58d99-b10b-4cc1-aa98-e0cf2d5d0304",
+        "2f0db8f3-4d61-41c7-9337-14a3301eaebf"
+      ]
+    },
+    {
+      "id": "76f575b4-11ae-42e6-a4bf-9ef6977d0811",
+      "name": "Reinigungsmittel",
+      "itemIds": [
+        "df3101fd-a8a0-42f0-88db-2eb4df7de57e",
+        "c99c54d7-3fb7-4d4f-a0d6-7a5bdb524682",
+        "f0b01e86-8951-4370-9347-73a4513a76d4",
+        "54a8985f-74f5-45e5-842b-234e02851972",
+        "c7dcbdb3-d71c-4ec5-91db-cef70900af24",
+        "0652ec1c-f1d9-49e8-b59c-2e7f6a2b7a14",
+        "146f5606-d89a-4a32-83ed-65ae204d52f0",
+        "43b61584-dc22-4011-bbd2-f9d76797a7b6",
+        "86360541-58de-47a9-8d5a-6911f2bc4592",
+        "0d4259ec-1e26-4881-93b4-a4159d123493",
+        "d103410d-903e-41d6-9db9-4bd9e4482b64",
+        "84b0a8f3-cd2d-434c-aa63-c10203e63ec8",
+        "b8cc64c6-eb93-45ca-8575-3e5d85353942"
+      ]
+    },
+    {
+      "id": "cba88d9d-ea20-420a-bb0c-aef406249312",
+      "name": "Hardware",
+      "itemIds": [
+        "d29c81a8-9d46-47b8-879c-3c2ed08c2a3a"
+      ]
+    },
+    {
+      "id": "d65a97b3-bf0f-41b4-9799-75d1b3a149a9",
+      "name": "Schreibwaren",
+      "itemIds": [
+        "e5c4d8b3-2c4f-4e98-9cc8-2e3a63d0e800",
+        "905b3cf7-7f09-4cc8-830d-b5882432f6ea",
+        "68db627a-ae32-4816-9150-7d5f68729f83",
+        "9ade1fbe-b19d-4d45-a5a1-99fda2840fc9",
+        "55b2fde0-95bd-4401-9449-7e055ac1375a",
+        "3ffc0828-6352-4b89-a989-d1625d2f96bb",
+        "d758906a-21c4-4054-92a4-df92934083a6",
+        "a73908d5-c77b-4468-9b6a-642e88526bd2",
+        "964c7641-4f93-4563-aa13-a5c3cee4ca79",
+        "67368b9b-b1d0-415c-b475-1b6227102c44",
+        "39e86eb0-6117-41ca-8aa9-858576ef13c9",
+        "93e9453b-c991-4bde-9c13-920f17813890",
+        "ba940884-3ea4-439e-abb1-c435b76af77b"
+      ]
+    },
+    {
+      "id": "1f9b45a0-884a-49b4-8ae0-a14e9a7b2df4",
+      "name": "Süßigkeiten 🍬",
+      "itemIds": [
+        "72205523-f564-43cd-bfae-d617881d4a0d",
+        "af3af5cf-d197-4791-92a1-7f18edc1e26c",
+        "2fd8d7cc-d8ab-4f53-9510-5b9364ea4114",
+        "1ab5dd1c-aae7-4e31-a805-ef26e4d612a7",
+        "45a13a52-81e0-4b31-9ea0-20ced2574102",
+        "e768d18c-9c90-4c4b-8783-2d5fa7f30c5e",
+        "1dd9f7e0-f374-48da-a06c-e322b458d539",
+        "bbc2cac3-6d96-4439-9945-c9dc42548834",
+        "2d2bdb5a-8691-42bd-95fa-80d7a0e0e8af",
+        "8c1b8821-c430-45da-9981-2d36d402251f",
+        "e7ee56e0-e541-474b-bf66-19b383456b54",
+        "efbad4c6-d47f-4885-bee0-1d3b5724d7e1",
+        "6f4cf305-8c0d-4a22-a45d-e28eb7d6c980",
+        "d8854814-f833-4178-b2a3-6720f81d3311",
+        "fe0e0e95-58c9-4cda-a82b-a5d7fdb6602b",
+        "41ccf0a4-b776-485c-8793-56410ae93d7a",
+        "69f0e7ee-8f25-4208-94a7-d32dea8c7e2a",
+        "668bac69-07c0-4705-98d1-3054995e134e",
+        "04fa6bcd-55ef-4572-bd4c-70d24e9abbbe",
+        "b6c46070-a45d-400c-aad2-30e465761824"
+      ]
+    },
+    {
+      "id": "8b6bc6d8-8ae1-47f9-9452-b1067f86d1a8",
+      "name": "Gewürze",
+      "itemIds": [
+        "c5584c03-3347-4009-a046-dfbf230d5a8a",
+        "12ec026f-d147-48f0-81db-aa4882d315d6",
+        "cd97e741-8973-43af-8e24-36836d6e73cc",
+        "e9fff0c6-0f88-4896-8b4a-9e2f8e11e853",
+        "efdab47a-935d-423b-ba1e-a9f973ed315e",
+        "67f813d0-c17a-4a5d-9bb7-2c7da8e26c36",
+        "dd210333-9034-45d3-93bf-088a1eae1fbe",
+        "fc4440c3-168a-4dc9-bc00-42f66e0b7e4e"
+      ]
+    },
+    {
+      "id": "af21392c-ac73-4087-9552-0ca6c6afb92e",
+      "name": "Konserven vorne",
+      "itemIds": [
+        "470a9b18-ad56-4373-ab87-f403aa90d6e7",
+        "2e74a49e-3508-4e9b-a08a-8ddbcd57e2f0",
+        "f6b02008-eaf6-4e65-aa93-07f72fb77cac",
+        "a7c48ba6-431b-438d-859a-b1a1b04b8a58",
+        "14e8de4a-52b2-42f9-9ae8-a61e293b6e48",
+        "deed777b-d46d-41bf-b78e-16395591a047",
+        "46ca1fbd-e761-4cea-a61b-a4dcae999c0e",
+        "ae5e6a48-88f9-465b-b54e-1ca35bcc6771",
+        "caa364e1-93ad-4453-bc62-4ec885178ba7",
+        "b8cd2edb-f060-4e7e-9ef9-ac55ba7b56e9",
+        "d156301c-5a2b-4178-afec-b12fd3d5f958",
+        "5e18cc1b-7a18-46de-acdf-d23c50106c96",
+        "d7087359-c542-4b02-9ae5-0b01ace530ea",
+        "270533ee-f518-4a8d-9264-7d542738d36f",
+        "f5a7a5a4-ad36-47a3-9611-96da15a51fd3",
+        "7f9833cb-6005-4219-9be8-aaf5e7e9b3b3",
+        "35def21c-3554-4ced-82a2-e5e9822bbfd3",
+        "ae42d0c9-86b4-44eb-a606-7f91067e0970",
+        "9067d080-1bb5-4897-8c47-4e8e20aa0b7b",
+        "4e351511-4811-422e-9595-b464e712cfbf",
+        "4c8308c2-bb3b-4c5d-ad14-8915eb7e6fca"
+      ]
+    },
+    {
+      "id": "b11fe22c-ae94-4c7b-a425-604dbcf4989b",
+      "name": "Konserven hinten",
+      "itemIds": [
+        "d-28",
+        "d-23",
+        "3457e264-f271-4e06-a9e8-bd2e6db6bfe9",
+        "55215835-7d2d-4194-b7d9-a42324697950",
+        "78db8d64-1441-4fe8-b776-fb35e6bcebbf"
+      ]
+    },
+    {
+      "id": "f2f9ce01-3aca-42f3-a0c9-00d1f99589b2",
+      "name": "Öle",
+      "itemIds": [
+        "c6a6c404-e99c-4d48-9b9c-8f42407e4645",
+        "b064633a-455f-4abd-807e-e2fa3097186c",
+        "f1ddcb9b-30f0-410d-babc-9c40c6a66414",
+        "406b4c90-650c-43df-96ea-6f4f7b80515f",
+        "fe9d455f-c720-4a40-b59b-660d121f9983",
+        "aff52422-9762-4bbb-9f14-71b0e760eb28",
+        "77dd968b-2d41-4d2f-9fd6-19293fe5a889",
+        "d310556e-b01d-4047-b7ab-e21ccd471b9c"
+      ]
+    },
+    {
+      "id": "70b255af-bedb-4383-a958-1e0e4b256b35",
+      "name": "Nudeln",
+      "itemIds": [
+        "47c5f8ad-9885-4125-ba0c-944ac8930646",
+        "b34802c2-ffe6-4b7e-85bf-b1396f560b96",
+        "d-26",
+        "a9ebd62f-5a12-464d-a60d-cce41e1c2fcc",
+        "2c5a3828-2477-47e4-a287-24c1962aad5b",
+        "b954a6bf-d648-4c41-8eb4-45f35cf40d35",
+        "071b8ed0-3b90-4a39-a380-5136f8c9f497",
+        "d-27"
+      ]
+    },
+    {
+      "id": "10e90041-f275-4f18-b945-31062fd86564",
+      "name": "Backzutaten",
+      "itemIds": [
+        "d-22",
+        "1bc59c60-ded2-4231-8a25-bdf1195d75ff",
+        "3964ddc1-6070-4bfa-8208-e063ee9ff535",
+        "6d69e4c4-b7c5-4504-a456-4f72401c7f29",
+        "ed9da751-8160-4a0f-9efb-36e50d0adbc6",
+        "42b56c65-f804-4b6f-aa0f-69c15222a4a0",
+        "edaeabee-8ae6-42cd-8913-9412ba2dc852",
+        "eedf00c0-6776-4fe1-9300-6b94e1f56d7d",
+        "95d162f6-ad2b-4625-b4bb-469c0af5acff",
+        "eec3dc2c-b2ec-41cd-a82a-0267df34d004",
+        "a9df5bea-df94-4d90-b99a-e51db8b37b39",
+        "fb0f0fbf-b807-4676-94ed-71e1533dd2ca",
+        "09176125-62c2-4ea8-af12-28058385da62",
+        "9a9f6257-1f1e-431a-82a8-95f80f6f508b",
+        "ef6e8281-9a06-4756-859c-7b5bfd37cc3f",
+        "9698e1f9-f41f-49f3-b174-0bd186bea2e4",
+        "07ab842d-f573-434b-b00c-46fa23fe8832",
+        "400d51bf-f10d-439c-bf3c-c54bdbfc690b",
+        "6acfccc7-0f1b-4499-9507-27a6ba56539b",
+        "63da870c-3e4d-4ec0-9e85-58e279f85cc5",
+        "cdd90a2c-578f-460e-b55c-381813134383",
+        "41c0c8df-2301-4dfa-be50-378804dc6cc0",
+        "a3c89541-2cea-4328-8005-054bfea46b76",
+        "d1c0760d-1b82-4d49-a29f-902319867331"
+      ]
+    },
+    {
+      "id": "18022f9e-9ea9-4416-bf58-c539e7485332",
+      "name": "Kaffee",
+      "itemIds": [
+        "67b773fa-bbdd-4aff-937d-6b0974bb27f4",
+        "13665b4b-24b5-4304-b440-419cd42e9db5"
+      ]
+    },
+    {
+      "id": "b7cb383c-3376-49fa-8442-1ae44256647c",
+      "name": "Müsli",
+      "itemIds": [
+        "d-24",
+        "f52b74c0-a681-4615-b5c8-981df421edc8",
+        "d32df33b-7048-4cde-aec6-00109a409696",
+        "94af9352-be60-40fa-9eff-c3f0be8224c4",
+        "cc8b037c-8933-4856-bf4b-199969cacf75",
+        "20c5d676-17b2-4597-9f1c-2880182f4c20",
+        "d5e8af1b-fa34-4595-9887-7e1a0e867c49",
+        "94ca5e15-f56f-46ed-b0ef-03125fdfa55d",
+        "dd7821f5-7a30-4dcb-b66f-9675a6d5a093",
+        "a7fcec1d-26b2-4633-accc-58af9713d614",
+        "cbcb9dbd-0a04-4a59-85a9-8867b1852328",
+        "2921121d-fe06-4b51-b8ef-e9e07e6494c1"
+      ]
+    },
+    {
+      "id": "e191147d-3298-4955-87a8-c5c8214c0532",
+      "name": "Tee",
+      "itemIds": [
+        "c5b33753-2d04-40e2-988a-cdbd95bfe515",
+        "dbf7571d-d9fc-4fe7-a191-ff32da936331",
+        "8ff2081b-ea02-45d8-8cd7-6b6bd6285ba5",
+        "856b51b0-16c6-4a3e-8324-ca63f66a09b1"
+      ]
+    },
+    {
+      "id": "ce6bf83d-9db8-4b71-9ba6-ce38cefbaf57",
+      "name": "Marmelade",
+      "itemIds": [
+        "8bf423f6-f3d4-44d1-8f3d-8dcff93ffa97",
+        "90864a7a-bd2d-4bba-b929-b66b7fcae222",
+        "db5095a4-8eef-4979-af3b-c59325d6c36e",
+        "43be8db3-ff6b-4705-a528-a5cef56f35f0",
+        "9348dbf0-4c30-420c-9149-1b3649f300e7"
+      ]
+    },
+    {
+      "id": "c958b87b-061c-4e2e-83fe-b4f39182e7e9",
+      "name": "Milch haltbar",
+      "itemIds": [
+        "d-25",
+        "67fa2e87-b373-4376-90fb-b4b603262a9c",
+        "3e2cd51a-c80c-42ad-8181-95856c56d952",
+        "056652ab-7130-4b32-9695-95ee5ce76a68",
+        "9175b20e-ad2f-46a7-917a-0a14cf7fdc02",
+        "dbfcc7a2-1f4b-4fa6-be01-46970a231229",
+        "535b51ac-8db4-4d1c-94d7-5ab736245371"
+      ]
+    },
+    {
+      "id": "f4820c15-ccc2-4a80-9f3e-5c00d224644f",
+      "name": "Brot, abgepackt",
+      "itemIds": [
+        "d-16",
+        "eba53fae-8a54-4f1b-ba25-2ee291d04c22",
+        "945a1359-6751-4b94-8778-66e756ff219d",
+        "da679e90-f697-40d1-bc74-9d559d846123",
+        "bec9865c-6de5-4b78-b42d-8a0aac00f736",
+        "b73606b8-e3d1-49e7-ad58-e2d51c5c358e"
+      ]
+    },
+    {
+      "id": "d555086c-5595-454e-8967-40995f1a093f",
+      "name": "Spezialitäten",
+      "itemIds": [
+        "ffafcb03-0982-4a0d-9bab-7924b0bee2c5",
+        "1876894e-6545-44a2-8ea2-94b5a5d5512a",
+        "cd509681-0722-440a-b235-917c486aa15c",
+        "7836cfd8-621e-437d-93f8-775c81b9fb08"
+      ]
+    },
+    {
+      "id": "874564f5-bd2b-4873-8c8d-f3e58ab4ac5d",
+      "name": "Getränke",
+      "itemIds": [
+        "998ed101-de24-4084-aac7-f0bf1b42f694",
+        "10f9662c-b372-4259-85fb-d6b5cfa7a674",
+        "429f8b24-fd50-4b0d-a231-8809e53ef213",
+        "c6548462-82e0-45cf-a5f6-aff8c736f5e7",
+        "e23b8e70-4ca9-465f-879c-4f46d154f164",
+        "abb123c2-4e9d-49d2-b641-ad30ff76ba69",
+        "8c299b0b-c4a1-4c2d-bb31-1042854ec489",
+        "98a2ee9f-30ef-4bdf-9f9e-aaf3439fc28e",
+        "14acff6d-5579-458a-a1c3-6f90560f694b",
+        "f3654e95-4242-4711-b21e-d645c89408b9",
+        "6ebb6709-ea34-42cf-901f-9bdd3b73f6fe"
+      ]
+    },
+    {
+      "id": "c778246d-33c6-4821-9082-ad0a50da81d8",
+      "name": "Suchen",
+      "itemIds": []
+    },
+    {
+      "id": "shop-fridge",
+      "name": "Kühl",
+      "itemIds": [
+        "d-9",
+        "b8928600-5e2a-4a27-b4cc-d63da2745585",
+        "d-10",
+        "d-15",
+        "1e447add-2f92-4e2a-b8ff-74485275cfbb",
+        "f93af7b7-12f1-4a5a-8dfa-107da826b793",
+        "c33f5855-2a4e-4641-bd65-451abab473ab",
+        "d2727442-9f68-4ff4-8832-b5e40815b5d0",
+        "d0deb66a-e33b-4ee1-8e1f-b8a6b240cde2",
+        "08e0ceaa-c2a6-4cea-bc39-62a0e661fe95",
+        "60a89328-e953-49cb-bdc5-56817b9d4aca",
+        "d-30",
+        "56259319-1dde-45f1-b3fe-569bd723eb42",
+        "d-11",
+        "62b0b9ce-711c-40bb-88f3-2f6698bed3ea",
+        "00b3b641-99d8-4049-a8eb-00aef1b222cc",
+        "d-35",
+        "5aad527e-7a2b-4124-be36-a5c318e7cca2",
+        "9445e819-d1bf-4e92-b49d-5c28e298b049",
+        "a9ce2974-becb-4119-92a1-1d734890cc31",
+        "c8560e3f-8ae4-44ee-bf88-9b75f79c7bae",
+        "a8b1f288-76c8-4f6f-afa1-348429c5fa88",
+        "c91753e8-f092-4aec-9487-d37b59867693",
+        "a0485ce5-3049-4070-94ae-72d693c65d11",
+        "d-13",
+        "bd6fb957-c909-4cab-8736-3555dc53c552",
+        "9425d4a8-6ce9-4b72-8fa1-ccd666ab7e54",
+        "0ef68e30-6639-454d-b8f2-fd1e94063f50",
+        "d-29",
+        "5e96e175-82af-46f6-996c-d90eb39cd905",
+        "8ed3af05-e5be-4ffb-bd1b-8c7bf9f02fd8",
+        "b56b10e4-23d8-494b-ad1d-9a62e509f305",
+        "823b332b-61cc-44f5-b36e-b4ed1cdf1fc3",
+        "a96e99c2-9f2e-42be-beed-075a3836ea49",
+        "3c9bbab7-63e9-46bb-b7e3-b24fec8bb130",
+        "306af4b1-8201-4745-96ae-9bc0d5c59ab2",
+        "5f80925a-84b7-49fa-a638-ad00ccd8e2b8",
+        "bd60d435-c8ba-471a-a640-19cc3a3a3d4b"
+      ]
+    },
+    {
+      "id": "7a80152c-2bc3-49df-9256-0d8c27905997",
+      "name": "Laktosefrei, kühl",
+      "itemIds": [
+        "7a4357b6-eac6-405d-a28b-23234a3563f9",
+        "f852ba90-a076-4c2e-b319-29e5e4e09b6c",
+        "d72dddbc-f55e-4215-8d54-3b276de347d0"
+      ]
+    },
+    {
+      "id": "ecae98d9-b20e-437e-9a7c-9fc9c98720a4",
+      "name": "Kühl Pizzateig",
+      "itemIds": [
+        "788b94c5-4aa1-462c-bb42-e01eafd0bcca",
+        "84480e27-3106-4b14-9587-ce6ef19e9d53",
+        "c9ce8fbe-d035-4c21-b137-2505b8fc7654",
+        "f8e4aa04-56be-4ea7-8739-e9b6597872d1",
+        "127b9975-8c25-4c99-bea5-6916ffeeab1c"
+      ]
+    },
+    {
+      "id": "ae054c2a-1457-467b-b4d0-06ec49efad98",
+      "name": "Fleisch",
+      "itemIds": [
+        "561b0bc4-a949-40e5-adde-60b57ced6e71",
+        "6e597131-7210-4b91-afb9-568bddec0593"
+      ]
+    },
+    {
+      "id": "79ea2814-b4ea-4ed5-9c53-8a4ba27e5c56",
+      "name": "TK - Frosta",
+      "itemIds": [
+        "7ed27034-f0da-40d8-95dd-74e0bc1a3efa",
+        "23ad00aa-48dc-4f02-af3d-0efb279b7ed7",
+        "afebdf35-142c-4c58-8a83-3d1055578e4c"
+      ]
+    },
+    {
+      "id": "shop-freezer",
+      "name": "TK",
+      "itemIds": [
+        "d-19",
+        "d-40",
+        "d-17",
+        "d-21",
+        "d-20",
+        "bbfe24f5-b9df-4e99-9db0-84e48ad89679",
+        "466580ce-0519-44a1-a660-1345cb6470b0",
+        "8fa40e4b-05f1-470a-8c2a-fc4260db546f",
+        "a3ed7f59-8a07-49d8-98e0-939837778149",
+        "d080b045-00a7-4aac-9767-3073750c55a0",
+        "2cde63fd-4997-42ee-8ca6-c2e66de0b633",
+        "efddbb86-a7a1-4965-b1d0-545c72f1ec4e",
+        "137e62c7-d7a5-417f-ae5e-5102a33a8877",
+        "75e8ba45-cec8-42f4-b000-7ef518e2fff9",
+        "34821a71-5774-49c4-8101-3db85a10310d",
+        "784eb9ae-da7c-4b8b-9ecb-f49c946d89af",
+        "56089774-e187-491a-bef0-3f5685886981",
+        "51289dd8-a1bf-405a-97ce-df0d72629752",
+        "de4cb560-3bb9-48b6-8b5f-3c8036f66881",
+        "5434b42d-27c4-4bb1-abb6-792faa3c6d16",
+        "b1d6f419-7978-4d28-aae8-bc3b741f4113",
+        "5467a743-85a6-42e8-abac-fbb8ddbc2761",
+        "03bf2d8b-4605-4706-9d4a-664573190b2b"
+      ]
+    },
+    {
+      "id": "e612928e-5722-47ba-ba09-573e3b7b7110",
+      "name": "Kasse",
+      "itemIds": [
+        "ab57b8bb-a830-4ad2-926a-07a24747ccdd",
+        "69f2b92a-9b73-47ab-8631-a7aeb8261a17",
+        "851bfd90-33ca-4854-9eb2-c40226ff836f",
+        "4744a1e6-cc01-4e72-87b6-ddea3c54b8d0",
+        "e626a9d2-f4b6-4e70-83a2-45f23c6bdbbc",
+        "99fcd80c-3cf5-47ec-a29a-75106d3189dc",
+        "90188eec-526a-48a6-9f90-ae36b636ae37",
+        "27417393-19d0-45ab-9cdb-c3a07230a748",
+        "3700e8d3-bc9c-40b8-907e-b0b587a7dbba",
+        "73236bd6-bd1d-47a7-a9d9-f1b24232f79c",
+        "467a9b20-fd89-41a7-8371-35b2ae298a24",
+        "f9a90555-66e9-4fcd-831c-19dda57e8efb",
+        "bf8bce0e-a339-4d95-9956-cd95f141259a",
+        "8a5500dd-5471-474c-8c6e-01ba217e35e4"
+      ]
+    },
+    {
+      "id": "a7e277b4-9f4b-4c90-89d4-a532d8b405cd",
+      "name": "Remove from this view",
+      "itemIds": [
+        "d-4",
+        "85f09df6-38b5-4619-ab4e-625ce11eb1f9",
+        "d-32",
+        "d-34",
+        "d-36",
+        "d-42",
+        "d-43",
+        "01c19822-515c-4067-bfc9-4af68dec703f",
+        "7d676708-5078-4360-9741-7b5e20e6934b",
+        "3fa282ed-fb62-4f3c-bdb5-bd954f7f9bfc",
+        "0d5c7c5a-00ea-4e7d-8027-9494f74f5e79",
+        "dd2b7ab2-67ff-43df-9210-f5413118e036",
+        "fd000912-4692-4caf-9a65-2455a80b1fd4",
+        "074fefd0-348a-4846-b578-a1766620667d",
+        "ce704f19-9578-488c-a73e-1588f09c566d",
+        "004e7cb6-286b-40cd-a3d6-a9b2e1955f64"
+      ],
+      "hideable": true
+    },
+    {
+      "id": "ab2a753d-b720-4a7a-a9c1-27664e86dff6",
+      "name": "Bäcker-Theke",
+      "itemIds": [
+        "9cad73d7-b18f-4398-bc11-f3996c4315ad"
+      ]
+    },
+    {
+      "id": "c581100e-a71a-4136-86e6-a69a2807c8a1",
+      "name": "hinterher",
+      "itemIds": [
+        "9431d431-1344-4e2e-8c60-e76e0ad3dba0",
+        "e4394dfe-2398-4336-ba2a-48bd08a73ba7"
+      ]
+    },
+    {
+      "id": "e1c50eb8-3c2c-4dd6-b4da-694d07c614c2",
+      "name": "Saft",
+      "itemIds": [
+        "c2219838-4160-4bee-84c7-3951e63f3a1d"
+      ]
+    }
+  ],
+  "homeCategories": [
+    {
+      "id": "e23accf7-97c3-4ce3-903a-c958a80d2e43",
+      "name": "Uncategorized",
+      "itemIds": [
+        "8a5500dd-5471-474c-8c6e-01ba217e35e4",
+        "b6c46070-a45d-400c-aad2-30e465761824",
+        "5da3c110-b147-40b3-8d2a-6e7ef6e188ce",
+        "d1c0760d-1b82-4d49-a29f-902319867331",
+        "64a2f9b6-c97a-4dd9-9ac8-1e003667bdef",
+        "a3c89541-2cea-4328-8005-054bfea46b76",
+        "d72dddbc-f55e-4215-8d54-3b276de347d0",
+        "7a4357b6-eac6-405d-a28b-23234a3563f9",
+        "f852ba90-a076-4c2e-b319-29e5e4e09b6c",
+        "bd60d435-c8ba-471a-a640-19cc3a3a3d4b",
+        "5f80925a-84b7-49fa-a638-ad00ccd8e2b8",
+        "fc4440c3-168a-4dc9-bc00-42f66e0b7e4e",
+        "535b51ac-8db4-4d1c-94d7-5ab736245371",
+        "0950131e-d2ba-463e-b8c3-b287f20b1089",
+        "4e351511-4811-422e-9595-b464e712cfbf",
+        "14acff6d-5579-458a-a1c3-6f90560f694b",
+        "f3654e95-4242-4711-b21e-d645c89408b9",
+        "6ebb6709-ea34-42cf-901f-9bdd3b73f6fe",
+        "e8ff53a6-77a5-4e4f-814c-8295ffb5d564",
+        "04fa6bcd-55ef-4572-bd4c-70d24e9abbbe",
+        "a4577f5a-b373-46dc-aeaf-8570928090d8",
+        "3c9bbab7-63e9-46bb-b7e3-b24fec8bb130",
+        "b8cc64c6-eb93-45ca-8575-3e5d85353942",
+        "9067d080-1bb5-4897-8c47-4e8e20aa0b7b",
+        "29804e04-9fae-4942-8581-f362c0513cd6",
+        "668bac69-07c0-4705-98d1-3054995e134e",
+        "8a5fa666-5223-4853-98f5-de2d8020fad1",
+        "856b51b0-16c6-4a3e-8324-ca63f66a09b1",
+        "60c722a0-d1b3-4bcb-8d9d-4438e82e1624",
+        "8ff2081b-ea02-45d8-8cd7-6b6bd6285ba5",
+        "6f9d21ae-bd1e-488d-b57c-0844c2e13c68",
+        "cdd90a2c-578f-460e-b55c-381813134383",
+        "dd210333-9034-45d3-93bf-088a1eae1fbe",
+        "c620382a-eedb-4f22-b844-ca97293a3b0a",
+        "71e1362e-d706-449c-bb4a-9a519c526c4a",
+        "69f0e7ee-8f25-4208-94a7-d32dea8c7e2a",
+        "d29c81a8-9d46-47b8-879c-3c2ed08c2a3a",
+        "98a2ee9f-30ef-4bdf-9f9e-aaf3439fc28e",
+        "8c299b0b-c4a1-4c2d-bb31-1042854ec489",
+        "a0485ce5-3049-4070-94ae-72d693c65d11",
+        "63da870c-3e4d-4ec0-9e85-58e279f85cc5",
+        "67f813d0-c17a-4a5d-9bb7-2c7da8e26c36",
+        "03bf2d8b-4605-4706-9d4a-664573190b2b",
+        "4f828f59-0d9d-490e-9e8d-87a2d07ff115",
+        "5467a743-85a6-42e8-abac-fbb8ddbc2761",
+        "a96e99c2-9f2e-42be-beed-075a3836ea49",
+        "2921121d-fe06-4b51-b8ef-e9e07e6494c1",
+        "2f0db8f3-4d61-41c7-9337-14a3301eaebf",
+        "cbcb9dbd-0a04-4a59-85a9-8867b1852328",
+        "7783f50b-207c-49de-8c59-ee2dc100378b",
+        "ceaad612-0f8c-4066-8a87-b2875b1095ff",
+        "84b0a8f3-cd2d-434c-aa63-c10203e63ec8",
+        "41ccf0a4-b776-485c-8793-56410ae93d7a",
+        "7836cfd8-621e-437d-93f8-775c81b9fb08",
+        "b102421d-8a89-4cec-9290-93e7e8d5dc7e",
+        "cf59709e-5fbf-4ddb-91b5-1ff3d93eb175",
+        "d1fe7976-093c-4b7d-8216-3c6f9438986c",
+        "7afcb6fc-5776-4a31-8b49-9a2b8913a54e",
+        "e8201da4-96ec-435c-9edc-535d32e6c614",
+        "9348dbf0-4c30-420c-9149-1b3649f300e7",
+        "78db8d64-1441-4fe8-b776-fb35e6bcebbf",
+        "ba940884-3ea4-439e-abb1-c435b76af77b",
+        "93e9453b-c991-4bde-9c13-920f17813890",
+        "89a58d99-b10b-4cc1-aa98-e0cf2d5d0304",
+        "e2e568c6-3999-42c3-bd1d-a7473d8324b3",
+        "d98610e6-0ff4-4351-8056-1c12024cecca",
+        "bd3cd1f3-67b4-4f13-8aae-c54236a3c4a9",
+        "de4cb560-3bb9-48b6-8b5f-3c8036f66881",
+        "5434b42d-27c4-4bb1-abb6-792faa3c6d16",
+        "35def21c-3554-4ced-82a2-e5e9822bbfd3",
+        "b73606b8-e3d1-49e7-ad58-e2d51c5c358e",
+        "e81f8ed4-29c2-4927-90a3-fea040a6c234",
+        "c6b273c6-24dd-40c3-95af-b48d3a525ca4",
+        "6acfccc7-0f1b-4499-9507-27a6ba56539b",
+        "5924b086-f97c-4d8d-81fa-b2265e555045",
+        "0ef68e30-6639-454d-b8f2-fd1e94063f50",
+        "bab642e7-8203-4e81-ab05-d3888e6eb55b",
+        "c3dfb200-02cc-4506-841a-4e9235f9950d",
+        "e23b8e70-4ca9-465f-879c-4f46d154f164",
+        "efdab47a-935d-423b-ba1e-a9f973ed315e",
+        "7f9833cb-6005-4219-9be8-aaf5e7e9b3b3",
+        "784eb9ae-da7c-4b8b-9ecb-f49c946d89af",
+        "fe0e0e95-58c9-4cda-a82b-a5d7fdb6602b",
+        "d8854814-f833-4178-b2a3-6720f81d3311",
+        "c6548462-82e0-45cf-a5f6-aff8c736f5e7",
+        "6f4cf305-8c0d-4a22-a45d-e28eb7d6c980",
+        "f5a7a5a4-ad36-47a3-9611-96da15a51fd3",
+        "823b332b-61cc-44f5-b36e-b4ed1cdf1fc3",
+        "e9fff0c6-0f88-4896-8b4a-9e2f8e11e853",
+        "b56b10e4-23d8-494b-ad1d-9a62e509f305",
+        "d3cf5db4-4e45-4d30-9e02-5e9e1cc8c960",
+        "34821a71-5774-49c4-8101-3db85a10310d",
+        "10f9662c-b372-4259-85fb-d6b5cfa7a674",
+        "d310556e-b01d-4047-b7ab-e21ccd471b9c",
+        "80051e1f-0ee8-4bb3-aa77-45cd015eb7f1",
+        "d9a53c42-20b0-4621-8d6a-947b609143c8",
+        "39e86eb0-6117-41ca-8aa9-858576ef13c9",
+        "071b8ed0-3b90-4a39-a380-5136f8c9f497",
+        "f8e4aa04-56be-4ea7-8739-e9b6597872d1",
+        "02bd496a-98f2-437c-a8fd-5f0adcfe04f5",
+        "41c0c8df-2301-4dfa-be50-378804dc6cc0",
+        "a7fcec1d-26b2-4633-accc-58af9713d614",
+        "dbf7571d-d9fc-4fe7-a191-ff32da936331",
+        "48b0702e-71cb-493e-b9c0-b51691870f40",
+        "8ba5e7d8-d8fe-4255-a77d-bafce0f260ba",
+        "67368b9b-b1d0-415c-b475-1b6227102c44",
+        "75e8ba45-cec8-42f4-b000-7ef518e2fff9",
+        "c2219838-4160-4bee-84c7-3951e63f3a1d",
+        "3700e8d3-bc9c-40b8-907e-b0b587a7dbba",
+        "c72e4d8e-a4b2-41ab-8309-03bbb9e248c2",
+        "d103410d-903e-41d6-9db9-4bd9e4482b64",
+        "4c8308c2-bb3b-4c5d-ad14-8915eb7e6fca",
+        "400d51bf-f10d-439c-bf3c-c54bdbfc690b",
+        "270533ee-f518-4a8d-9264-7d542738d36f",
+        "f8719bff-de03-4533-9f90-0771091c370e",
+        "fa3738dd-d71b-4956-a0e1-4e15938caf8a",
+        "dd7821f5-7a30-4dcb-b66f-9675a6d5a093",
+        "07ab842d-f573-434b-b00c-46fa23fe8832",
+        "efddbb86-a7a1-4965-b1d0-545c72f1ec4e",
+        "137e62c7-d7a5-417f-ae5e-5102a33a8877",
+        "4015a01d-941b-495d-92a9-ef1dacdd0704",
+        "df9b5885-f4e3-46d7-b6d2-603816d30ffb",
+        "9efc4c08-7dec-49fc-bd64-65c65e7bac2d",
+        "2cde63fd-4997-42ee-8ca6-c2e66de0b633",
+        "964c7641-4f93-4563-aa13-a5c3cee4ca79",
+        "9698e1f9-f41f-49f3-b174-0bd186bea2e4",
+        "13665b4b-24b5-4304-b440-419cd42e9db5",
+        "43be8db3-ff6b-4705-a528-a5cef56f35f0",
+        "db5095a4-8eef-4979-af3b-c59325d6c36e",
+        "b2a69b85-9497-4000-a052-4bf6c7d92f4c",
+        "47c3370d-3f88-49bd-bded-c8fcf38da482",
+        "d080b045-00a7-4aac-9767-3073750c55a0",
+        "617cacb1-0b93-4534-bec2-17a83e6bba3c",
+        "ef6e8281-9a06-4756-859c-7b5bfd37cc3f",
+        "d8ba1edb-fe95-4f27-a94a-7405e620fe13",
+        "cd97e741-8973-43af-8e24-36836d6e73cc",
+        "eb877683-f206-4e65-a1c3-d99e19124a68",
+        "67b773fa-bbdd-4aff-937d-6b0974bb27f4",
+        "ceccb8c8-6319-4b6e-8697-2a6211eb3aed",
+        "bdc21ed3-cbcd-4512-83b4-0bac6d805a48",
+        "a9ce2974-becb-4119-92a1-1d734890cc31",
+        "12ec026f-d147-48f0-81db-aa4882d315d6",
+        "a24f8fc2-a5ba-4465-88cd-10334c77efaf",
+        "9425d4a8-6ce9-4b72-8fa1-ccd666ab7e54",
+        "01a1aeb4-bc02-4f97-aec3-9edf3a5b98aa",
+        "a3ed7f59-8a07-49d8-98e0-939837778149",
+        "3bb68f70-31af-41ac-b10f-dcf6bf596d6e",
+        "a2978510-d5cf-4fcf-9688-408451075a56",
+        "2278fa0e-6670-4481-9541-779a73660da0",
+        "5e96e175-82af-46f6-996c-d90eb39cd905",
+        "da679e90-f697-40d1-bc74-9d559d846123",
+        "1833bf93-ac2f-4d58-813e-fbe1238184c3",
+        "8c1b8821-c430-45da-9981-2d36d402251f",
+        "e7ee56e0-e541-474b-bf66-19b383456b54",
+        "c5c651a6-0e44-4bb8-8d3e-e960b7aeb162",
+        "d156301c-5a2b-4178-afec-b12fd3d5f958",
+        "0d4259ec-1e26-4881-93b4-a4159d123493",
+        "aff52422-9762-4bbb-9f14-71b0e760eb28",
+        "58c8df83-741a-4ca5-8a1a-de2a7abc267a",
+        "86360541-58de-47a9-8d5a-6911f2bc4592",
+        "2c5a3828-2477-47e4-a287-24c1962aad5b",
+        "90864a7a-bd2d-4bba-b929-b66b7fcae222",
+        "bd6fb957-c909-4cab-8736-3555dc53c552",
+        "0652ec1c-f1d9-49e8-b59c-2e7f6a2b7a14",
+        "146f5606-d89a-4a32-83ed-65ae204d52f0",
+        "43b61584-dc22-4011-bbd2-f9d76797a7b6",
+        "c7dcbdb3-d71c-4ec5-91db-cef70900af24",
+        "77dd968b-2d41-4d2f-9fd6-19293fe5a889",
+        "a87b2dd1-2416-4f08-a8ad-cbd0510db22d",
+        "24db6e2d-70d0-40c2-b33a-9a1e5974bd64",
+        "ef7b3034-9051-4887-b0cb-b1bada48ff4d",
+        "d7087359-c542-4b02-9ae5-0b01ace530ea",
+        "0b99bd20-07a9-431b-a47a-e1a8dec14eba",
+        "cfb62025-b68e-4270-875a-ad946c07d528",
+        "c5584c03-3347-4009-a046-dfbf230d5a8a",
+        "9eb0ac78-7d1f-475a-8fd3-d4aab700a7e2",
+        "c91753e8-f092-4aec-9487-d37b59867693",
+        "5e18cc1b-7a18-46de-acdf-d23c50106c96",
+        "a73908d5-c77b-4468-9b6a-642e88526bd2",
+        "b8cd2edb-f060-4e7e-9ef9-ac55ba7b56e9",
+        "8ed3af05-e5be-4ffb-bd1b-8c7bf9f02fd8",
+        "bf8bce0e-a339-4d95-9956-cd95f141259a",
+        "cd509681-0722-440a-b235-917c486aa15c",
+        "6083ec99-526b-42d9-a3fd-b310e5cb07e2",
+        "94ca5e15-f56f-46ed-b0ef-03125fdfa55d",
+        "ee1fd06e-cb2d-46a0-93ee-4ce23f2b0f91",
+        "0e01f840-2fdc-4636-91cf-a3c0e200d659",
+        "c5b33753-2d04-40e2-988a-cdbd95bfe515",
+        "2d2bdb5a-8691-42bd-95fa-80d7a0e0e8af",
+        "8f71753a-1fca-4573-be1d-caef5466b1c4",
+        "9cad73d7-b18f-4398-bc11-f3996c4315ad",
+        "1dd9f7e0-f374-48da-a06c-e322b458d539",
+        "a9ebd62f-5a12-464d-a60d-cce41e1c2fcc",
+        "c8560e3f-8ae4-44ee-bf88-9b75f79c7bae",
+        "d758906a-21c4-4054-92a4-df92934083a6",
+        "e768d18c-9c90-4c4b-8783-2d5fa7f30c5e",
+        "9445e819-d1bf-4e92-b49d-5c28e298b049",
+        "6e597131-7210-4b91-afb9-568bddec0593",
+        "47c5f8ad-9885-4125-ba0c-944ac8930646",
+        "d95631ea-90b1-4af8-9ac0-4828b1d0d6f4",
+        "9a9f6257-1f1e-431a-82a8-95f80f6f508b",
+        "d5e8af1b-fa34-4595-9887-7e1a0e867c49",
+        "5aad527e-7a2b-4124-be36-a5c318e7cca2",
+        "b34802c2-ffe6-4b7e-85bf-b1396f560b96",
+        "55b2fde0-95bd-4401-9449-7e055ac1375a",
+        "3ffc0828-6352-4b89-a989-d1625d2f96bb",
+        "ce7718f5-3136-46e8-a5c5-9f0c73e11285",
+        "dcb198f4-3205-443c-a4ec-855a53cf985c",
+        "9175b20e-ad2f-46a7-917a-0a14cf7fdc02",
+        "406b4c90-650c-43df-96ea-6f4f7b80515f",
+        "dbfcc7a2-1f4b-4fa6-be01-46970a231229",
+        "fe9d455f-c720-4a40-b59b-660d121f9983",
+        "4744a1e6-cc01-4e72-87b6-ddea3c54b8d0",
+        "945a1359-6751-4b94-8778-66e756ff219d",
+        "54a8985f-74f5-45e5-842b-234e02851972",
+        "486a57bf-1abe-4bf9-9b5c-7a33ce081c15",
+        "93480235-4969-47dd-a7c5-00bb42692dc8",
+        "538c93fb-df40-4d0b-bbf8-360190994b99",
+        "fb0f0fbf-b807-4676-94ed-71e1533dd2ca",
+        "00b3b641-99d8-4049-a8eb-00aef1b222cc",
+        "3d330f1d-1552-4e49-9034-b8e44113dce5",
+        "20c5d676-17b2-4597-9f1c-2880182f4c20",
+        "a9df5bea-df94-4d90-b99a-e51db8b37b39",
+        "edbec6ca-c196-421a-8f42-ca17f14a5237",
+        "9ade1fbe-b19d-4d45-a5a1-99fda2840fc9",
+        "df16ef69-5ceb-47cb-8cc7-6791a7ede53c",
+        "68db627a-ae32-4816-9150-7d5f68729f83",
+        "45a13a52-81e0-4b31-9ea0-20ced2574102",
+        "f1ddcb9b-30f0-410d-babc-9c40c6a66414",
+        "eec3dc2c-b2ec-41cd-a82a-0267df34d004",
+        "9d633e76-9f66-4277-afeb-eb0eaf56e086",
+        "b064633a-455f-4abd-807e-e2fa3097186c",
+        "55215835-7d2d-4194-b7d9-a42324697950",
+        "f0b01e86-8951-4370-9347-73a4513a76d4",
+        "c99c54d7-3fb7-4d4f-a0d6-7a5bdb524682",
+        "ae5e6a48-88f9-465b-b54e-1ca35bcc6771",
+        "46ca1fbd-e761-4cea-a61b-a4dcae999c0e",
+        "2a86ad99-93dd-4ea9-b6a8-506fbe2f4376",
+        "851bfd90-33ca-4854-9eb2-c40226ff836f",
+        "34935073-423c-4f26-a285-82f584476792",
+        "a7c48ba6-431b-438d-859a-b1a1b04b8a58",
+        "deed777b-d46d-41bf-b78e-16395591a047",
+        "ac8c97a3-58da-4546-abb9-8a0eed1b3d13",
+        "a794bc1d-dcd7-4430-bfc6-4edd91c05085",
+        "466580ce-0519-44a1-a660-1345cb6470b0",
+        "8bf423f6-f3d4-44d1-8f3d-8dcff93ffa97",
+        "2fd8d7cc-d8ab-4f53-9510-5b9364ea4114",
+        "94af9352-be60-40fa-9eff-c3f0be8224c4",
+        "561b0bc4-a949-40e5-adde-60b57ced6e71",
+        "95d162f6-ad2b-4625-b4bb-469c0af5acff",
+        "8795e844-bf2a-4ce6-91d1-7d0e5a883448",
+        "af3af5cf-d197-4791-92a1-7f18edc1e26c",
+        "d32df33b-7048-4cde-aec6-00109a409696",
+        "f6b02008-eaf6-4e65-aa93-07f72fb77cac",
+        "08e0ceaa-c2a6-4cea-bc39-62a0e661fe95",
+        "3e2cd51a-c80c-42ad-8181-95856c56d952",
+        "905b3cf7-7f09-4cc8-830d-b5882432f6ea",
+        "1876894e-6545-44a2-8ea2-94b5a5d5512a",
+        "f52b74c0-a681-4615-b5c8-981df421edc8",
+        "ffafcb03-0982-4a0d-9bab-7924b0bee2c5",
+        "c33f5855-2a4e-4641-bd65-451abab473ab",
+        "998ed101-de24-4084-aac7-f0bf1b42f694",
+        "eedf00c0-6776-4fe1-9300-6b94e1f56d7d"
+      ]
+    },
+    {
+      "id": "edbd36f7-988f-49ca-b66e-1d2eff9ab0db",
+      "name": "Remove from this view",
+      "itemIds": [
+        "470a9b18-ad56-4373-ab87-f403aa90d6e7",
+        "7bbcf356-663a-4193-90c0-5527293c2be7",
+        "67fa2e87-b373-4376-90fb-b4b603262a9c",
+        "e5c4d8b3-2c4f-4e98-9cc8-2e3a63d0e800",
+        "df3101fd-a8a0-42f0-88db-2eb4df7de57e",
+        "2e74a49e-3508-4e9b-a08a-8ddbcd57e2f0",
+        "6d69e4c4-b7c5-4504-a456-4f72401c7f29",
+        "a71e7a16-fa40-4536-9b7a-20f9d2f1fee4",
+        "42b56c65-f804-4b6f-aa0f-69c15222a4a0",
+        "edaeabee-8ae6-42cd-8913-9412ba2dc852",
+        "94f4fbc8-86f4-4bff-9d45-99266e348376",
+        "3457e264-f271-4e06-a9e8-bd2e6db6bfe9",
+        "72205523-f564-43cd-bfae-d617881d4a0d",
+        "8f54c3ad-4106-4065-b64c-171215e05018",
+        "ab57b8bb-a830-4ad2-926a-07a24747ccdd",
+        "9bcbbdb9-6a62-424c-baed-1c008acec6b6",
+        "d1efba15-d394-45ec-859b-dbd4d6ce1cec",
+        "b1e3f21b-391f-45a7-9acf-0affc412cbd7",
+        "3d310759-f1fc-47df-8084-a0c7e6e6b706",
+        "70c050b3-6e89-4bca-baba-0d2c7b0fd557",
+        "c6a6c404-e99c-4d48-9b9c-8f42407e4645",
+        "69f2b92a-9b73-47ab-8631-a7aeb8261a17",
+        "e626a9d2-f4b6-4e70-83a2-45f23c6bdbbc",
+        "99fcd80c-3cf5-47ec-a29a-75106d3189dc",
+        "0fac37cb-e152-4a8a-8dfb-627a29cbbb4c",
+        "90188eec-526a-48a6-9f90-ae36b636ae37",
+        "27417393-19d0-45ab-9cdb-c3a07230a748",
+        "28448e7b-25ad-477f-8423-8a6339aace4a",
+        "b1d6f419-7978-4d28-aae8-bc3b741f4113",
+        "327f9f60-aef9-455e-b74c-917c1867e881",
+        "a10d6264-9fc9-434c-9a6f-7e5b0e8f3e70",
+        "73236bd6-bd1d-47a7-a9d9-f1b24232f79c",
+        "7302d976-e104-49f0-ba21-201db34a9ae1",
+        "467a9b20-fd89-41a7-8371-35b2ae298a24",
+        "d-33",
+        "e4394dfe-2398-4336-ba2a-48bd08a73ba7",
+        "ffc27a62-7be2-4170-944c-d9a26173ec53",
+        "f9a90555-66e9-4fcd-831c-19dda57e8efb"
+      ],
+      "hideable": true
+    },
+    {
+      "id": "home-generated-0",
+      "name": "Eilt Küche",
+      "itemIds": [
+        "788b94c5-4aa1-462c-bb42-e01eafd0bcca"
+      ]
+    },
+    {
+      "id": "9e15c3b1-d936-4812-af89-6e876c2fde83",
+      "name": "Küche",
+      "itemIds": [
+        "d-4",
+        "85f09df6-38b5-4619-ab4e-625ce11eb1f9",
+        "d-3",
+        "01c19822-515c-4067-bfc9-4af68dec703f",
+        "d-5",
+        "94e0ebeb-1bed-490b-ab99-078d67f9243c",
+        "d-31",
+        "73266516-ebf2-4fd0-963c-36cac26e4963",
+        "d-1",
+        "d-2",
+        "d-7",
+        "932429d6-e145-4cbe-854e-12d52e26cc1b",
+        "1ab5dd1c-aae7-4e31-a805-ef26e4d612a7",
+        "6898decf-9095-45ec-9016-72931208d1a8",
+        "22612d4d-76b0-4784-a2f6-d2fcb33b819d",
+        "bbc2cac3-6d96-4439-9945-c9dc42548834",
+        "89fe9ed4-659e-49b5-bef0-8acad915a52a",
+        "8dc57d5d-cd6f-464e-a41a-c7341489d047",
+        "a60515c3-2fe0-4740-abf7-c0b303dbc802",
+        "1b8f6672-5123-427d-9567-b53c93a2d2da",
+        "0a006807-991c-4841-b622-e814893cb904",
+        "b0caab74-6aad-4218-9a75-17027e036d15",
+        "52c168a0-ebe1-43c1-bbc3-6fac45964147"
+      ]
+    },
+    {
+      "id": "55d51f3c-6a04-4094-9cc4-a0344e1d6b87",
+      "name": "Frosta",
+      "itemIds": [
+        "7ed27034-f0da-40d8-95dd-74e0bc1a3efa"
+      ]
+    },
+    {
+      "id": "home-generated-2",
+      "name": "TK",
+      "itemIds": [
+        "d-16",
+        "d-17",
+        "d-18",
+        "57fa5323-ae92-4bb7-a155-01fae425b120",
+        "d-19",
+        "d-20",
+        "d-21",
+        "8fa40e4b-05f1-470a-8c2a-fc4260db546f",
+        "23ad00aa-48dc-4f02-af3d-0efb279b7ed7",
+        "56089774-e187-491a-bef0-3f5685886981",
+        "51289dd8-a1bf-405a-97ce-df0d72629752",
+        "bbfe24f5-b9df-4e99-9db0-84e48ad89679"
+      ]
+    },
+    {
+      "id": "home-generated-4",
+      "name": "Vorrat",
+      "itemIds": [
+        "d-25",
+        "d-24",
+        "d-26",
+        "d-27",
+        "d-28",
+        "eba53fae-8a54-4f1b-ba25-2ee291d04c22",
+        "b954a6bf-d648-4c41-8eb4-45f35cf40d35",
+        "d-22",
+        "d-23",
+        "ed9da751-8160-4a0f-9efb-36e50d0adbc6",
+        "14e8de4a-52b2-42f9-9ae8-a61e293b6e48",
+        "cc8b037c-8933-4856-bf4b-199969cacf75",
+        "09176125-62c2-4ea8-af12-28058385da62",
+        "caa364e1-93ad-4453-bc62-4ec885178ba7",
+        "429f8b24-fd50-4b0d-a231-8809e53ef213",
+        "f101ff15-90c8-4a88-aa93-aa89b1037d51",
+        "abb123c2-4e9d-49d2-b641-ad30ff76ba69",
+        "bec9865c-6de5-4b78-b42d-8a0aac00f736",
+        "056652ab-7130-4b32-9695-95ee5ce76a68",
+        "1bc59c60-ded2-4231-8a25-bdf1195d75ff",
+        "3964ddc1-6070-4bfa-8208-e063ee9ff535",
+        "efbad4c6-d47f-4885-bee0-1d3b5724d7e1",
+        "ae42d0c9-86b4-44eb-a606-7f91067e0970"
+      ]
+    },
+    {
+      "id": "home-generated-5",
+      "name": "Kühlschrank",
+      "itemIds": [
+        "d-15",
+        "d-29",
+        "d-30",
+        "d-13",
+        "d-11",
+        "62b0b9ce-711c-40bb-88f3-2f6698bed3ea",
+        "d-12",
+        "3724d802-01cf-410a-be76-b6b4e424f0bc",
+        "d-10",
+        "d-9",
+        "d-14",
+        "d2727442-9f68-4ff4-8832-b5e40815b5d0",
+        "84480e27-3106-4b14-9587-ce6ef19e9d53",
+        "c9ce8fbe-d035-4c21-b137-2505b8fc7654",
+        "1e447add-2f92-4e2a-b8ff-74485275cfbb",
+        "b8928600-5e2a-4a27-b4cc-d63da2745585",
+        "f93af7b7-12f1-4a5a-8dfa-107da826b793",
+        "60a89328-e953-49cb-bdc5-56817b9d4aca",
+        "4314247f-8f89-4728-9597-aa155202611e",
+        "d-38",
+        "c0b0935d-3a09-4c82-b546-06e846f36650",
+        "d0deb66a-e33b-4ee1-8e1f-b8a6b240cde2",
+        "da27e46f-139f-4250-b85c-7315eeefceec",
+        "a8b1f288-76c8-4f6f-afa1-348429c5fa88",
+        "127b9975-8c25-4c99-bea5-6916ffeeab1c",
+        "56259319-1dde-45f1-b3fe-569bd723eb42",
+        "13d2a2d5-9e08-4258-8727-6f3eb7306b88",
+        "d921a78e-f336-4623-9074-1589b5155302",
+        "306af4b1-8201-4745-96ae-9bc0d5c59ab2"
+      ]
+    },
+    {
+      "id": "home-generated-8",
+      "name": "Sarah fragen",
+      "itemIds": [
+        "d-35"
+      ]
+    },
+    {
+      "id": "161a1b6b-be1b-4e1e-bddf-a040f60188da",
+      "name": "oben frühzeitig",
+      "itemIds": [
+        "7d676708-5078-4360-9741-7b5e20e6934b",
+        "d-32",
+        "a9a6f392-a586-4914-bbf2-16ae2b95700b"
+      ]
+    },
+    {
+      "id": "home-generated-11",
+      "name": "unten zwischendurch",
+      "itemIds": [
+        "d-37",
+        "d-39",
+        "d-40",
+        "ccc86bd9-4301-4e55-8070-6e33190b5ee0",
+        "51fef25f-ea1c-4f11-a36c-e43628b2e72c",
+        "b43a25e7-1c0a-4127-8866-5025e34be925",
+        "aa31baba-20ef-4e48-9a60-cc4ad3cf1fb9",
+        "a59ddf98-c6c4-406a-a019-4055b03ca7c2",
+        "afebdf35-142c-4c58-8a83-3d1055578e4c",
+        "004e7cb6-286b-40cd-a3d6-a9b2e1955f64",
+        "074fefd0-348a-4846-b578-a1766620667d"
+      ]
+    },
+    {
+      "id": "home-generated-7",
+      "name": "am Ende oben",
+      "itemIds": [
+        "d-34",
+        "3fa282ed-fb62-4f3c-bdb5-bd954f7f9bfc",
+        "56692cdf-42ee-48d6-bd92-a48d5085e8b6",
+        "9431d431-1344-4e2e-8c60-e76e0ad3dba0",
+        "ba3d5c56-431b-4d65-a867-7ed9ceb4c2ba",
+        "0d5c7c5a-00ea-4e7d-8027-9494f74f5e79",
+        "ce704f19-9578-488c-a73e-1588f09c566d"
+      ]
+    },
+    {
+      "id": "home-generated-9",
+      "name": "letzter Moment oben",
+      "itemIds": [
+        "dd2b7ab2-67ff-43df-9210-f5413118e036",
+        "e89fdf4d-3adc-4e6a-be50-f5d104b2d79c",
+        "fd000912-4692-4caf-9a65-2455a80b1fd4"
+      ]
+    },
+    {
+      "id": "75b7b37b-5f07-4609-b4a1-09b912c5b1d9",
+      "name": "Vorher in Steyerberg",
+      "itemIds": [
+        "cb186f12-fdad-462a-adfe-e6b0239ce359",
+        "e747f989-6d07-44fe-a30b-995d0e7a9719",
+        "26d2836e-757b-4c1b-a97f-bf7661407371",
+        "da923ad6-eaa3-4bb6-a6c6-7247ce1e0bca",
+        "6d1c8485-1dfe-4b41-8dd8-8814bad3fefd",
+        "87e2796d-7958-4ea8-8b17-721aa298fcbe",
+        "aaa25fbc-c693-433a-9e3b-55aaf6b0c139"
+      ]
+    },
+    {
+      "id": "49d6c26d-65e5-4e0c-9d76-62499bcfafb4",
+      "name": "unten letzter Moment",
+      "itemIds": [
+        "d-43",
+        "d-42",
+        "4ba0512d-57c2-4626-9ea2-c19f1a80a619",
+        "499164ff-329b-406b-9f6e-22312ab1a569",
+        "ec536891-509e-4e35-bfb0-f697120b70dc",
+        "01197b3e-dd90-45d9-947e-ee4c6809ee88",
+        "08db0a1e-8396-41e8-a062-ac970ff91d43",
+        "96148217-806c-4e7b-92c2-6eb55d7a8240",
+        "de4d1ce2-e886-404a-aa6c-f3613825f81f",
+        "d-36"
+      ]
+    }
+  ]
+}
